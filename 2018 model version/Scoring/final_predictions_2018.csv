@@ -1,0 +1,643 @@
+"Player","Position","Team","Expected_votes","Predicted_votes","Pred_BR_rank"
+"Aaron Black","Forward","Geelong",0.0205876996596353,0,194
+"Aaron Francis","Defender,Forward","Essendon",0.07761067930656,0,195
+"Aaron Hall","Midfield","Gold Coast",0.407711175896503,0,196
+"Aaron Mullett","Defender","Carlton",0.122041827146567,0,197
+"Aaron Naughton","Defender","Western Bulldogs",0.120382664899536,0,198
+"Aaron Sandilands","Ruck","Fremantle",0.688407127027831,0,199
+"Aaron Vandenberg","Forward","Melbourne",0.0525260085303065,0,200
+"Aaron Young","Forward","Gold Coast",3.155002762375,6,62
+"Adam Cerra","Midfield,Forward","Fremantle",1.02439350014025,2,134
+"Adam Kennedy","Defender,Midfield","GWS",0.160995418768099,0,201
+"Adam Oxley","Defender","Collingwood",0.0255057291379741,0,202
+"Adam Saad","Defender","Essendon",0.357442180576654,0,203
+"Adam Tomlinson","Defender","GWS",0.395001758572502,0,204
+"Adam Treloar","Midfield","Collingwood",10.5486117485352,9,43
+"Aidan Corr","Defender","GWS",0.0965109931387248,0,205
+"Aiden Bonar","Midfield,Forward","GWS",0.0276420534246371,0,206
+"Aidyn Johnson","Forward","Port Adelaide",0.0255646053017644,0,207
+"Alex Johnson","Defender","Sydney",0.0108532405178662,0,208
+"Alex Keath","Defender","Adelaide",0.0728865520186524,0,209
+"Alex Morgan","Defender","North Melbourne",0.00767355794338467,0,210
+"Alex Neal-Bullen","Forward","Melbourne",1.14617822624232,0,211
+"Alex Pearce","Defender","Fremantle",0.125710747510585,0,212
+"Alex Rance","Defender","Richmond",0.619149450742815,0,213
+"Alex Sexton","Defender,Forward","Gold Coast",0.970403446951307,0,214
+"Alex Witherden","Defender","Brisbane",2.61260427842348,4,78
+"Aliir Aliir","Defender","Sydney",0.211140868059473,0,215
+"Allen Christensen","Midfield,Forward","Brisbane",0.633180565578249,0,216
+"Andrew Brayshaw","Midfield","Fremantle",0.141298524903483,0,217
+"Andrew Gaff","Midfield","West Coast",19.5241587858212,17,14
+"Andrew McGrath","Defender,Midfield","Essendon",0.516572482097083,0,218
+"Andrew Phillips","Ruck","Carlton",0.0201172270302001,0,219
+"Andy Otten","Defender,Forward","Adelaide",0.0950044478408067,0,220
+"Angus Brayshaw","Defender,Midfield","Melbourne",10.4540905773254,14,24
+"Anthony McDonald-Tipungwuti","Forward","Essendon",1.06453504058424,1,167
+"Anthony Miles","Midfield","Richmond",0.0114864482975183,0,221
+"Bachar Houli","Defender","Richmond",0.564804343215884,0,222
+"Bailey Banfield","Midfield","Fremantle",0.174631604492677,0,223
+"Bailey Dale","Midfield","Western Bulldogs",0.0976054727645827,0,224
+"Bailey Rice","Defender","St Kilda",0.0797271462495412,0,225
+"Bailey Williams","Defender","Western Bulldogs",0.908221292129402,0,226
+"Bayley Fritsch","Midfield,Forward","Melbourne",0.475268429148993,0,227
+"Ben Ainsworth","Forward","Gold Coast",0.190795442412631,0,228
+"Ben Brown","Forward","North Melbourne",8.95892545367058,9,44
+"Ben Crocker","Forward","Collingwood",0.0899345357553481,0,229
+"Ben Cunnington","Midfield","North Melbourne",8.51305544801341,9,45
+"Ben Jacobs","Midfield","North Melbourne",1.61554664193439,2,135
+"Ben Keays","Forward","Brisbane",0.0161675485438776,0,230
+"Ben Long","Forward","St Kilda",0.0865728606425122,0,231
+"Ben McEvoy","Ruck","Hawthorn",2.81206678923885,3,96
+"Ben McNiece","Defender","Essendon",0.0647277403449503,0,232
+"Ben Paton","Defender","St Kilda",0.0227025204355894,0,233
+"Ben Reid","Defender,Forward","Collingwood",0.0670368351342872,0,234
+"Ben Ronke","Forward","Sydney",2.76240423723587,3,97
+"Benjamin Stratton","Defender","Hawthorn",0.213162592608536,0,235
+"Bernie Vince","Defender","Melbourne",0.188380283973888,0,236
+"Billy Gowers","Forward","Western Bulldogs",3.40825355535865,3,98
+"Billy Hartung","Midfield","North Melbourne",0.226407696139471,0,237
+"Billy Longer","Ruck","St Kilda",0.0163350473320292,0,238
+"Billy Stretch","Midfield","Melbourne",0.0348670349062676,0,239
+"Blake Acres","Midfield,Forward","St Kilda",1.28197865478698,2,136
+"Blake Hardwick","Defender","Hawthorn",0.233076643585617,0,240
+"Brad Ebert","Midfield","Port Adelaide",2.14701899914857,1,168
+"Brad Scheer","Forward","Gold Coast",0.0487732632492887,0,241
+"Bradley Hill","Midfield","Fremantle",0.51533531338446,0,242
+"Bradley Lynch","Defender","Western Bulldogs",0.0557435596486396,0,243
+"Bradley Sheppard","Defender","West Coast",0.721850397551067,0,244
+"Brady Grey","Forward","Fremantle",0.0332675105830716,0,245
+"Brandan Parfitt","Midfield,Forward","Geelong",3.81144515200967,4,79
+"Brandon Ellis","Defender","Richmond",0.437064830120722,0,246
+"Brandon Matera","Forward","Fremantle",0.178742146119035,0,247
+"Brandon Starcevich","Midfield,Forward","Brisbane",0.0231558445456633,0,248
+"Brandon White","Defender","St Kilda",0.0447885855920303,0,249
+"Brayden Ainsworth","Midfield","West Coast",0.0246990539256046,0,250
+"Brayden Crossley","Ruck","Gold Coast",0.0539840928894316,0,251
+"Brayden Fiorini","Midfield","Gold Coast",2.51024549932379,5,65
+"Brayden Maynard","Defender","Collingwood",0.781384715148816,0,252
+"Brayden Sier","Midfield","Collingwood",0.398457853560794,0,253
+"Brendan Whitecross","Forward","Hawthorn",0.0507054183383714,0,254
+"Brendon Ah Chee","Midfield,Forward","West Coast",0.0775463962944089,0,255
+"Brendon Goddard","Defender,Midfield","Essendon",0.820026041469628,0,256
+"Brennan Cox","Defender,Forward","Fremantle",2.12394946542974,3,99
+"Brent Daniels","Midfield,Forward","GWS",0.0477836018312784,0,257
+"Brett Deledio","Forward","GWS",2.48379402979924,3,100
+"Brodie Grundy","Ruck","Collingwood",14.9879809886921,21,6
+"Brodie Smith","Defender","Adelaide",0.165200689889249,0,258
+"Brody Mihocek","Defender,Forward","Collingwood",0.35661293237246,0,259
+"Bryce Gibbs","Midfield","Adelaide",7.85803565258033,12,26
+"Cale Hooker","Defender,Forward","Essendon",0.613425499855988,0,260
+"Caleb Daniel","Midfield,Forward","Western Bulldogs",1.50586429504355,0,261
+"Caleb Marchbank","Defender","Carlton",0.113864046529686,0,262
+"Callan Ward","Midfield","GWS",11.2384008996807,11,32
+"Callum Ah Chee","Forward","Gold Coast",0.113609258254707,0,263
+"Callum Brown","Midfield,Forward","Collingwood",0.0614395134068588,0,264
+"Callum Mills","Defender","Sydney",0.256585644867522,0,265
+"Callum Moore","Forward","Richmond",0.0541564755551381,0,266
+"Callum Sinclair","Ruck","Sydney",7.41813286902422,8,52
+"Cameron Ellis-Yolmen","Midfield","Adelaide",1.12821256974969,0,267
+"Cameron Guthrie","Defender,Midfield","Geelong",0.107018212927124,0,268
+"Cameron McCarthy","Forward","Fremantle",0.177330808048524,0,269
+"Cameron O'Shea","Defender","Carlton",0.0770109742841974,0,270
+"Cameron Pedersen","Forward,Ruck","Melbourne",0.0363157985498121,0,271
+"Cameron Polson","Midfield,Forward","Carlton",0.0352829407107319,0,272
+"Cameron Rayner","Midfield,Forward","Brisbane",0.28298185417508,0,273
+"Cameron Sutcliffe","Defender","Fremantle",0.03300754575949,0,274
+"Cameron Zurhaar","Forward","North Melbourne",0.0484572226834147,0,275
+"Cedric Cox","Defender","Brisbane",0.0248237260366889,0,276
+"Chad Wingard","Midfield,Forward","Port Adelaide",5.66606282635715,3,101
+"Charlie Ballard","Midfield,Forward","Gold Coast",0.0610000825977054,0,277
+"Charlie Cameron","Forward","Brisbane",0.48545785309789,0,278
+"Charlie Curnow","Forward","Carlton",1.69588985545845,1,169
+"Charlie Dixon","Forward","Port Adelaide",3.36552979712133,5,66
+"Charlie Spargo","Midfield,Forward","Melbourne",0.139012200951725,0,279
+"Chris Masten","Midfield","West Coast",1.64537380570002,1,170
+"Christian Petracca","Midfield,Forward","Melbourne",1.45519937661029,0,280
+"Christian Salem","Defender,Midfield","Melbourne",2.08479665550305,0,281
+"Christopher Mayne","Forward","Collingwood",0.297024107628836,0,282
+"Ciaran Byrne","Defender","Carlton",0.0676881210068367,0,283
+"Clayton Oliver","Midfield","Melbourne",21.3157231370609,25,2
+"Colin O'Riordan","Defender","Sydney",0.024633126879279,0,284
+"Connor Blakely","Defender,Midfield","Fremantle",4.10252091683575,5,67
+"Connor Menadue","Midfield","Richmond",0.0406908887134686,0,285
+"Conor Glass","Defender","Hawthorn",0.0335288874918481,0,286
+"Conor McKenna","Defender","Essendon",0.220087156143203,0,287
+"Conor Nash","Defender","Hawthorn",0.0314283283158997,0,288
+"Corey Ellis","Defender,Midfield","Richmond",0.0334040663886324,0,289
+"Corey Maynard","Midfield","Melbourne",0.0086057123029595,0,290
+"Cory Gregson","Forward","Geelong",0.0621889167665133,0,291
+"Curtly Hampton","Midfield","Adelaide",0.0165605621067962,0,292
+"Cyril Rioli","Forward","Hawthorn",0.0207191590960575,0,293
+"Dale Morris","Defender","Western Bulldogs",0.0816326743683918,0,294
+"Dale Thomas","Midfield,Forward","Carlton",2.32117927766643,3,102
+"Dan Houston","Defender","Port Adelaide",0.265601433688115,0,295
+"Dane Rampe","Defender","Sydney",1.39266538104627,0,296
+"Daniel Butler","Forward","Richmond",0.219535398210918,0,297
+"Daniel Hannebery","Midfield","Sydney",0.196997200487652,0,298
+"Daniel Howe","Midfield","Hawthorn",0.324969116529368,0,299
+"Daniel Lloyd","Forward","GWS",0.139085694851901,0,300
+"Daniel McKenzie","Defender","St Kilda",0.110741201574294,0,301
+"Daniel McStay","Defender","Brisbane",0.106340014303202,0,302
+"Daniel Menzel","Forward","Geelong",2.10597918435674,2,137
+"Daniel Rich","Defender","Brisbane",0.605612039882667,0,303
+"Daniel Rioli","Forward","Richmond",0.114155104345067,0,304
+"Daniel Robinson","Forward","Sydney",0.067961795096534,0,305
+"Daniel Talia","Defender","Adelaide",0.160761943838638,0,306
+"Daniel Venables","Forward","West Coast",0.0864838913170138,0,307
+"Daniel Wells","Midfield,Forward","Collingwood",0.0699265230334877,0,308
+"Danyle Pearce","Forward","Fremantle",0.0334779489239849,0,309
+"Darcy Byrne-Jones","Defender","Port Adelaide",0.605232321505409,0,310
+"Darcy Fogarty","Midfield,Forward","Adelaide",0.054073218818115,0,311
+"Darcy Gardiner","Defender","Brisbane",0.868334201027305,0,312
+"Darcy Lang","Forward","Carlton",0.208862619166257,0,313
+"Darcy Macpherson","Forward","Gold Coast",0.0823166552692831,0,314
+"Darcy Moore","Forward","Collingwood",0.0300534550038433,0,315
+"Darcy Parish","Midfield,Forward","Essendon",0.387375889372883,0,316
+"Darcy Tucker","Midfield,Forward","Fremantle",0.157682241208638,0,317
+"Darragh Joyce","Defender","St Kilda",0.00805884606154826,0,318
+"David Armitage","Midfield","St Kilda",1.09593572877187,1,171
+"David Astbury","Defender","Richmond",0.259495664372836,0,319
+"David Cuningham","Midfield,Forward","Carlton",0.0318561988188949,0,320
+"David MacKay","Defender,Midfield","Adelaide",0.168941436943166,0,321
+"David Mirra","Defender","Hawthorn",0.0468594126648328,0,322
+"David Mundy","Midfield,Forward","Fremantle",4.12893076315232,4,80
+"David Myers","Midfield","Essendon",3.39652821616964,4,81
+"David Swallow","Midfield","Gold Coast",2.67539563413801,3,103
+"David Zaharakis","Midfield","Essendon",4.73867530306779,4,82
+"Dawson Simpson","Ruck","GWS",0.198308196700107,0,323
+"Dayne Beams","Midfield","Brisbane",16.586181857858,22,5
+"Dayne Zorko","Midfield","Brisbane",9.7526440751445,10,37
+"Dean Kent","Forward","Melbourne",0.274819353410087,0,324
+"Dean Towers","Forward","Sydney",0.0690244052828377,0,325
+"Devon Smith","Midfield,Forward","Essendon",4.48704075624092,5,68
+"Dion Prestia","Midfield","Richmond",3.14088931202788,3,104
+"Dom Barry","Midfield","Port Adelaide",0.0419543579181559,0,326
+"Dom Tyson","Midfield","Melbourne",0.52021035300043,0,327
+"Dominic Sheed","Midfield","West Coast",6.75688353912716,3,105
+"Dougal Howard","Defender","Port Adelaide",0.17384931810062,0,328
+"Dustin Martin","Midfield","Richmond",17.808348581357,16,16
+"Dylan Buckley","Defender","GWS",0.00869555988496303,0,329
+"Dylan Clarke","Midfield,Forward","Essendon",0.00821915257011418,0,330
+"Dylan Grimes","Defender","Richmond",0.171482900883888,0,331
+"Dylan Roberton","Defender","St Kilda",0.0497918536753989,0,332
+"Dylan Shiel","Midfield","GWS",2.22912734937831,0,333
+"Dyson Heppell","Midfield","Essendon",16.8431596130479,17,15
+"Easton Wood","Defender","Western Bulldogs",0.0899784784739253,0,334
+"Ed Langdon","Midfield,Forward","Fremantle",3.06230161372672,4,83
+"Ed Richards","Defender,Midfield","Western Bulldogs",0.185890704967897,0,335
+"Ed Vickers-Willis","Defender","North Melbourne",0.0582155961915378,0,336
+"Eddie Betts","Forward","Adelaide",0.323361600009813,0,337
+"Edward Curnow","Midfield","Carlton",3.07606341754698,3,106
+"Edward Phillips","Midfield","St Kilda",0.0611161957219154,0,338
+"Elliot Yeo","Midfielder","West Coast",14.6655868085268,16,17
+"Elliott Himmelberg","Forward","Adelaide",0.00832317409896616,0,339
+"Eric Hipwood","Forward","Brisbane",2.39759699350302,2,138
+"Esava Ratugolea","Forward","Geelong",0.0429735894405764,0,340
+"Ethan Hughes","Defender","Fremantle",0.0407425289657668,0,341
+"Fergus Greene","Forward","Western Bulldogs",0.0242632675451585,0,342
+"Fletcher Roberts","Defender","Western Bulldogs",0.0160162705489294,0,343
+"Flynn Appleby","Defender","Collingwood",0.0727400386701997,0,344
+"Fraser McInnes","Forward,Ruck","West Coast",0.0166249256841259,0,345
+"Gary Jnr Ablett","Midfield","Geelong",18.6994057441896,15,21
+"Gary Rohan","Forward","Sydney",0.0691943704458456,0,346
+"George Hewett","Midfield,Forward","Sydney",0.640894895340337,0,347
+"George Horlin-Smith","Midfield","Geelong",0.623000323689114,0,348
+"Hamish Hartlett","Defender","Port Adelaide",0.233683166340387,0,349
+"Harris Andrews","Defender","Brisbane",0.656731815690763,0,350
+"Harrison Himmelberg","Defender","GWS",0.618687259229878,0,351
+"Harrison Marsh","Defender","Sydney",0.0689764715134935,0,352
+"Harrison Petty","Defender","Melbourne",0.00769631521855226,0,353
+"Harry Cunningham","Forward","Sydney",0.306976615363786,0,354
+"Harry McKay","Forward","Carlton",0.119259387996883,0,355
+"Harry Morrison","Defender","Hawthorn",0.31355138507309,0,356
+"Harry Perryman","Defender","GWS",0.0675074495042668,0,357
+"Harry Taylor","Defender,Forward","Geelong",0.063430373120423,0,358
+"Hayden Ballantyne","Forward","Fremantle",0.170351507749433,0,359
+"Hayden Crozier","Defender,Forward","Western Bulldogs",0.942021797185911,0,360
+"Heath Grundy","Defender","Sydney",0.624278483944723,0,361
+"Heath Shaw","Defender","GWS",2.99724892427336,3,107
+"Hugh Greenwood","Midfield","Adelaide",2.5425994718219,2,139
+"Hugh McCluggage","Midfield,Forward","Brisbane",1.9122539085174,2,140
+"Hunter Clark","Defender,Midfield","St Kilda",0.116041627815813,0,362
+"Isaac Cumming","Defender","GWS",0.0150289624922047,0,363
+"Isaac Heeney","Midfield,Forward","Sydney",4.3784495868082,3,108
+"Isaac Smith","Midfield","Hawthorn",5.08151220511988,4,84
+"Ivan Soldo","Ruck","Richmond",0.00875739716650832,0,364
+"Jack Billings","Forward","St Kilda",2.22374529022068,2,141
+"Jack Bowes","Defender","Gold Coast",0.232315789093788,0,365
+"Jack Crisp","Defender","Collingwood",2.00073366423299,0,366
+"Jack Darling","Forward","West Coast",11.5293022175239,13,25
+"Jack Graham","Midfield","Richmond",1.09891842553798,1,172
+"Jack Gunston","Forward","Hawthorn",8.70525029682384,5,69
+"Jack Henry","Defender,Forward","Geelong",0.181777553748228,0,367
+"Jack Higgins","Midfield,Forward","Richmond",0.217285604675796,0,368
+"Jack Hombsch","Defender","Port Adelaide",0.0763306537156341,0,369
+"Jack Leslie","Defender","Gold Coast",0.0320561837297843,0,370
+"Jack Lonie","Forward","St Kilda",0.63102967314961,0,371
+"Jack Madgen","Midfield","Collingwood",0.0323548258311292,0,372
+"Jack Martin","Forward","Gold Coast",0.387074479628938,0,373
+"Jack Newnes","Midfield,Forward","St Kilda",0.406959345440838,0,374
+"Jack Redden","Midfield","West Coast",8.38732463754564,12,27
+"Jack Redpath","Forward","Western Bulldogs",0.0167928650100081,0,375
+"Jack Riewoldt","Forward","Richmond",13.0839664540707,11,33
+"Jack Silvagni","Forward","Carlton",0.121131709575225,0,376
+"Jack Sinclair","Midfield","St Kilda",0.860637455396705,1,173
+"Jack Steele","Midfield","St Kilda",4.05386313762302,5,70
+"Jack Steven","Midfield","St Kilda",9.5342880819978,9,46
+"Jack Trengove","Midfield","Port Adelaide",0.0324442060093018,0,377
+"Jack Viney","Midfield","Melbourne",1.68742853508537,4,85
+"Jack Watts","Forward","Port Adelaide",0.792551217416283,1,174
+"Jack Ziebell","Midfield,Forward","North Melbourne",3.69199103641059,5,71
+"Jackson Macrae","Midfield","Western Bulldogs",19.912324161763,21,7
+"Jackson Merrett","Defender,Forward","Essendon",0.0150289624922047,0,378
+"Jackson Nelson","Defender","West Coast",0.0602540820356729,0,379
+"Jackson Thurlow","Defender,Midfield","Geelong",0.0755984009964811,0,380
+"Jackson Trengove","Forward","Western Bulldogs",0.907852167912358,2,142
+"Jacob Allison","Midfield","Brisbane",0.0244660293687678,0,381
+"Jacob Dawson","Midfield","Gold Coast",0.0228413664906585,0,382
+"Jacob Heron","Defender","Gold Coast",0.0388559526031858,0,383
+"Jacob Hopper","Midfield","GWS",0.592080140722243,0,384
+"Jacob Townsend","Forward","Richmond",0.122184236549278,0,385
+"Jacob Weitering","Defender","Carlton",0.125067811783684,0,386
+"Jade Gresham","Forward","St Kilda",2.00472696393176,2,143
+"Jaeger O'Meara","Midfield","Hawthorn",4.64876224126825,6,63
+"Jaidyn Stephenson","Midfield,Forward","Collingwood",1.97294577740174,1,175
+"Jake Barrett","Forward","Brisbane",0.0516895481177181,0,387
+"Jake Carlisle","Defender","St Kilda",0.590861871780364,0,388
+"Jake Kelly","Defender","Adelaide",0.235184827530585,0,389
+"Jake Kolodjashnij","Defender","Geelong",0.159904685131549,0,390
+"Jake Lever","Defender","Melbourne",0.297988439031632,0,391
+"Jake Lloyd","Defender","Sydney",14.9040186328621,16,18
+"Jake Long","Midfield","Essendon",0.0158720769989281,0,392
+"Jake Melksham","Forward","Melbourne",2.34935685794529,2,144
+"Jake Neade","Forward","Port Adelaide",0.0619621027738135,0,393
+"Jake Stringer","Forward","Essendon",1.4613763041195,2,145
+"Jake Waterman","Forward","West Coast",0.15044199571363,0,394
+"Jamaine Jones","Forward","Geelong",0.0335572517818273,0,395
+"James Aish","Defender,Midfield","Collingwood",0.101233130744777,0,396
+"James Cousins","Midfield","Hawthorn",0.0332852992829577,0,397
+"James Frawley","Defender","Hawthorn",0.147316973877891,0,398
+"James Harmes","Midfield,Forward","Melbourne",3.18500355331022,4,86
+"James Parsons","Forward","Geelong",0.084152367802633,0,399
+"James Sicily","Defender,Forward","Hawthorn",5.13131849269249,7,56
+"James Stewart","Forward","Essendon",0.20966363402465,0,400
+"James Worpel","Midfield","Hawthorn",0.29744670214497,0,401
+"Jamie Cripps","Forward","West Coast",2.39644723041094,3,109
+"Jamie MacMillan","Defender","North Melbourne",0.411562158350044,0,402
+"Jared Polec","Midfield","Port Adelaide",4.68908530465829,4,87
+"Jarman Impey","Forward","Hawthorn",0.475778925315651,0,403
+"Jarrad McVeigh","Defender","Sydney",0.861012535823545,1,176
+"Jarrad Waite","Forward","North Melbourne",5.33769819163966,7,57
+"Jarrod Berry","Midfield","Brisbane",0.804603809694024,0,404
+"Jarrod Garlett","Midfield,Forward","Carlton",0.0643860487812798,0,405
+"Jarrod Harbrow","Defender","Gold Coast",0.7133858096398,0,406
+"Jarrod Lienert","Defender","Port Adelaide",0.051588476164209,0,407
+"Jarrod Pickett","Forward","Carlton",0.0323229577145023,0,408
+"Jarrod Witts","Ruck","Gold Coast",2.67142632412125,3,110
+"Jarryd Blair","Forward","Collingwood",0.0164212988386368,0,409
+"Jarryd Lyons","Midfield","Gold Coast",4.43794957129661,4,88
+"Jarryd Roughead","Forward","Hawthorn",1.28800065380691,0,410
+"Jarryn Geary","Defender","St Kilda",0.635179822369146,0,411
+"Jason Castagna","Forward","Richmond",0.51092434833836,0,412
+"Jason Johannisen","Defender,Forward","Western Bulldogs",2.27583686968439,3,111
+"Jasper Pittard","Defender","Port Adelaide",0.243260350801487,0,413
+"Jay Kennedy-Harris","Midfield","Melbourne",0.0522844504596935,0,414
+"Jayden Hunt","Defender","Melbourne",0.0428092389003455,0,415
+"Jayden Laverde","Forward","Essendon",0.0743288317270362,0,416
+"Jayden Short","Defender","Richmond",0.972332689051566,0,417
+"Jed Anderson","Midfield,Forward","North Melbourne",1.12868450791513,1,177
+"Jed Bews","Defender","Geelong",0.137185621972477,0,418
+"Jed Lamb","Forward","Carlton",0.169129854571746,0,419
+"Jeff Garlett","Forward","Melbourne",2.23156942882652,1,178
+"Jeremy Cameron","Forward","GWS",4.30560104375747,3,112
+"Jeremy Finlayson","Defender,Midfield","GWS",0.153666462767729,0,420
+"Jeremy Howe","Defender","Collingwood",2.14098697607495,3,113
+"Jeremy McGovern","Defender","West Coast",3.35543126443773,4,89
+"Jesse Hogan","Forward","Melbourne",12.2554931856438,12,28
+"Jesse Joyce","Defender","Gold Coast",0.159733639776105,0,421
+"Jesse Lonergan","Midfield","Gold Coast",0.0662830842665954,0,422
+"Jimmy Webster","Defender","St Kilda",0.635523079512137,0,423
+"Joe Daniher","Forward","Essendon",0.102805356243074,0,424
+"Joel Hamling","Defender","Fremantle",0.385825986289463,0,425
+"Joel Selwood","Midfield","Geelong",17.0637539333507,19,12
+"Joel Smith","Defender,Midfield","Melbourne",0.0535321157734425,0,426
+"Jonathan O'Rourke","Midfield","Hawthorn",0.024882320397186,0,427
+"Jonathon Ceglar","Ruck","Hawthorn",0.0994267689415721,0,428
+"Jonathon Patton","Forward","GWS",0.805499383123863,2,146
+"Jordan Cunico","Midfield","Geelong",0.408491102913907,0,429
+"Jordan Dawson","Midfield,Forward","Sydney",0.0399434018543551,0,430
+"Jordan De Goey","Midfield,Forward","Collingwood",6.01113525712646,7,58
+"Jordan Gallucci","Midfield,Forward","Adelaide",0.468436246932246,0,431
+"Jordan Lewis","Defender,Midfield","Melbourne",0.629435645424004,0,432
+"Jordan Murdoch","Midfield,Forward","Geelong",0.261580450992458,0,433
+"Jordan Ridley","Defender","Essendon",0.022213427014316,0,434
+"Jordan Roughead","Ruck","Western Bulldogs",0.103004374416019,0,435
+"Josh Battle","Forward","St Kilda",0.0314805395439812,0,436
+"Josh Bruce","Forward","St Kilda",0.0315549293023604,0,437
+"Josh Caddy","Midfield,Forward","Richmond",7.85783066085663,9,47
+"Josh Daicos","Midfield,Forward","Collingwood",0.102901005232482,0,438
+"Josh Dunkley","Midfield,Forward","Western Bulldogs",3.31250849292519,3,114
+"Josh Jenkins","Forward","Adelaide",3.77102224138021,4,90
+"Josh P. Kennedy","Midfield","Sydney",13.0294407049085,16,19
+"Josh Schache","Forward","Western Bulldogs",0.113987390911327,0,439
+"Josh Smith","Defender","Collingwood",0.00795666209578735,0,440
+"Josh Thomas","Forward","Collingwood",2.48054493693951,3,115
+"Joshua Begley","Forward","Essendon",0.0338141049600146,0,441
+"Joshua Green","Forward","Essendon",0.044179635588946,0,442
+"Joshua Kelly","Midfield","GWS",15.3305534784174,16,20
+"Joshua Kennedy","Forward","West Coast",4.46148936306355,3,116
+"Joshua Schoenfeld","Midfield","Gold Coast",0.0399614869019254,0,443
+"Joshua Wagner","Defender","Melbourne",0.0430973010092763,0,444
+"Joshua Walker","Defender,Forward","Brisbane",0.338799367483327,0,445
+"Justin Westhoff","Midfield,Forward","Port Adelaide",5.21519205522464,10,38
+"Jy Simpkin","Forward","North Melbourne",0.260004957635033,0,446
+"Kade Kolodjashnij","Defender","Gold Coast",0.0716710898635542,0,447
+"Kade Simpson","Defender","Carlton",5.47124296828464,9,48
+"Kaiden Brand","Defender","Hawthorn",0.0830580395214824,0,448
+"Kamdyn Mcintosh","Defender,Midfield","Richmond",0.19202263695582,0,449
+"Kane Farrell","Defender,Midfield","Port Adelaide",0.0374884736673259,0,450
+"Kane Lambert","Midfield,Forward","Richmond",6.32684488604484,9,49
+"Karl Amon","Midfield","Port Adelaide",0.0503239051663914,0,451
+"Kayne Turner","Forward","North Melbourne",0.223409840014598,0,452
+"Kieren Jack","Midfield,Forward","Sydney",0.195109988649183,0,453
+"Kobe Mutch","Midfield","Essendon",0.0227027973047994,0,454
+"Koby Stevens","Midfield","St Kilda",0.0228964834877073,0,455
+"Kyle Cheney","Defender","Adelaide",0.0659778207340668,0,456
+"Kyle Hartigan","Defender","Adelaide",0.102823704414788,0,457
+"Kyle Langford","Midfield,Forward","Essendon",0.848460571612773,1,179
+"Lachie Neale","Midfield","Fremantle",11.6805536435389,10,39
+"Lachie Whitfield","Defender,Midfield","GWS",11.6223166650419,12,29
+"Lachlan Fogarty","Midfield,Forward","Geelong",0.125012213312459,0,458
+"Lachlan Henderson","Defender","Geelong",0.0769837208268995,0,459
+"Lachlan Hunter","Midfield","Western Bulldogs",8.24564964350396,8,53
+"Lachlan Keeffe","Defender,Forward","GWS",0.0458263041523418,0,460
+"Lachlan Murphy","Defender,Forward","Adelaide",0.0644291322015317,0,461
+"Lachlan Plowman","Defender","Carlton",0.0943330203627942,0,462
+"Lachlan Weller","Defender,Midfield","Gold Coast",0.383058764219331,0,463
+"Lance Franklin","Forward","Sydney",15.428431926437,15,22
+"Levi Casboult","Forward,Ruck","Carlton",0.255491912524336,0,464
+"Levi Greenwood","Midfield,Forward","Collingwood",0.0979791967294732,0,465
+"Lewis Jetta","Defender,Midfield","West Coast",0.290768747460168,0,466
+"Lewis Melican","Defender","Sydney",0.0252378527428801,0,467
+"Lewis Pierce","Ruck","St Kilda",0.0210979133164822,0,468
+"Lewis Taylor","Forward","Brisbane",0.639780390645114,0,469
+"Lewis Young","Defender","Western Bulldogs",0.0170616844197721,0,470
+"Liam Baker","Forward","Richmond",0.0246137193354307,0,471
+"Liam Duggan","Defender","West Coast",0.267324267803957,0,472
+"Liam Jones","Defender","Carlton",0.187645553220927,0,473
+"Liam Ryan","Forward","West Coast",0.226225396579988,0,474
+"Liam Shiels","Midfield","Hawthorn",7.05200043477015,9,50
+"Lin Jong","Midfield,Forward","Western Bulldogs",0.0854789647918539,0,475
+"Lincoln McCarthy","Forward","Geelong",0.0172673574796181,0,476
+"Lindsay Thomas","Forward","Port Adelaide",0.0597707870837642,0,477
+"Lochie O'Brien","Defender,Midfield","Carlton",0.13822178765761,0,478
+"Logan Austin","Defender","St Kilda",0.202420895212297,0,479
+"Lukas Webb","Midfield,Forward","Western Bulldogs",0.0363460081297384,0,480
+"Luke Breust","Forward","Hawthorn",8.84470848295761,11,34
+"Luke Brown","Defender","Adelaide",0.265522842051064,0,481
+"Luke Dahlhaus","Midfield,Forward","Western Bulldogs",1.40726163297302,1,180
+"Luke Davies-Uniacke","Midfield","North Melbourne",0.0471403932661664,0,482
+"Luke Dunstan","Midfield","St Kilda",0.827275188953357,0,483
+"Luke Hodge","Defender","Brisbane",1.35295274993894,2,147
+"Luke McDonald","Defender,Midfield","North Melbourne",1.55265368661454,2,148
+"Luke Parker","Midfield","Sydney",11.8706705128957,8,54
+"Luke Ryan","Defender","Fremantle",2.53029933824384,2,149
+"Luke Shuey","Midfield","West Coast",3.32456750550433,1,181
+"Lynden Dunn","Defender","Collingwood",0.126218885913238,0,484
+"Majak Daw","Forward,Ruck","North Melbourne",0.571997946776318,0,485
+"Marc Murphy","Midfield","Carlton",3.38288473394865,2,150
+"Marcus Adams","Defender","Western Bulldogs",0.0793518291658596,0,486
+"Marcus Bontempelli","Midfield","Western Bulldogs",9.89904679509127,8,55
+"Mark Baguley","Defender","Essendon",0.231951956231107,0,487
+"Mark Blicavs","Defender,Midfield","Geelong",0.325247115026745,0,488
+"Mark Hutchings","Midfield,Forward","West Coast",0.752882625678866,0,489
+"Mark Lecras","Forward","West Coast",0.35217266279156,0,490
+"Mark O'Connor","Defender,Midfield","Geelong",0.0335624455217723,0,491
+"Marley Williams","Defender","North Melbourne",0.180105969581649,0,492
+"Mason Cox","Forward,Ruck","Collingwood",1.52140154316687,3,117
+"Mason Redman","Defender","Essendon",0.0283673252341007,0,493
+"Mason Wood","Forward","North Melbourne",2.20994708078386,3,118
+"Matt Crouch","Midfield","Adelaide",15.3373554311032,21,8
+"Matt Eagles","Defender","Brisbane",0.0159294157642775,0,494
+"Matt Guelfi","Midfield,Forward","Essendon",0.149318350411183,0,495
+"Matt Shaw","Midfield","Carlton",0.0159115467010051,0,496
+"Matthew Buntine","Defender","GWS",0.0498747770523776,0,497
+"Matthew De Boer","Forward","GWS",1.52332596252407,2,151
+"Matthew Dea","Defender","Essendon",0.0980177446573371,0,498
+"Matthew Kennedy","Midfield","Carlton",0.150767791001694,0,499
+"Matthew Kreuzer","Ruck","Carlton",1.2923684483107,1,182
+"Matthew Leuenberger","Ruck","Essendon",0.00847248071239842,0,500
+"Matthew Lobbe","Ruck","Carlton",0.169965652603806,0,501
+"Matthew Rosa","Midfield","Gold Coast",0.0717334608213852,0,502
+"Matthew Scharenberg","Defender","Collingwood",0.645659828824045,3,119
+"Matthew Suckling","Defender","Western Bulldogs",0.898705396213767,2,152
+"Matthew Taberner","Forward","Fremantle",0.285664876791902,0,503
+"Matthew Wright","Forward","Carlton",0.451798526637096,0,504
+"Maverick Weller","Forward","St Kilda",0.128306976444404,0,505
+"Max Gawn","Ruck","Melbourne",23.0136983033065,24,3
+"Max Spencer","Defender","Gold Coast",0.0160342093250057,0,506
+"Michael Apeness","Forward,Ruck","Fremantle",0.0387905710294604,0,507
+"Michael Barlow","Midfield,Forward","Gold Coast",0.257399660230192,0,508
+"Michael Hartley","Defender","Essendon",0.0331838478403911,0,509
+"Michael Hibberd","Defender","Melbourne",0.399630699375623,0,510
+"Michael Hurley","Defender","Essendon",2.86372035948357,3,120
+"Michael Johnson","Defender","Fremantle",0.13323821443269,0,511
+"Michael Rischitelli","Defender,Midfield","Gold Coast",0.137543997915152,0,512
+"Michael Walters","Midfield,Forward","Fremantle",4.76983584190135,5,72
+"Mitch Honeychurch","Forward","Western Bulldogs",0.128878306554339,0,513
+"Mitch McGovern","Forward","Adelaide",2.04388662146628,3,121
+"Mitch Robinson","Midfield,Forward","Brisbane",1.54467123674863,1,183
+"Mitchell Brown","Defender,Forward","Essendon",0.60205858193804,1,184
+"Mitchell Crowden","Midfield,Forward","Fremantle",0.056294352861407,0,514
+"Mitchell Duncan","Midfield","Geelong",8.08026177308039,7,59
+"Mitchell Hannan","Midfield,Forward","Melbourne",0.227326475917243,0,515
+"Mitchell Lewis","Forward","Hawthorn",0.00751448124610235,0,516
+"Mitchell Wallis","Midfield,Forward","Western Bulldogs",0.463206255176895,0,517
+"Myles Poholke","Midfield,Forward","Adelaide",0.0638894958610198,0,518
+"Nakia Cockatoo","Forward","Geelong",0.0160342093250057,0,519
+"Nathan Broad","Defender","Richmond",0.115084056641374,0,520
+"Nathan Brown","Defender","St Kilda",0.0555789991893835,0,521
+"Nathan Freeman","Midfield","St Kilda",0.015599390841723,0,522
+"Nathan Fyfe","Midfield","Fremantle",21.6591991282893,19,13
+"Nathan Hrovat","Forward","North Melbourne",0.113077815576809,0,523
+"Nathan Jones","Midfield","Melbourne",4.57904889792439,1,185
+"Nathan Murphy","Defender,Forward","Collingwood",0.0162964740885168,0,524
+"Nathan Vardy","Ruck","West Coast",0.0414249633510602,0,525
+"Nathan Wilson","Defender","Fremantle",0.980765875939646,1,186
+"Nathan Wright","Forward","St Kilda",0.00795666209578735,0,526
+"Neville Jetta","Defender","Melbourne",0.24911998236382,0,527
+"Nic Newman","Midfield","Sydney",0.473052752462274,0,528
+"Nicholas Coffield","Defender,Midfield","St Kilda",0.0693109375782423,0,529
+"Nicholas Graham","Midfield,Forward","Carlton",0.123294772239615,0,530
+"Nicholas Holman","Midfield,Forward","Gold Coast",0.20516127745798,0,531
+"Nicholas Naitanui","Ruck","West Coast",0.82218130129098,0,532
+"Nicholas Robertson","Defender,Midfield","Brisbane",0.352957664293423,0,533
+"Nick Haynes","Defender","GWS",1.25182085293664,3,122
+"Nick Smith","Defender","Sydney",0.185149821553556,0,534
+"Nick Vlastuin","Defender","Richmond",0.853984154374508,0,535
+"Oliver Florent","Forward","Sydney",0.34230377069364,0,536
+"Oliver Wines","Midfield","Port Adelaide",11.4840972469648,10,40
+"Orazio Fantasia","Forward","Essendon",4.16507908637306,3,123
+"Oscar Allen","Forward","West Coast",0.00823310054572525,0,537
+"Oscar McDonald","Defender","Melbourne",0.183390418855004,0,538
+"Oscar McInerney","Forward,Ruck","Brisbane",0.0807833766405081,0,539
+"Paddy Dow","Midfield,Forward","Carlton",0.16694694783099,0,540
+"Pat Kerr","Forward","Carlton",0.0225754699320753,0,541
+"Patrick Ambrose","Defender","Essendon",0.0450415407869379,0,542
+"Patrick Cripps","Midfield","Carlton",14.5896957303475,12,30
+"Patrick Dangerfield","Midfield,Forward","Geelong",14.6338732711668,20,10
+"Patrick Lipinski","Midfield,Forward","Western Bulldogs",0.181174809993351,0,543
+"Patrick McCartin","Forward","St Kilda",0.097209392311355,0,544
+"Patrick Ryder","Ruck","Port Adelaide",0.817932116989768,2,153
+"Patrick Wilson","Midfield,Forward","Adelaide",0.00751448124610235,0,545
+"Paul Ahern","Midfield,Forward","North Melbourne",0.994080464985441,2,154
+"Paul Puopolo","Forward","Hawthorn",2.05416031322118,2,155
+"Paul Seedsman","Defender,Midfield","Adelaide",0.962984162243959,0,546
+"Pearce Hanley","Defender,Midfield","Gold Coast",0.0260511643416297,0,547
+"Peter Wright","Forward","Gold Coast",0.0715589744359733,0,548
+"Phil Davis","Defender","GWS",0.218900577131044,0,549
+"Quinton Narkle","Midfield,Forward","Geelong",0.043015256006536,0,550
+"Reece Conca","Defender","Richmond",0.854286738435872,1,187
+"Rhys Mathieson","Midfield,Forward","Brisbane",0.134392409999835,0,551
+"Rhys Stanley","Forward,Ruck","Geelong",0.772563834007163,2,156
+"Richard Douglas","Midfield","Adelaide",1.98551553197545,3,124
+"Ricky Henderson","Midfield","Hawthorn",0.662534285349189,0,552
+"Riley Bonner","Defender","Port Adelaide",1.00375449236353,2,157
+"Riley Knight","Forward","Adelaide",0.0859306336548252,0,553
+"Roarke Smith","Defender","Western Bulldogs",0.0683990131755071,0,554
+"Robbie Fox","Midfield","Sydney",0.0726810740949849,0,555
+"Robbie Gray","Midfield,Forward","Port Adelaide",9.78206514874301,7,60
+"Robbie Tarrant","Defender","North Melbourne",0.595630585785085,1,188
+"Rohan Bewick","Midfield,Forward","Brisbane",0.0304109335535094,0,556
+"Rory Atkins","Midfield","Adelaide",3.25487831365066,5,73
+"Rory Laird","Defender","Adelaide",15.3410505464342,21,9
+"Rory Lobb","Forward,Ruck","GWS",1.11195535842099,2,158
+"Rory Sloane","Midfield","Adelaide",2.70092541565834,1,189
+"Rory Thompson","Defender","Gold Coast",0.0787342395016479,0,557
+"Rowan Marshall","Forward","St Kilda",0.152682393184065,0,558
+"Ryan Abbott","Ruck","Geelong",0.0847856669688398,0,559
+"Ryan Bastinac","Midfield","Brisbane",0.016202148650888,0,560
+"Ryan Burton","Defender","Hawthorn",0.259718550267077,0,561
+"Ryan Clarke","Defender","North Melbourne",0.501729848073469,0,562
+"Ryan Garthwaite","Defender","Richmond",0.0161986184335359,0,563
+"Ryan Griffen","Midfield,Forward","GWS",0.156036255634989,0,564
+"Ryan Lester","Midfield,Forward","Brisbane",0.180242345110732,0,565
+"Ryan Nyhuis","Defender,Forward","Fremantle",0.0755351676784723,0,566
+"Ryan Schoenmakers","Forward","Hawthorn",0.0448693462378114,0,567
+"Ryley Stoddart","Defender","Sydney",0.00849853611765377,0,568
+"Sam Day","Forward","Gold Coast",0.0818140042138827,0,569
+"Sam Frost","Defender","Melbourne",0.0920816200931036,0,570
+"Sam Gibson","Midfield","Adelaide",0.0818798406714327,0,571
+"Sam Gilbert","Defender","St Kilda",0.096201576385633,0,572
+"Sam Gray","Forward","Port Adelaide",2.20252146321906,4,91
+"Sam Jacobs","Ruck","Adelaide",0.893609896680991,1,190
+"Sam Kerridge","Midfield","Carlton",0.662688939073816,0,573
+"Sam Lloyd","Forward","Richmond",0.0978295778376538,0,574
+"Sam Mayes","Defender","Brisbane",0.0479113685981396,0,575
+"Sam Menegola","Midfield,Forward","Geelong",5.95539422225926,5,74
+"Sam Petrevski-Seton","Midfield,Forward","Carlton",0.249812966137295,0,576
+"Sam Powell-Pepper","Midfield","Port Adelaide",2.00655054614467,3,125
+"Sam Reid","Forward","Sydney",0.0378309435027522,0,577
+"Sam Rowe","Defender","Carlton",0.111426982778753,0,578
+"Sam Switkowski","Forward","Fremantle",0.0194863471854381,0,579
+"Sam Taylor","Defender","GWS",0.0489152847949947,0,580
+"Sam Weideman","Forward","Melbourne",0.0437664452851905,0,581
+"Samuel Murray","Defender","Collingwood",0.131397359469904,0,582
+"Samuel Reid","Forward","GWS",0.136086867768611,0,583
+"Samuel Wright","Defender","North Melbourne",0.188832905127726,0,584
+"Scott D. Thompson","Defender","North Melbourne",2.23213667139248,3,126
+"Scott Jones","Ruck","Fremantle",0.0158899111628832,0,585
+"Scott Lycett","Ruck","West Coast",0.940913099312626,2,159
+"Scott Pendlebury","Midfield","Collingwood",9.33040747454401,12,31
+"Scott Selwood","Midfield","Geelong",0.213910268574236,0,586
+"Sean Darcy","Ruck","Fremantle",0.0782543740667448,0,587
+"Sean Lemmens","Defender,Forward","Gold Coast",0.0821988016381226,0,588
+"Sebastian Ross","Midfield","St Kilda",9.98395484303861,11,35
+"Shai Bolton","Forward","Richmond",0.0160342093250057,0,589
+"Shane Biggs","Defender","Western Bulldogs",0.0457752023135502,0,590
+"Shane Edwards","Midfield,Forward","Richmond",4.12841594752151,3,127
+"Shane Kersten","Forward","Fremantle",0.0738649529782376,0,591
+"Shane Savage","Defender","St Kilda",0.457147577087854,0,592
+"Shannon Hurn","Defender","West Coast",2.94042527849119,4,92
+"Shaun Atley","Forward","North Melbourne",0.686881419544516,0,593
+"Shaun Burgoyne","Midfield","Hawthorn",2.499983172138,2,160
+"Shaun Grigg","Midfield","Richmond",0.519396692736479,0,594
+"Shaun Higgins","Midfield","North Melbourne",12.128933808996,10,41
+"Shaun McKernan","Forward,Ruck","Essendon",1.19775866996398,2,161
+"Steele Sidebottom","Midfield","Collingwood",15.0025642217183,20,11
+"Stefan Giro","Midfield,Forward","Fremantle",0.0797750575176516,0,595
+"Stefan Martin","Ruck","Brisbane",6.26658909673812,7,61
+"Stephen Coniglio","Midfield","GWS",12.016239095224,15,23
+"Stephen Hill","Defender,Midfield","Fremantle",0.349459228574282,0,596
+"Steven May","Defender","Gold Coast",1.30654862938228,2,162
+"Steven Motlop","Midfield,Forward","Port Adelaide",1.51241457329672,1,191
+"Stewart Crameri","Forward","Geelong",0.0347841781404502,0,597
+"Taylin Duman","Defender","Fremantle",0.170786274193205,0,598
+"Taylor Adams","Midfield","Collingwood",5.75909526933234,9,51
+"Taylor Duryea","Defender,Forward","Hawthorn",0.137406742169689,0,599
+"Taylor Walker","Forward","Adelaide",1.26829950888616,3,128
+"Teia Miles","Defender,Forward","Hawthorn",0.107286287508486,0,600
+"Thomas Boyd","Ruck","Western Bulldogs",0.0923306964664265,0,601
+"Thomas J. Lynch","Forward","Gold Coast",3.37112276628433,3,129
+"Thomas Jonas","Defender","Port Adelaide",2.31486836231412,4,93
+"Thomas Murphy","Defender","North Melbourne",0.0237061016780025,0,602
+"Thomas Sheridan","Defender","Fremantle",0.155773988173301,0,603
+"Thomas Stewart","Defender","Geelong",1.89169995108693,3,130
+"Tim Kelly","Midfield","Geelong",4.55564704910627,5,75
+"Tim Membrey","Forward","St Kilda",2.28095711119888,2,163
+"Tim Mohr","Defender","GWS",0.0158662699991235,0,604
+"Tim O'Brien","Forward","Hawthorn",0.0877933324290034,0,605
+"Tim Smith","Forward","Melbourne",0.0689595399788289,0,606
+"Tim Taranto","Midfield,Forward","GWS",1.43598680449263,0,607
+"Timothy English","Forward,Ruck","Western Bulldogs",0.0729906114813963,0,608
+"Toby Greene","Forward","GWS",2.33471985481109,3,131
+"Toby McLean","Midfield,Forward","Western Bulldogs",2.73273609329972,2,164
+"Toby Nankervis","Ruck","Richmond",3.59618865614342,3,132
+"Todd Goldstein","Ruck","North Melbourne",4.28979043563022,4,94
+"Todd Marshall","Forward","Port Adelaide",0.0932200675063926,0,609
+"Tom Barrass","Defender","West Coast",0.215634218932553,0,610
+"Tom Bell","Forward","Brisbane",0.00814135134561836,0,611
+"Tom Bellchambers","Ruck","Essendon",0.844173884180889,1,192
+"Tom Clurey","Defender","Port Adelaide",0.157010500595015,0,612
+"Tom Cole","Defender","West Coast",0.156714500581067,0,613
+"Tom Cutler","Defender,Midfield","Brisbane",2.86403839303187,2,165
+"Tom De Koning","Forward,Ruck","Carlton",0.00787663409816339,0,614
+"Tom Doedee","Defender","Adelaide",0.706147242143999,0,615
+"Tom Hawkins","Forward","Geelong",10.2295068537817,11,36
+"Tom Hickey","Ruck","St Kilda",0.162540821386172,0,616
+"Tom Langdon","Defender","Collingwood",0.374518016362425,0,617
+"Tom Lynch","Forward","Adelaide",2.53725508426593,4,95
+"Tom McCartin","Forward","Sydney",0.0967840126721238,0,618
+"Tom McDonald","Defender,Forward","Melbourne",7.53985962648986,6,64
+"Tom Mitchell","Midfield","Hawthorn",39.0921735286784,41,1
+"Tom Papley","Midfield,Forward","Sydney",0.210212273000659,0,619
+"Tom Phillips","Midfield","Collingwood",5.32629454364861,5,76
+"Tom Rockliff","Midfield,Forward","Port Adelaide",6.07233250658649,5,77
+"Tomas Bugg","Forward","Melbourne",0.0811335656081801,0,620
+"Tory Dickson","Forward","Western Bulldogs",0.0492610920849927,0,621
+"Touk Miller","Midfield","Gold Coast",0.814356186213569,0,622
+"Travis Boak","Midfield,Forward","Port Adelaide",2.22402914830225,2,166
+"Travis Colyer","Midfield,Forward","Essendon",0.101887597344181,0,623
+"Travis Varcoe","Defender,Forward","Collingwood",0.159138658982004,0,624
+"Trent Cotchin","Midfield","Richmond",9.56309102456674,10,42
+"Trent Dumont","Midfield","North Melbourne",3.00604737394492,3,133
+"Trent McKenzie","Defender","Port Adelaide",0.00795666209578735,0,625
+"Wayne Milera","Midfield,Forward","Adelaide",0.661133669032499,0,626
+"Wil Powell","Midfield,Forward","Gold Coast",0.0379015609914405,0,627
+"Will Brodie","Midfield","Gold Coast",0.13932988513973,0,628
+"Will Hayward","Forward","Sydney",0.230348754184023,0,629
+"Will Hoskin-Elliott","Midfield,Forward","Collingwood",1.29539801399794,1,193
+"Will Schofield","Defender","West Coast",0.0331124316787765,0,630
+"Will Walker","Midfield","North Melbourne",0.0321730347045383,0,631
+"William Langford","Midfield,Forward","Hawthorn",0.0427575180883512,0,632
+"Willie Rioli","Forward","West Coast",0.206473278081055,0,633
+"Wylie Buzza","Forward,Ruck","Geelong",0.00793313499956176,0,634
+"Zac Bailey","Midfield","Brisbane",0.091037221325469,0,635
+"Zac Fisher","Midfield,Forward","Carlton",0.301882026580323,0,636
+"Zac Langdon","Forward","GWS",0.176377621093133,0,637
+"Zac Smith","Ruck","Geelong",0.0294227390056668,0,638
+"Zach Guthrie","Defender","Geelong",0.0399409931578572,0,639
+"Zach Tuohy","Defender","Geelong",0.763530335974411,0,640
+"Zachary Merrett","Midfield","Essendon",18.8904264821852,24,4
+"Zaine Cordy","Defender","Western Bulldogs",0.120174498473507,0,641
+"Zak Jones","Midfield","Sydney",0.492158103516754,0,642
