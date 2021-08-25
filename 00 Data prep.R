@@ -2,90 +2,59 @@
 #
 # Author: Saurav Acharya
 # Project: AFL Brownlow prediction
-# Description: Bring together all of the different
-#              data sources for modelling
-# Update: Ensure top 50 player rating is NA for seasons 2012 and 2013
+# Description: Bring together all of the different data sources for modelling
 # Update 2021-08-23: New source of data have solved for data cleaning steps
+# 
 ####################################################################################
 
-install.packages(c("devtools","reshape2","tidyr"))
-require(devtools)
-install_github("Displayr/flipTime")
+# install.packages(c("devtools","reshape2","tidyr"))
+# require(devtools)
+# install_github("Displayr/flipTime")
 
 rm(list = ls())
 gc()
 
-library(fitzRoy)
-library(reshape2)
-library(tidyr)
-library(dplyr)
-library(rvest)
-library(flipTime)
-library(stringr)
+source(paste0(data_dir,"00 Setup.R"))
 
-data_dir <- "C:\\Users\\User\\Documents\\Brownlow\\01 Data\\"
+data_dir <- "C:\\Users\\User\\Documents\\Brownlow\\brownlow_model\\"
 model_dir <- "C:\\Users\\User\\Documents\\Brownlow\\02 Model\\"
 
-# First step is to export a list of player names 
-# This will be used to clean up player names in the brownlow votes data
-# Manual name fixes to ensure each player name is distinct
-player_stats <- fetch_player_stats()
-fryzigg <- fetch_player_stats(season = 2019, source = "fryzigg")
-View(fryzigg)
+# Fetch stats from fryzigg 
+base_stats <- fetch_player_stats(season = list(2014, 2015, 2016, 2017, 2018), source = "fryzigg")
 
-# After cleaning data in excel, import brownlow votes data
-br_raw <- read.csv(file=paste0(data_dir,"brownlow_final.csv"), header=TRUE, sep=",")
-head(br_raw)
+# Add season, full player name and calculate match outcome
+base_stats$season <- as.numeric(format(base_stats$date, "%Y"))
+base_stats$match_outcome <-ifelse(base_stats$match_margin>0,"Win",ifelse(base_stats$match_margin<0,"Loss","Draw"))
+base_stats$player_name <- paste(base_stats$player_first_name, base_stats$player_last_name)
 
-br_summ <- br_raw[,c("Season","Player","Team","Games_played","Games_polled","Total_3_vote_games","Total_2_vote_games","Total_1_vote_games","Total_Votes")]
-View(br_summ)
+# Add brownlow information
+player_stats <- base_stats %>%
+  group_by(season, player_id) %>%
+  mutate(
+    games_polled = length(player_id[brownlow_votes >0]),
+    three_vote_games = length(player_id[brownlow_votes == 3]),
+    two_vote_games = length(player_id[brownlow_votes == 2]),
+    one_vote_games = length(player_id[brownlow_votes == 1]),
+    total_votes = sum(brownlow_votes)
+    )
 
-br_round <- br_raw[,1:26]
+# Join All-Australian
+all_australian <- read_excel(paste0(data_dir,"all_australian_team.xlsx"))
 
-br_round_final <- melt(br_round,value.name ="Votes",variable.name ="Round",id=c("Season","Player","Team"))
-br_round_final$Player <- as.character(br_round_final$Player)
-br_round_final$Team <- as.character(br_round_final$Team)
-br_round_final$Round <- as.character(br_round_final$Round)
-head(br_round_final)
-unique(br_round_final$Votes)
+View(all_australian)
 
-# Replicate brownlow adjustments
-head(fryzigg)
-
-
-
-
-# Only consider regular season matches from 2012 onwards
-mr<-subset(results_long,Season > 2011&Season < 2019&Round.Type == "Regular")
-
-# Calculate match outcome
-mr$Outcome <-ifelse(mr$Margin >0,"Win",ifelse(mr$Margin<0,"Loss","Draw"))
-
-mr$Game <- as.integer(mr$Game)
-mr$Season <- as.integer(mr$Season)
-
-# Join All-Australian and AFL Top 50 Player ratings
-
-all_australian <- read.csv(file=paste0(data_dir,"all_australian_team.csv"), header=TRUE, sep=",",stringsAsFactors = FALSE)
-all_data <-left_join(x=all_data,y=all_australian,by=c("Player","Season","Team")) 
-
+all_data <-left_join(x=player_stats,y=all_australian,by=c("player_name","season","player_team")) 
 all_data$AA_squad <- ifelse(is.na(all_data$AA_squad),0,all_data$AA_squad)
 all_data$AA_team <- ifelse(is.na(all_data$AA_team),0,all_data$AA_team)
 View(all_data)
 
-# afl_top_50 <- read.csv(file=paste0(data_dir,"afl_players_top_50.csv"), header=TRUE, sep=",",stringsAsFactors = FALSE)
-# all_data <-left_join(x=all_data,y=afl_top_50,by=c("Player","Season","Team")) 
+View(filter(all_data, player_last_name == "Ryder") %>% select(player_name))
 
-# all_data$AFL_player_top_50_flag <- ifelse(is.na(all_data$AFL_player_top_50_flag&all_data$Season > 2013),0,all_data$AFL_player_top_50_flag)
-# View(all_data)
+check <- filter(all_data, AA_squad == 1)
+all_australian %>% distinct(season, player_name) %>% group_by(season) %>% summarize(n())
+check %>% distinct(season, player_id) %>% group_by(season) %>% summarize(n())
+View(check %>% distinct(season, player_id, player_name))
 
-
-# check <- filter(all_data, AFL_player_top_50_flag == 1)
-# check %>% distinct(Season, Player) %>% group_by(Season) %>% summarize(n())
-
-check <- filter(all_data, AA_team == 1)
-check %>% distinct(Season, Player) %>% group_by(Season) %>% summarize(n())
-
-saveRDS(all_data, file=paste0(model_dir,"all_data_v4.RDS")) 
+saveRDS(all_data, file=paste0(model_dir,"all_data.RDS")) 
 all_data_restrict <- filter(all_data, Disposals > 7)
-saveRDS(all_data_restrict, file=paste0(model_dir,"all_data_restrict_v4.RDS")) 
+saveRDS(all_data_restrict, file=paste0(model_dir,"all_data_restrict.RDS")) 

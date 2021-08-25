@@ -12,10 +12,6 @@
 rm(list = ls())
 gc()
 
-library(data.table)
-library(RODBC)
-library(caret)
-
 options(scipen=20)
 
 training_prop <- 0.8

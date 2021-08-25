@@ -12,12 +12,6 @@
 rm(list = ls())
 gc()
 
-library(pdp)
-library(gbm)
-library(ggplot2)
-library(ROCR)
-library(dplyr)
-
 data_dir <- "C:\\Users\\Saurav\\Documents\\Brownlow\\01 Data\\"
 model_dir <- "C:\\Users\\Saurav\\Documents\\Brownlow\\02 Model\\"
 

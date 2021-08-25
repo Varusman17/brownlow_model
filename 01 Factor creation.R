@@ -8,19 +8,6 @@
 #         - BR polling history
 ##############################################################################
 
-# install.packages(c("devtools","reshape2","tidyr","eeptools"))
-
-rm(list = ls())
-gc()
-
-library(fitzRoy)
-library(reshape2)
-library(tidyr)
-library(dplyr)
-library(rvest)
-library(sqldf)
-library(eeptools)
-
 data_dir <- "C:\\Users\\Saurav\\Documents\\Brownlow\\01 Data\\"
 model_dir <- "C:\\Users\\Saurav\\Documents\\Brownlow\\02 Model\\"
 
