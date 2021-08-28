@@ -18,6 +18,7 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   
   # Add season, full player name and calculate match outcome
   base_stats <- base_stats %>% 
+    filter(match_round < 24) %>%
     mutate(
       season = as.numeric(format(date, "%Y")),
       margin = ifelse(player_team == match_home_team,match_home_team_score - match_away_team_score,match_away_team_score - match_home_team_score),
@@ -49,10 +50,7 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   all_data$AA_squad <- ifelse(is.na(all_data$AA_squad),0,all_data$AA_squad)
   all_data$AA_team <- ifelse(is.na(all_data$AA_team),0,all_data$AA_team)
   
+  # Restrict to just home and away team
+  
   return(all_data)
 }
-
-
-
-
-
