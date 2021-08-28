@@ -7,16 +7,11 @@
 # 
 ####################################################################################
 
-# install.packages(c("devtools","reshape2","tidyr"))
-# require(devtools)
-# install_github("Displayr/flipTime")
-
 list_of_packages <- c("readxl"
                       , "fitzRoy"
                       , "reshape2"
                       , "tidyverse"
                       , "rvest"
-                      , "flipTime"
                       , "data.table"
                       , "RODBC"
                       , "caret"
@@ -26,6 +21,7 @@ list_of_packages <- c("readxl"
                       , "ROCR"
                       , "sqldf"
                       , "eeptools"
+                      , "here"
                       )
 
 new_packages <- list_of_packages[!(list_of_packages %in% installed.packages()[,"Package"])]
