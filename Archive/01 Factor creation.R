@@ -19,75 +19,75 @@ all_data <- readRDS(file=paste0(model_dir,"all_data_restrict_v4.RDS"))
 br_raw <- read.csv(file=paste0(data_dir,"brownlow_final.csv"), header=TRUE, sep=",")
 # head(br_raw)
 
-br_summ <- br_raw[,c("Season","Player","Team","Games_played","Games_polled","Total_3_vote_games","Total_2_vote_games","Total_1_vote_games","Total_Votes")]
+br_summ <- br_raw[,c("season","player_name","player_team","games_played","games_polled","three_vote_games","two_vote_games","one_vote_games","total_votes")]
 # View(br_summ)
 
 # Rank the brownlow votes information
 
-br_summ <- br_summ %>% arrange(Season, desc(Total_Votes)) %>% group_by(Season) %>% mutate(Season_BR_rank = row_number(desc(Total_Votes)))
-br_summ <- br_summ %>% arrange(Season, Team, desc(Total_Votes)) %>% group_by(Season, Team) %>% mutate(Team_BR_rank = row_number(desc(Total_Votes)))
-br_summ$Season_more_than_5_BR <- ifelse(br_summ$Total_Votes>4, 1, 0)
-br_summ$Season_more_than_10_BR <- ifelse(br_summ$Total_Votes>9, 1, 0)
-br_summ$Season_more_than_15_BR <- ifelse(br_summ$Total_Votes>14, 1, 0)
-br_summ$Season_more_than_20_BR <- ifelse(br_summ$Total_Votes>19, 1, 0)
+br_summ <- br_summ %>% arrange(season, desc(total_votes)) %>% group_by(season) %>% mutate(season_BR_rank = row_number(desc(total_votes)))
+br_summ <- br_summ %>% arrange(season, Team, desc(total_votes)) %>% group_by(season, Team) %>% mutate(team_BR_rank = row_number(desc(total_votes)))
+br_summ$season_more_than_5_BR <- ifelse(br_summ$total_votes>4, 1, 0)
+br_summ$season_more_than_10_BR <- ifelse(br_summ$total_votes>9, 1, 0)
+br_summ$season_more_than_15_BR <- ifelse(br_summ$total_votes>14, 1, 0)
+br_summ$season_more_than_20_BR <- ifelse(br_summ$total_votes>19, 1, 0)
 
 View(br_summ)
 
 all_data_ess <- 
   sqldf('SELECT A.*
-        , B.Team_BR_rank AS Prev_season_team_BR_rank
-        , B.Season_BR_rank AS Prev_season_BR_rank
-        , B.Season_more_than_5_BR AS Prev_season_more_than_5_BR
-        , B.Season_more_than_10_BR AS Prev_season_more_than_10_BR
-        , B.Season_more_than_15_BR AS Prev_season_more_than_15_BR
-        , B.Season_more_than_20_BR AS Prev_season_more_than_20_BR
+        , B.team_BR_rank AS prev_season_team_BR_rank
+        , B.season_BR_rank AS prev_season_BR_rank
+        , B.season_more_than_5_BR AS prev_season_more_than_5_BR
+        , B.season_more_than_10_BR AS prev_season_more_than_10_BR
+        , B.season_more_than_15_BR AS prev_season_more_than_15_BR
+        , B.season_more_than_20_BR AS prev_season_more_than_20_BR
         FROM all_data A
         LEFT JOIN br_summ B
         ON A.Player = B.Player
-        AND A.Season = B.Season + 2
-        WHERE A.Season IN ("2017") AND A.Player IN ("Dyson Heppell","Cale Hooker","Michael Hurley","Tom Bellchambers")
+        AND A.season = B.season + 2
+        WHERE A.season IN ("2017") AND A.Player IN ("Dyson Heppell","Cale Hooker","Michael Hurley","Tom Bellchambers")
         ')
 
 # View(all_data_ess)
 
 all_data_br <- 
 sqldf('SELECT A.*
-              , B.Team_BR_rank AS Prev_season_team_BR_rank
-              , B.Season_BR_rank AS Prev_season_BR_rank
-              , B.Season_more_than_5_BR AS Prev_season_more_than_5_BR
-              , B.Season_more_than_10_BR AS Prev_season_more_than_10_BR
-              , B.Season_more_than_15_BR AS Prev_season_more_than_15_BR
-              , B.Season_more_than_20_BR AS Prev_season_more_than_20_BR
+              , B.team_BR_rank AS prev_season_team_BR_rank
+              , B.season_BR_rank AS prev_season_BR_rank
+              , B.season_more_than_5_BR AS prev_season_more_than_5_BR
+              , B.season_more_than_10_BR AS prev_season_more_than_10_BR
+              , B.season_more_than_15_BR AS prev_season_more_than_15_BR
+              , B.season_more_than_20_BR AS prev_season_more_than_20_BR
       FROM all_data A
       LEFT JOIN br_summ B
         ON A.Player = B.Player
-        AND A.Season = B.Season + 1
+        AND A.season = B.season + 1
       ')
 
-all_data_br <- all_data_br[!(all_data_br$Season=="2017" & all_data_br$Player=="Dyson Heppell"),]
-all_data_br <- all_data_br[!(all_data_br$Season=="2017" & all_data_br$Player=="Cale Hooker"),]
-all_data_br <- all_data_br[!(all_data_br$Season=="2017" & all_data_br$Player=="Michael Hurley"),]
-all_data_br <- all_data_br[!(all_data_br$Season=="2017" & all_data_br$Player=="Tom Bellchambers"),]
+all_data_br <- all_data_br[!(all_data_br$season=="2017" & all_data_br$Player=="Dyson Heppell"),]
+all_data_br <- all_data_br[!(all_data_br$season=="2017" & all_data_br$Player=="Cale Hooker"),]
+all_data_br <- all_data_br[!(all_data_br$season=="2017" & all_data_br$Player=="Michael Hurley"),]
+all_data_br <- all_data_br[!(all_data_br$season=="2017" & all_data_br$Player=="Tom Bellchambers"),]
 
 all_data <- rbind(all_data_br,all_data_ess)
 View(all_data)
 
 all_data <-
   sqldf('SELECT A.*
-        , B.Games_played
-        , B.Games_polled
-        , B.Total_Votes
+        , B.games_played
+        , B.games_polled
+        , B.total_votes
         FROM all_data A
         LEFT JOIN br_summ B
         ON A.Player = B.Player
-        AND A.Season = B.Season
+        AND A.season = B.season
         ')
   
-all_data$Prev_season_top_5_BR_rank <- ifelse(all_data$Prev_season_BR_rank <6, 1, 0)
-all_data$Prev_season_top_10_BR_rank <- ifelse(all_data$Prev_season_BR_rank <11, 1, 0)
-all_data$Prev_season_top_20_BR_rank <- ifelse(all_data$Prev_season_BR_rank <21, 1, 0)
-all_data$Prev_season_top_30_BR_rank <- ifelse(all_data$Prev_season_BR_rank <31, 1, 0)
-all_data$Prev_season_top_50_BR_rank <- ifelse(all_data$Prev_season_BR_rank <51, 1, 0)
+all_data$prev_season_top_5_BR_rank <- ifelse(all_data$prev_season_BR_rank <6, 1, 0)
+all_data$prev_season_top_10_BR_rank <- ifelse(all_data$prev_season_BR_rank <11, 1, 0)
+all_data$prev_season_top_20_BR_rank <- ifelse(all_data$prev_season_BR_rank <21, 1, 0)
+all_data$prev_season_top_30_BR_rank <- ifelse(all_data$prev_season_BR_rank <31, 1, 0)
+all_data$prev_season_top_50_BR_rank <- ifelse(all_data$prev_season_BR_rank <51, 1, 0)
 # Calculate player age
 
 all_data$Player_age <- floor(age_calc(all_data$DOB,all_data$Date, units = "years"))
@@ -99,176 +99,176 @@ all_australian <- read.csv(file=paste0(data_dir,"all_australian_team.csv"), head
 
 all_data <-
   sqldf('SELECT A.*
-              , B.AA_team as Prev_season_AA_team
-              , B.AA_squad AS Prev_season_AA_squad
+              , B.AA_team as prev_season_AA_team
+              , B.AA_squad AS prev_season_AA_squad
 
          FROM all_data A
          LEFT JOIN all_australian B
-         ON A.Player = B.Player
-         AND A.Season = B.Season + 1
+         ON A.player_name = B.player_name
+         AND A.season = B.season + 1
         
         ')
-all_data$Prev_season_AA_squad <- ifelse(is.na(all_data$Prev_season_AA_squad),0,all_data$Prev_season_AA_squad)
-all_data$Prev_season_AA_team <- ifelse(is.na(all_data$Prev_season_AA_team),0,all_data$Prev_season_AA_team)
+all_data$prev_season_AA_squad <- ifelse(is.na(all_data$prev_season_AA_squad),0,all_data$prev_season_AA_squad)
+all_data$prev_season_AA_team <- ifelse(is.na(all_data$prev_season_AA_team),0,all_data$prev_season_AA_team)
 
 #all_data <-
 #  sqldf('SELECT A.*
-#        , B.AFL_player_top_50_flag as Prev_season_AFL_player_top_50_flag
-#        , B.AFL_player_top_50_rank as Prev_season_AFL_player_top_50_rank
+#        , B.AFL_player_top_50_flag as prev_season_AFL_player_top_50_flag
+#        , B.AFL_player_top_50_rank as prev_season_AFL_player_top_50_rank
 #        FROM all_data A
 #        LEFT JOIN afl_top_50 B
 #        ON A.Player = B.Player
-#        AND A.Season = B.Season + 1
+#        AND A.season = B.season + 1
 #        
 #        ')
-# all_data$Prev_season_AFL_player_top_50_flag <- ifelse(is.na(all_data$Prev_season_AFL_player_top_50_flag&all_data$Season>2014),0,all_data$Prev_season_AFL_player_top_50_flag)
+# all_data$prev_season_AFL_player_top_50_flag <- ifelse(is.na(all_data$prev_season_AFL_player_top_50_flag&all_data$season>2014),0,all_data$prev_season_AFL_player_top_50_flag)
 
 # Rank the factors on a team / match / season level
 
 # SC scores
-all_data <- all_data %>% arrange(Match_id, desc(SC)) %>% group_by(Match_id) %>% mutate(Match_SC_rank = row_number(desc(SC)))
-all_data <- all_data %>% arrange(Match_id, Team, desc(SC)) %>% group_by(Match_id,Team) %>% mutate(Team_SC_rank = row_number(desc(SC)))
-all_data <- all_data %>% arrange(Season, desc(SC), desc(AF)) %>% group_by(Season) %>% mutate(Season_SC_rank = order(desc(SC), desc(AF)))
+all_data <- all_data %>% arrange(match_id, desc(supercoach_score)) %>% group_by(match_id) %>% mutate(match_supercoach_scorerank = row_number(desc(supercoach_score)))
+all_data <- all_data %>% arrange(match_id, Team, desc(supercoach_score)) %>% group_by(match_id,Team) %>% mutate(team_supercoach_scorerank = row_number(desc(supercoach_score)))
+all_data <- all_data %>% arrange(season, desc(supercoach_score), desc(afl_fantasy_score)) %>% group_by(season) %>% mutate(season_supercoach_scorerank = order(desc(supercoach_score), desc(afl_fantasy_score)))
 
 #AF scores
-all_data <- all_data %>% arrange(Match_id, desc(AF)) %>% group_by(Match_id) %>% mutate(Match_AF_rank = row_number(desc(AF)))
-all_data <- all_data %>% arrange(Match_id, Team, desc(AF)) %>% group_by(Match_id,Team) %>% mutate(Team_AF_rank = row_number(desc(AF)))
-all_data <- all_data %>% arrange(Season, desc(SC), desc(AF)) %>% group_by(Season) %>% mutate(Season_AF_rank = order(desc(AF), desc(SC)))
+all_data <- all_data %>% arrange(match_id, desc(afl_fantasy_score)) %>% group_by(match_id) %>% mutate(match_afl_fantasy_scorerank = row_number(desc(afl_fantasy_score)))
+all_data <- all_data %>% arrange(match_id, Team, desc(afl_fantasy_score)) %>% group_by(match_id,Team) %>% mutate(team_afl_fantasy_scorerank = row_number(desc(afl_fantasy_score)))
+all_data <- all_data %>% arrange(season, desc(supercoach_score), desc(afl_fantasy_score)) %>% group_by(season) %>% mutate(season_afl_fantasy_scorerank = order(desc(afl_fantasy_score), desc(supercoach_score)))
 
 # Contested possessions
-all_data <- all_data %>% arrange(Match_id, desc(Contested_possessions),desc(SC)) %>% group_by(Match_id) %>% mutate(Match_CP_rank = order(desc(Contested_possessions), desc(SC)))
-all_data <- all_data %>% arrange(Match_id, Team, desc(Contested_possessions),desc(SC)) %>% group_by(Match_id,Team) %>% mutate(Team_CP_rank = order(desc(Contested_possessions), desc(SC)))
-all_data <- all_data %>% arrange(Season, desc(Contested_possessions), desc(SC)) %>% group_by(Season) %>% mutate(Season_CP_rank = order(desc(Contested_possessions), desc(SC)))
+all_data <- all_data %>% arrange(match_id, desc(Contested_possessions),desc(supercoach_score)) %>% group_by(match_id) %>% mutate(match_CP_rank = order(desc(Contested_possessions), desc(supercoach_score)))
+all_data <- all_data %>% arrange(match_id, Team, desc(Contested_possessions),desc(supercoach_score)) %>% group_by(match_id,Team) %>% mutate(team_CP_rank = order(desc(Contested_possessions), desc(supercoach_score)))
+all_data <- all_data %>% arrange(season, desc(Contested_possessions), desc(supercoach_score)) %>% group_by(season) %>% mutate(season_CP_rank = order(desc(Contested_possessions), desc(supercoach_score)))
 
 # Uncontested possessions
-all_data <- all_data %>% arrange(Match_id, desc(Uncontested_possessions),desc(SC)) %>% group_by(Match_id) %>% mutate(Match_UP_rank = order(desc(Uncontested_possessions), desc(SC)))
-all_data <- all_data %>% arrange(Match_id, Team, desc(Uncontested_possessions),desc(SC)) %>% group_by(Match_id,Team) %>% mutate(Team_UP_rank = order(desc(Uncontested_possessions), desc(SC)))
-all_data <- all_data %>% arrange(Season, desc(Uncontested_possessions), desc(SC)) %>% group_by(Season) %>% mutate(Season_UP_rank = order(desc(Uncontested_possessions), desc(SC)))
+all_data <- all_data %>% arrange(match_id, desc(Uncontested_possessions),desc(supercoach_score)) %>% group_by(match_id) %>% mutate(match_UP_rank = order(desc(Uncontested_possessions), desc(supercoach_score)))
+all_data <- all_data %>% arrange(match_id, Team, desc(Uncontested_possessions),desc(supercoach_score)) %>% group_by(match_id,Team) %>% mutate(team_UP_rank = order(desc(Uncontested_possessions), desc(supercoach_score)))
+all_data <- all_data %>% arrange(season, desc(Uncontested_possessions), desc(supercoach_score)) %>% group_by(season) %>% mutate(season_UP_rank = order(desc(Uncontested_possessions), desc(supercoach_score)))
 
 # Disposals
-all_data <- all_data %>% arrange(Match_id, desc(Disposals), desc(SC)) %>% group_by(Match_id) %>% mutate(Match_D_rank = order(desc(Disposals), desc(SC)))
-all_data <- all_data %>% arrange(Match_id, Team, desc(Disposals), desc(SC)) %>% group_by(Match_id,Team) %>% mutate(Team_D_rank = order(desc(Disposals), desc(SC)))
-all_data <- all_data %>% arrange(Season, desc(Disposals), desc(SC)) %>% group_by(Season) %>% mutate(Season_D_rank = order(desc(Disposals), desc(SC)))
+all_data <- all_data %>% arrange(match_id, desc(Disposals), desc(supercoach_score)) %>% group_by(match_id) %>% mutate(match_D_rank = order(desc(Disposals), desc(supercoach_score)))
+all_data <- all_data %>% arrange(match_id, Team, desc(Disposals), desc(supercoach_score)) %>% group_by(match_id,Team) %>% mutate(team_D_rank = order(desc(Disposals), desc(supercoach_score)))
+all_data <- all_data %>% arrange(season, desc(Disposals), desc(supercoach_score)) %>% group_by(season) %>% mutate(season_D_rank = order(desc(Disposals), desc(supercoach_score)))
 
 # Effective disposals
-all_data <- all_data %>% arrange(Match_id, desc(Effective_disposals), desc(SC)) %>% group_by(Match_id) %>% mutate(Match_ED_rank = order(desc(Effective_disposals), desc(SC)))
-all_data <- all_data %>% arrange(Match_id, Team, desc(Effective_disposals), desc(SC)) %>% group_by(Match_id,Team) %>% mutate(Team_ED_rank = order(desc(Effective_disposals), desc(SC)))
-all_data <- all_data %>% arrange(Season, desc(Effective_disposals), desc(SC)) %>% group_by(Season) %>% mutate(Season_ED_rank = order(desc(Effective_disposals), desc(SC)))
+all_data <- all_data %>% arrange(match_id, desc(Effective_disposals), desc(supercoach_score)) %>% group_by(match_id) %>% mutate(match_ED_rank = order(desc(Effective_disposals), desc(supercoach_score)))
+all_data <- all_data %>% arrange(match_id, Team, desc(Effective_disposals), desc(supercoach_score)) %>% group_by(match_id,Team) %>% mutate(team_ED_rank = order(desc(Effective_disposals), desc(supercoach_score)))
+all_data <- all_data %>% arrange(season, desc(Effective_disposals), desc(supercoach_score)) %>% group_by(season) %>% mutate(season_ED_rank = order(desc(Effective_disposals), desc(supercoach_score)))
 
 # Kicks
-all_data <- all_data %>% arrange(Match_id, desc(Kicks), desc(SC)) %>% group_by(Match_id) %>% mutate(Match_K_rank = order(desc(Kicks), desc(SC)))
-all_data <- all_data %>% arrange(Match_id, Team, desc(Kicks), desc(SC)) %>% group_by(Match_id,Team) %>% mutate(Team_K_rank = order(desc(Kicks), desc(SC)))
-all_data <- all_data %>% arrange(Season, desc(Kicks), desc(SC)) %>% group_by(Season) %>% mutate(Season_K_rank = order(desc(Kicks), desc(SC)))
+all_data <- all_data %>% arrange(match_id, desc(Kicks), desc(supercoach_score)) %>% group_by(match_id) %>% mutate(match_K_rank = order(desc(Kicks), desc(supercoach_score)))
+all_data <- all_data %>% arrange(match_id, Team, desc(Kicks), desc(supercoach_score)) %>% group_by(match_id,Team) %>% mutate(team_K_rank = order(desc(Kicks), desc(supercoach_score)))
+all_data <- all_data %>% arrange(season, desc(Kicks), desc(supercoach_score)) %>% group_by(season) %>% mutate(season_K_rank = order(desc(Kicks), desc(supercoach_score)))
 
 # Handballs
-all_data <- all_data %>% arrange(Match_id, desc(Handballs), desc(SC)) %>% group_by(Match_id) %>% mutate(Match_H_rank = order(desc(Handballs), desc(SC)))
-all_data <- all_data %>% arrange(Match_id, Team, desc(Handballs), desc(SC)) %>% group_by(Match_id,Team) %>% mutate(Team_H_rank = order(desc(Handballs), desc(SC)))
-all_data <- all_data %>% arrange(Season, desc(Handballs), desc(SC)) %>% group_by(Season) %>% mutate(Season_H_rank = order(desc(Handballs), desc(SC)))
+all_data <- all_data %>% arrange(match_id, desc(Handballs), desc(supercoach_score)) %>% group_by(match_id) %>% mutate(match_H_rank = order(desc(Handballs), desc(supercoach_score)))
+all_data <- all_data %>% arrange(match_id, Team, desc(Handballs), desc(supercoach_score)) %>% group_by(match_id,Team) %>% mutate(team_H_rank = order(desc(Handballs), desc(supercoach_score)))
+all_data <- all_data %>% arrange(season, desc(Handballs), desc(supercoach_score)) %>% group_by(season) %>% mutate(season_H_rank = order(desc(Handballs), desc(supercoach_score)))
 
 # Marks
-all_data <- all_data %>% arrange(Match_id, desc(Marks)) %>% group_by(Match_id) %>% mutate(Match_M_rank = dense_rank(desc(Marks)))
-all_data <- all_data %>% arrange(Match_id, Team, desc(Marks)) %>% group_by(Match_id,Team) %>% mutate(Team_M_rank = dense_rank(desc(Marks)))
-all_data <- all_data %>% arrange(Season, desc(Marks), desc(SC)) %>% group_by(Season) %>% mutate(Season_M_rank = order(desc(Marks), desc(SC)))
+all_data <- all_data %>% arrange(match_id, desc(Marks)) %>% group_by(match_id) %>% mutate(match_M_rank = dense_rank(desc(Marks)))
+all_data <- all_data %>% arrange(match_id, Team, desc(Marks)) %>% group_by(match_id,Team) %>% mutate(team_M_rank = dense_rank(desc(Marks)))
+all_data <- all_data %>% arrange(season, desc(Marks), desc(supercoach_score)) %>% group_by(season) %>% mutate(season_M_rank = order(desc(Marks), desc(supercoach_score)))
 
 # Goals
-all_data <- all_data %>% arrange(Match_id, desc(Goals), desc(SC)) %>% group_by(Match_id) %>% mutate(Match_G_rank = dense_rank(desc(Goals)))
-all_data <- all_data %>% arrange(Match_id, Team, desc(Goals), desc(SC)) %>% group_by(Match_id,Team) %>% mutate(Team_G_rank = dense_rank(desc(Goals)))
-all_data <- all_data %>% arrange(Season, desc(Goals), desc(SC)) %>% group_by(Season) %>% mutate(Season_G_rank = order(desc(Goals), desc(SC)))
+all_data <- all_data %>% arrange(match_id, desc(Goals), desc(supercoach_score)) %>% group_by(match_id) %>% mutate(match_G_rank = dense_rank(desc(Goals)))
+all_data <- all_data %>% arrange(match_id, Team, desc(Goals), desc(supercoach_score)) %>% group_by(match_id,Team) %>% mutate(team_G_rank = dense_rank(desc(Goals)))
+all_data <- all_data %>% arrange(season, desc(Goals), desc(supercoach_score)) %>% group_by(season) %>% mutate(season_G_rank = order(desc(Goals), desc(supercoach_score)))
 
 # Proportion of goals kicked for team
 all_data$Goals <- as.integer(all_data$Goals)
-all_data$Team_goals <- as.integer(all_data$Team_goals)
-all_data <- all_data %>% mutate(Prop_goals = Goals / Team_goals)
-all_data <- filter(all_data, Season > 2011)
+all_data$team_goals <- as.integer(all_data$team_goals)
+all_data <- all_data %>% mutate(Prop_goals = Goals / team_goals)
+all_data <- filter(all_data, season > 2011)
 
 # Assign a player id and then a record id for tracking purposes
 player_id <- data.frame(unique(all_data$Player))
-names(player_id)[1] <- c("Player")
-player_id <- player_id %>% arrange(Player) %>% mutate(Player_id = order(Player))
-all_data <- inner_join(x=all_data,y=player_id,by=c("Player"))
+names(player_id)[1] <- c("player_name")
+player_id <- player_id %>% arrange(Player) %>% mutate(player_id = order(Player))
+all_data <- inner_join(x=all_data,y=player_id,by=c("player_name"))
 
 # View(all_data)
 
 # Add more player level features
-all_data <- all_data %>% group_by(Player_id) %>% mutate(First_season = min(Season))
-all_data$Num_seasons <- all_data$Season - all_data$First_season + 1
+all_data <- all_data %>% group_by(player_id) %>% mutate(First_season = min(season))
+all_data$num_seasons <- all_data$season - all_data$First_season + 1
 
 # Compute the avg number of times a player has been selected to AA squad / team
 
-player <- all_data %>% distinct(Season,Player,AA_squad,AA_team,Num_seasons,Prev_season_more_than_5_BR, Prev_season_more_than_10_BR, Prev_season_more_than_15_BR, Prev_season_more_than_20_BR, Games_played, Games_polled, Total_Votes)
+player <- all_data %>% distinct(season,player_name,AA_squad,AA_team,num_seasons,prev_season_more_than_5_BR, prev_season_more_than_10_BR, prev_season_more_than_15_BR, prev_season_more_than_20_BR, games_played, games_polled, total_votes)
 # player$AFL_player_top_50_flag <- ifelse(is.na(player$AFL_player_top_50_flag),0,player$AFL_player_top_50_flag)
-player$Games_played <- ifelse(is.na(player$Games_played),0,player$Games_played)
-player$Games_polled <- ifelse(is.na(player$Games_polled),0,player$Games_polled)
-player$Total_Votes <- ifelse(is.na(player$Total_Votes),0,player$Total_Votes)
-player <- player %>% arrange(Player,Season) %>% mutate(Num_AA_team = cumsum(AA_team))
-player <- player %>% arrange(Player,Season) %>% mutate(Num_AA_squad = cumsum(AA_squad))
-# player <- player %>% arrange(Player,Season) %>% mutate(Num_AFL_top_50 = cumsum(AFL_player_top_50_flag))
-player$Avg_AA_team <- player$Num_AA_team / player$Num_seasons
-player$Avg_AA_squad <- player$Num_AA_squad / player$Num_seasons
+player$games_played <- ifelse(is.na(player$games_played),0,player$games_played)
+player$games_polled <- ifelse(is.na(player$games_polled),0,player$games_polled)
+player$total_votes <- ifelse(is.na(player$total_votes),0,player$total_votes)
+player <- player %>% arrange(player_name,season) %>% mutate(num_AA_team = cumsum(AA_team))
+player <- player %>% arrange(player_name,season) %>% mutate(num_AA_squad = cumsum(AA_squad))
+# player <- player %>% arrange(player_name,season) %>% mutate(num_AFL_top_50 = cumsum(AFL_player_top_50_flag))
+player$avg_AA_team <- player$num_AA_team / player$num_seasons
+player$avg_AA_squad <- player$num_AA_squad / player$num_seasons
 
 # Compute a player's previous brownlow polling history
 
-player$Prev_season_more_than_5_BR <- ifelse(is.na(player$Prev_season_more_than_5_BR),0,player$Prev_season_more_than_5_BR)
-player$Prev_season_more_than_10_BR <- ifelse(is.na(player$Prev_season_more_than_10_BR),0,player$Prev_season_more_than_10_BR)
-player$Prev_season_more_than_15_BR <- ifelse(is.na(player$Prev_season_more_than_15_BR),0,player$Prev_season_more_than_15_BR)
-player$Prev_season_more_than_20_BR <- ifelse(is.na(player$Prev_season_more_than_20_BR),0,player$Prev_season_more_than_20_BR)
-player <- player %>% arrange(Player,Season) %>% mutate(Num_season_more_than_5_BR = cumsum(Prev_season_more_than_5_BR))
-player <- player %>% arrange(Player,Season) %>% mutate(Num_season_more_than_10_BR = cumsum(Prev_season_more_than_10_BR))
-player <- player %>% arrange(Player,Season) %>% mutate(Num_season_more_than_15_BR = cumsum(Prev_season_more_than_15_BR))
-player <- player %>% arrange(Player,Season) %>% mutate(Num_season_more_than_20_BR = cumsum(Prev_season_more_than_20_BR))
-player <- player %>% arrange(Player,Season) %>% mutate(Total_Votes_since_2012 = cumsum(Total_Votes))
-player$Avg_games_polled <- player$Games_polled / player$Games_played
+player$prev_season_more_than_5_BR <- ifelse(is.na(player$prev_season_more_than_5_BR),0,player$prev_season_more_than_5_BR)
+player$prev_season_more_than_10_BR <- ifelse(is.na(player$prev_season_more_than_10_BR),0,player$prev_season_more_than_10_BR)
+player$prev_season_more_than_15_BR <- ifelse(is.na(player$prev_season_more_than_15_BR),0,player$prev_season_more_than_15_BR)
+player$prev_season_more_than_20_BR <- ifelse(is.na(player$prev_season_more_than_20_BR),0,player$prev_season_more_than_20_BR)
+player <- player %>% arrange(player_name,season) %>% mutate(num_season_more_than_5_BR = cumsum(prev_season_more_than_5_BR))
+player <- player %>% arrange(player_name,season) %>% mutate(num_season_more_than_10_BR = cumsum(prev_season_more_than_10_BR))
+player <- player %>% arrange(player_name,season) %>% mutate(num_season_more_than_15_BR = cumsum(prev_season_more_than_15_BR))
+player <- player %>% arrange(player_name,season) %>% mutate(num_season_more_than_20_BR = cumsum(prev_season_more_than_20_BR))
+player <- player %>% arrange(player_name,season) %>% mutate(total_votes_since_2012 = cumsum(total_votes))
+player$avg_games_polled <- player$games_polled / player$games_played
 
 # Compute the avg number of times a player has been selected as a Top 50 player
 
-player_adjusted <- filter(player,Season > 2013)
-player_adjusted <- player_adjusted %>% group_by(Player_id) %>% mutate(First_season = min(Season))
-player_adjusted$Num_season_since_2014 <- player_adjusted$Season - player_adjusted$First_season + 1
-#player_adjusted$Avg_AFL_top_50 <- player_adjusted$Num_AFL_top_50 / player_adjusted$Num_season_since_2014
+player_adjusted <- filter(player_name,season > 2013)
+player_adjusted <- player_adjusted %>% group_by(player_id) %>% mutate(First_season = min(season))
+player_adjusted$num_season_since_2014 <- player_adjusted$season - player_adjusted$First_season + 1
+#player_adjusted$avg_AFL_top_50 <- player_adjusted$num_AFL_top_50 / player_adjusted$num_season_since_2014
 player_adjusted <- within(player_adjusted,rm(First_season))
 library(sqldf)
 player_final <-
   sqldf('SELECT A.*
-        , B.Num_season_since_2014
+        , B.num_season_since_2014
         
         FROM player A
         LEFT JOIN player_adjusted B
         ON A.Player = B.Player
-        AND A.Season = B.Season
+        AND A.season = B.season
         
         ')
-#player_final$AFL_player_top_50_flag <- ifelse(player_final$Season<2014,NA,player_final$AFL_player_top_50_flag)
-#player_final$Num_AFL_top_50 <- ifelse(player_final$Season<2014,NA,player_final$Num_AFL_top_50)
+#player_final$AFL_player_top_50_flag <- ifelse(player_final$season<2014,NA,player_final$AFL_player_top_50_flag)
+#player_final$num_AFL_top_50 <- ifelse(player_final$season<2014,NA,player_final$num_AFL_top_50)
 player_final <-
   sqldf('SELECT A.*
-        , B.Avg_games_polled as Prev_season_avg_games_polled
-        , B.Total_Votes_since_2012 as Prev_season_total_votes_since_2012
-        , B.Total_Votes_since_2012 / A.Num_seasons AS Prev_season_avg_votes_per_seasons_since_2012
-        , B.Total_Votes as Prev_season_total_BR_votes
+        , B.avg_games_polled as prev_season_avg_games_polled
+        , B.total_votes_since_2012 as prev_season_total_votes_since_2012
+        , B.total_votes_since_2012 / A.num_seasons AS prev_season_avg_votes_per_seasons_since_2012
+        , B.total_votes as prev_season_total_BR_votes
         FROM player_final A
         LEFT JOIN player_final B
         ON A.Player = B.Player
-        AND A.Season = B.Season + 1
+        AND A.season = B.season + 1
         
         ')
-player_final$Avg_games_polled <- ifelse(is.na(player_final$Avg_games_polled),0,player_final$Avg_games_polled)
-player_final$Prev_season_avg_games_polled <- ifelse(is.na(player_final$Prev_season_avg_games_polled),0,player_final$Prev_season_avg_games_polled)
+player_final$avg_games_polled <- ifelse(is.na(player_final$avg_games_polled),0,player_final$avg_games_polled)
+player_final$prev_season_avg_games_polled <- ifelse(is.na(player_final$prev_season_avg_games_polled),0,player_final$prev_season_avg_games_polled)
 check <- filter(player_final,Player == "Tom Mitchell")
 View(check)
 
 # Join on player level features to the data set
-all_data <- within(all_data, rm("Prev_season_more_than_5_BR"))
-all_data <- within(all_data, rm("Prev_season_more_than_10_BR"))
-all_data <- within(all_data, rm("Prev_season_more_than_15_BR"))
-all_data <- within(all_data, rm("Prev_season_more_than_20_BR"))
-all_data <- within(all_data, rm("Games_played"))
-all_data <- within(all_data, rm("Games_polled"))
-all_data <- within(all_data, rm("Total_Votes"))
+all_data <- within(all_data, rm("prev_season_more_than_5_BR"))
+all_data <- within(all_data, rm("prev_season_more_than_10_BR"))
+all_data <- within(all_data, rm("prev_season_more_than_15_BR"))
+all_data <- within(all_data, rm("prev_season_more_than_20_BR"))
+all_data <- within(all_data, rm("games_played"))
+all_data <- within(all_data, rm("games_polled"))
+all_data <- within(all_data, rm("total_votes"))
 
-all_data <- left_join(x=all_data,y=player_final,by=c("Player","Player_id","AA_team","AA_squad","Num_seasons","Season"))
+all_data <- left_join(x=all_data,y=player_final,by=c("player_name","player_id","AA_team","AA_squad","num_seasons","season"))
 View(all_data)
 # Add in a record_id column
-all_data <- within(all_data, Record_id <- paste(Season, Round,Match_id, Player,Player_id,sep = "_"))
+all_data <- within(all_data, Record_id <- paste(season, Round,match_id, player_name,player_id,sep = "_"))
 
 columns <- data.frame(colnames(all_data))
 write.csv(columns,file=paste0(model_dir,"column_names_v9.csv"))
@@ -277,9 +277,9 @@ saveRDS(all_data, file=paste0(model_dir,"final_data_v9.RDS"))
 # Perform summary statistics on votegetters
 
 target <- c("1", "2","3")
-votegetters <- filter(all_data, Num_Votes %in% target)
-three_vote <- filter(all_data, Num_Votes == "3")
-unique(votegetters$Num_Votes)
+votegetters <- filter(all_data, num_votes %in% target)
+three_vote <- filter(all_data, num_votes == "3")
+unique(votegetters$num_votes)
 
 # Have players who get less than 10 disposals ever polled votes?
 
@@ -300,19 +300,19 @@ hist(three_vote$SC)
 five_goal_games <- all_data %>% filter(G >= 5)
 View(five_goal_games)
 library(plyr)
-summarize <- count(five_goal_games,c("Season","G","Outcome","Num_Votes"))
+summarize <- count(five_goal_games,c("season","G","Outcome","num_votes"))
 write.csv(summarize,file=paste0(data_dir,"five_goal_games.csv"))
 
-View(all_data%>%filter(Match_id == "5461"))
+View(all_data%>%filter(match_id == "5461"))
 
 # How often does a player get more than 40 touches and poll?
 
 all_data %>% filter(D > 39)
-weird_matches <- all_data %>% filter(D > 39 & Votes == "0") %>% select(Match_id)
-weird <- inner_join(all_data, weird_matches, by = "Match_id")
+weird_matches <- all_data %>% filter(D > 39 & Votes == "0") %>% select(match_id)
+weird <- inner_join(all_data, weird_matches, by = "match_id")
 View(weird)
-all_data %>% filter(Season == "2013" & Player == "Gary Jnr Ablett")
-View(all_data %>% filter(Season == "2013" & Player == "Gary Jnr Ablett"))
-View(all_data %>% filter(Match_id == "5628"))
+all_data %>% filter(season == "2013" & Player == "Gary Jnr Ablett")
+View(all_data %>% filter(season == "2013" & Player == "Gary Jnr Ablett"))
+View(all_data %>% filter(match_id == "5628"))
 
-View(all_data%>%filter(Match_id == "5343"))
+View(all_data%>%filter(match_id == "5343"))

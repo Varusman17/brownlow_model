@@ -10,6 +10,10 @@ rm(list = ls())
 gc()
 library(here)
 source(paste0(here(),"/00_setup.R"))
+source(paste0(here(),"/01_get_data.R"))
+source(paste0(here(),"/02_transform_data.R"))
+source(paste0(here(),"/03_train_XGBoost.R"))
+source(paste0(here(),"/04_test_model.R"))
 
 # Source data and add factors ---------------------------------------------
 df <- get_data()

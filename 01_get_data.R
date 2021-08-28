@@ -11,6 +11,7 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   require(here) 
   require(dplyr)
   require(readxl)
+  require(fitzRoy)
   
   # Fetch stats from fryzigg 
   base_stats <- fetch_player_stats(season = years, source = "fryzigg")
@@ -19,11 +20,12 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   base_stats <- base_stats %>% 
     mutate(
       season = as.numeric(format(date, "%Y")),
-      match_outcome = case_when(
-        match_margin > 0 ~ "Win",
-        match_margin < 0 ~ "Loss",
-        T ~ 'Draw'
-      ),
+      margin = ifelse(player_team == match_home_team,match_home_team_score - match_away_team_score,match_away_team_score - match_home_team_score),
+      match_outcome = case_when(margin > 0 ~ "Win",margin < 0 ~ "Loss",T ~ 'Draw'),
+      player_opposition = ifelse(player_team == match_home_team,match_away_team,match_home_team),
+      team_goals = ifelse(player_team == match_home_team,match_home_team_goals,match_away_team_goals),
+      team_behinds = ifelse(player_team == match_home_team,match_home_team_behinds,match_away_team_behinds),
+      team_score = ifelse(player_team == match_home_team,match_home_team_score,match_away_team_score),
       player_name = paste(player_first_name, player_last_name)
     )
   
@@ -31,6 +33,7 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   player_stats <- base_stats %>%
     group_by(season, player_id) %>%
     mutate(
+      games_played = length(player_id),
       games_polled = length(player_id[brownlow_votes >0]),
       three_vote_games = length(player_id[brownlow_votes == 3]),
       two_vote_games = length(player_id[brownlow_votes == 2]),
