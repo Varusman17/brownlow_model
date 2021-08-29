@@ -20,7 +20,7 @@ df <- get_data()
 
 
 # Cast data to correct type and split into train and test -----------------
-transformed_data <- transform_data(df)
+transformed_data <- transform_data(df, training_season_cutoff = 2019) # Try and predict on 2020 and assess model performance
 
 
 # Train XGBoost model -----------------------------------------------------
@@ -28,5 +28,9 @@ model <- train_XGBoost(transformed_data)
 
 
 # Test model --------------------------------------------------------------
+model_diagnostics <- test_model(model, transformed_data)
 
-model_diagnostics <- test_model(model, testDf)
+
+# Explore model diagnostics -----------------------------------------------
+xgb.plot.importance(model_diagnostics$variable_importance[1:10])
+

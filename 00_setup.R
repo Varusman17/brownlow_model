@@ -22,6 +22,8 @@ list_of_packages <- c("readxl"
                       , "sqldf"
                       , "eeptools"
                       , "here"
+                      , 'xgboost'
+                      , 'Matrix'
                       )
 
 new_packages <- list_of_packages[!(list_of_packages %in% installed.packages()[,"Package"])]

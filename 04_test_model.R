@@ -5,10 +5,23 @@
 # Inputs: 
 #   - Model object
 #   - Dataframe to testing
-# Outputs: Model diagnostics (could be either tabular or pngs)
+# Outputs: List of model diagnostics
 # 
 ####################################################################################
 
-test_model <- function(model, testDf) {
+test_model <- function(model, df) {
   
+  names <- dimnames(data.matrix(df))[[2]]
+  names <- names[names != 'brownlow_votes']
+  
+  imp <- xgb.importance(
+    feature_names = names, 
+    model = model
+  )
+  
+  model_performance_list <- list(
+    variable_importance = imp
+  )
+  
+  return(model_performance_list)
 }
