@@ -7,13 +7,13 @@
 # 
 ####################################################################################
 
-train_XGBoost <- function(df, y = 'brownlow_votes') {
+train_XGBoost <- function(X, y) {
   
-  X <- data.matrix(df %>% select(-y))
+  X <- data.matrix(X)
   
   model <- xgboost(
     data = X,
-    label = df %>% select(y) %>% pull(),
+    label = y,
     booster = "gbtree", 
     objective = "reg:squarederror",
     nrounds = 100,
