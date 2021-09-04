@@ -18,8 +18,9 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   
   # Add season, full player name and calculate match outcome
   base_stats <- base_stats %>% 
-    filter(match_round < 24) %>%
+    filter(as.numeric(match_round) < 24) %>%
     mutate(
+      match_round = as.numeric(match_round),
       season = as.numeric(format(date, "%Y")),
       margin = ifelse(player_team == match_home_team,match_home_team_score - match_away_team_score,match_away_team_score - match_home_team_score),
       match_outcome = case_when(margin > 0 ~ "Win",margin < 0 ~ "Loss",T ~ 'Draw'),
@@ -45,12 +46,14 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   
   # Join All-Australian
   all_australian <- read_excel(paste0(here(),"/Data/all_australian_team.xlsx"))
+  aa_data <- left_join(x=player_stats,y=all_australian,by=c("player_name","season","player_team")) 
+  aa_data$AA_squad <- ifelse(is.na(aa_data$AA_squad),0,aa_data$AA_squad)
+  aa_data$AA_team <- ifelse(is.na(aa_data$AA_team),0,aa_data$AA_team)
   
-  all_data <- left_join(x=player_stats,y=all_australian,by=c("player_name","season","player_team")) 
-  all_data$AA_squad <- ifelse(is.na(all_data$AA_squad),0,all_data$AA_squad)
-  all_data$AA_team <- ifelse(is.na(all_data$AA_team),0,all_data$AA_team)
-  
-  # Restrict to just home and away team
+  # Join coaches votes
+  coaches_votes <- read_csv(paste0(here(),"/Data/coaches_votes.csv"))
+  all_data <- left_join(aa_data,coaches_votes, by=c('season','match_round','player_team','player_name'))
+  all_data$coaches_votes <- ifelse(is.na(all_data$coaches_votes),0,all_data$coaches_votes)
   
   return(all_data)
 }
