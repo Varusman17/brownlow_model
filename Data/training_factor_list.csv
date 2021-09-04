@@ -1,6 +1,6 @@
 ID,Factor,Response,InputFactor,Monotone,Key,Type,New_factor,Old_factor,Check,Include
 1,date,N,N,0,N,Factor,0,0,1,N
-2,season,N,N,0,N,Factor,0,0,1,N
+2,season,N,N,0,N,Factor,0,0,1,Y
 3,match_round,N,N,0,N,Factor,0,0,1,N
 4,venue_name,N,N,0,N,Factor,0,0,1,N
 5,player_name,N,N,0,N,Factor,0,0,1,N

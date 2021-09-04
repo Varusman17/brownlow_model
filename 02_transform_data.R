@@ -36,7 +36,7 @@ transform_data <- function(
   #' randomly due to information leakage by capturing response variable in our independent variables
   df_all <- df_all %>% 
     # eg. if we want to train on pre2017 and test on 2018, we want to filter out 2019 onwards
-    filter(as.numeric(season) <= training_season_cutoff + 1) %>% 
+    filter(season <= training_season_cutoff + 1) %>% 
     mutate(train_test = ifelse(as.numeric(season) <= training_season_cutoff, 'train', 'test'))
   
   list_output = list(

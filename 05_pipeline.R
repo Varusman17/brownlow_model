@@ -36,4 +36,29 @@ model_diagnostics <- test_model(model, transformed_data$X_test, transformed_data
 xgb.plot.importance(model_diagnostics$variable_importance[1:10])
 
 # Explore predicted votes vs actual votes at player level
-model_diagnostics$votes_by_player
+View(model_diagnostics$votes_by_player %>% arrange(desc(predicted_votes)))
+
+# Inspect matches where coaches, predicted and actual votes were greater than 0
+View(model_diagnostics$votes_by_match %>%
+  filter(brownlow_votes >0 | predicted_votes > 0 | coaches_votes >0) %>%
+  select(player_name, player_positionC, brownlow_votes, predicted_votes, coaches_votes)
+)
+
+
+# View how the predicted votes perform for vote-getting performances
+ggplot(model_diagnostics$votes_by_match %>% filter(brownlow_votes > 0),
+  aes(x = predicted_votes, fill = factor(brownlow_votes))) +
+  geom_bar(position = "fill")+
+  xlab('Predicted Votes') +
+  ylab('Count') +
+  ggtitle('Predicted Votes by Brownlow Medal Votes')
+
+# Correlation between features
+# data <- model_diagnostics$votes_by_match %>% 
+#   select(-player_name, -season)
+# 
+# corr <- round(cor(data),2)
+# p.mat <- cor_pmat(data)
+# ggcorrplot(corr, p.mat = p.mat, type = "lower", insig = "blank")
+
+

@@ -28,7 +28,7 @@ test_model <- function(model, X_test, entire_df) {
     data.frame(pred = brownlow_pred), 
     entire_df %>% filter(train_test == 'test') %>% select(player_name, brownlow_votes, match_id)
   )
-  votes_by_player <- latest_season_with_pred %>% 
+  votes_by_match <- latest_season_with_pred %>% 
     group_by(match_id) %>% 
     mutate(
       pred_rank = row_number(desc(pred)),
@@ -38,18 +38,21 @@ test_model <- function(model, X_test, entire_df) {
         pred_rank == 3 ~ 1,
         T ~ 0,
       )
-    ) %>%
+    )
+  votes_by_player <- votes_by_match %>% 
     group_by(player_name) %>% 
     summarise(
       actual_votes = sum(brownlow_votes),
       predicted_votes = sum(predicted_votes),
-      prediction_sum = sum(pred)
+      prediction_sum = sum(pred),
+      votes_accuracy = actual_votes - predicted_votes
     )
-
+  
   # Arrange output into list
   model_performance_list <- list(
     variable_importance = imp,
     pred = latest_season_with_pred,
+    votes_by_match = votes_by_match,
     votes_by_player = votes_by_player
   )
   
