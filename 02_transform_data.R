@@ -24,6 +24,31 @@ transform_data <- function(
   df_removed <- df %>%
     select(all_of(dataInfo$Factor[dataInfo$Include == 'Y']), match_id, match_round, player_team)
   
+  
+  # Add in variables that are proportional to the match
+  df_removed <- df_removed %>% 
+    group_by(match_id) %>% 
+    mutate(
+      kicks_prop = kicks / sum(kicks),
+      marks_prop = marks / sum(marks),
+      handballs_prop = handballs / sum(handballs),
+      disposals_prop = disposals / sum(disposals),
+      goals_prop = goals / sum(goals),
+      behinds_prop = behinds / sum(behinds),
+      tackles_prop = tackles / sum(tackles),
+      inside_fifties_prop = inside_fifties / sum(inside_fifties),
+      clearances_prop = clearances / sum(clearances),
+      contested_possessions_prop = contested_possessions / sum(contested_possessions),
+      uncontested_possessions_prop = uncontested_possessions / sum(uncontested_possessions),
+      contested_marks_prop = contested_marks / sum(contested_marks),
+      contested_marks_prop = contested_marks / sum(contested_marks),
+      marks_inside_fifty_prop = marks_inside_fifty / sum(marks_inside_fifty),
+      goal_assists_prop = goal_assists / sum(goal_assists),
+      turnovers_prop = turnovers / sum(turnovers),
+      shots_at_goal_prop = shots_at_goal / sum(shots_at_goal)
+    ) %>% 
+    ungroup()
+  
   # One hot encode all character variables
   chr_vars <- df_removed %>% select(where(is.character), -player_team) %>% colnames()
   dummies <- dummyVars(as.formula(paste('~', paste(chr_vars, collapse = ' + '))), data = df_removed)

@@ -20,7 +20,7 @@ df <- get_data()
 
 
 # Cast data to correct type and split into train and test -----------------
-transformed_data <- transform_data(df, training_season_cutoff = 2020) # Try and predict on 2019 and assess model performance
+transformed_data <- transform_data(df, training_season_cutoff = 2019) # Try and predict on 2019 and assess model performance
 
 
 # Train XGBoost model -----------------------------------------------------
