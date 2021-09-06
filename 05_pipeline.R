@@ -18,6 +18,7 @@ source(paste0(here(),"/04_test_model.R"))
 # Source data and add factors ---------------------------------------------
 df <- get_data()
 
+
 # Cast data to correct type and split into train and test -----------------
 transformed_data <- transform_data(df, training_season_cutoff = 2020) # Try and predict on 2019 and assess model performance
 
@@ -33,16 +34,27 @@ model_diagnostics <- test_model(model, transformed_data$X_test, transformed_data
 # Explore model diagnostics -----------------------------------------------
 # Plot variable importance
 xgb.plot.importance(model_diagnostics$variable_importance[1:10])
--
+
+
 # Explore predicted votes vs actual votes at player level
 View(model_diagnostics$votes_by_player %>% arrange(desc(predicted_votes)))
 
 # Inspect matches where coaches, predicted and actual votes were greater than 0
+# 2021 SC scores have not been updated in fryzigg package
+
 View(model_diagnostics$votes_by_match %>%
   filter(brownlow_votes >0 | predicted_votes > 0 | coaches_votes >0) %>%
-  select(player_name, player_positionC, brownlow_votes, predicted_votes, coaches_votes)
+  select(player_team, player_name, player_positionC, supercoach_score, afl_fantasy_score, brownlow_votes, predicted_votes, coaches_votes)
 )
 
+
+# View how the coaches votes perform for vote-getting performances
+ggplot(model_diagnostics$votes_by_match %>% filter(brownlow_votes > 0),
+  aes(x = coaches_votes, fill = factor(brownlow_votes))) +
+  geom_bar(position = "fill")+
+  xlab('Coaches Votes') +
+  ylab('Count') +
+  ggtitle('Coaches Votes by Brownlow Votes')
 
 # View how the predicted votes perform for vote-getting performances
 ggplot(model_diagnostics$votes_by_match %>% filter(brownlow_votes > 0),
@@ -50,7 +62,15 @@ ggplot(model_diagnostics$votes_by_match %>% filter(brownlow_votes > 0),
   geom_bar(position = "fill")+
   xlab('Predicted Votes') +
   ylab('Count') +
-  ggtitle('Predicted Votes by Brownlow Medal Votes')
+  ggtitle('Predicted Votes by Brownlow Votes')
+
+# View how the predicted votes compare to coaches votes
+ggplot(model_diagnostics$votes_by_match %>% filter(predicted_votes > 0),
+  aes(x = coaches_votes, fill = factor(predicted_votes))) +
+  geom_bar(position = "fill")+
+  xlab('Coaches Votes') +
+  ylab('Count') +
+  ggtitle('Coaches Votes by Predicted Votes')
 
 # Correlation between features
 # data <- model_diagnostics$votes_by_match %>% 
@@ -59,5 +79,4 @@ ggplot(model_diagnostics$votes_by_match %>% filter(brownlow_votes > 0),
 # corr <- round(cor(data),2)
 # p.mat <- cor_pmat(data)
 # ggcorrplot(corr, p.mat = p.mat, type = "lower", insig = "blank")
-
 

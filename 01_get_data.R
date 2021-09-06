@@ -16,6 +16,17 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   # Fetch stats from fryzigg 
   base_stats <- fetch_player_stats(season = years, source = "fryzigg")
   
+  # Fetch fantasy scores from 2020 and 2021
+  sc_scores <- fetch_player_stats(season = c(2020,2021), source = "footywire") %>%
+    mutate(
+      round_adj = gsub('Round','',Round),
+      player_team = gsub('Brisbane','Brisbane Lions', Team),
+      match_round = as.numeric(round_adj)
+      ) %>%
+    filter(match_round < 24) %>%
+    rename(season = Season, player_name = Player) %>%
+    select(season, match_round, player_name, player_team, AF, SC)
+  
   # Add season, full player name and calculate match outcome
   base_stats <- base_stats %>% 
     filter(as.numeric(match_round) < 24) %>%
@@ -62,3 +73,37 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   
   return(all_data)
 }
+
+# No fantasy scores from 2020 and no SC scores in 2021
+# View(
+# base_stats %>% 
+# group_by(season) %>% 
+# summarise(AF = min(afl_fantasy_score), SC = min(supercoach_score))
+# )
+# Add 2020 and 2021 sc scores
+# base_stats_adj <- left_join(base_stats, sc_scores, by=c('season', 'match_round','player_team', 'player_name')) %>%
+#   mutate(
+#     sc_score = coalesce(supercoach_score, SC),
+#     af_score = coalesce(afl_fantasy_score, AF)
+#   )
+# 
+# unmatched_name <- base_stats_adj %>% filter(season == c(2020,2021), is.na(sc_score)) %>% distinct(season, player_name, player_team)
+# write.csv(unmatched_name,file=paste0(here(), '/Data/unmatched_name.csv'))
+# 
+# View(sc_scores %>% distinct(player_team))
+# 
+# View(sc_scores %>% filter(player_team == "Fremantle") %>% distinct(season, match_round))
+# 
+# base_stats_adj %>%
+#   filter(season == c(2020,2021), player_team == "Fremantle") %>% 
+#   select(season, match_round, player_name, player_team, supercoach_score, SC, sc_score) %>%
+#   View()
+# 
+# 
+# View(
+#   base_stats_adj %>%
+#     filter(player_team == "Adelaide")
+#   group_by(season) %>% 
+#     summarise(AF = min(afl_fantasy_score), SC = min(supercoach_score))
+# )  
+# 

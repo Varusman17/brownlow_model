@@ -22,10 +22,10 @@ transform_data <- function(
   
   # Remove unnecessary variables but keeping unique identifier for the match
   df_removed <- df %>%
-    select(all_of(dataInfo$Factor[dataInfo$Include == 'Y']), match_id, match_round)
+    select(all_of(dataInfo$Factor[dataInfo$Include == 'Y']), match_id, match_round, player_team)
   
   # One hot encode all character variables
-  chr_vars <- df_removed %>% select(where(is.character)) %>% colnames()
+  chr_vars <- df_removed %>% select(where(is.character), -player_team) %>% colnames()
   dummies <- dummyVars(as.formula(paste('~', paste(chr_vars, collapse = ' + '))), data = df_removed)
   df_ohe <- as.data.frame(predict(dummies, newdata = df_removed))
   df_all <- bind_cols(df_removed %>% select(-all_of(chr_vars)), df_ohe, data.frame(player_name = df$player_name))
@@ -43,11 +43,11 @@ transform_data <- function(
     entire_df = df_all,
     X_train = df_all %>%
       filter(train_test == 'train') %>% 
-      select(-player_name, -train_test, -brownlow_votes, -match_id),
+      select(-player_name, -train_test, -brownlow_votes, -match_id, -match_round, -player_team),
     y_train = df_all %>% filter(train_test == 'train') %>% select(brownlow_votes) %>% pull(),
     X_test = df_all %>%
       filter(train_test == 'test') %>% 
-      select(-player_name, -train_test, -brownlow_votes, -match_id),
+      select(-player_name, -train_test, -brownlow_votes, -match_id, -match_round, -player_team),
     y_test = df_all %>% filter(train_test == 'test') %>% select(brownlow_votes) %>% pull()
   )
   

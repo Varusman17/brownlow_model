@@ -26,7 +26,7 @@ test_model <- function(model, X_test, entire_df) {
   latest_season_with_pred <- bind_cols(
     X_test, 
     data.frame(pred = brownlow_pred), 
-    entire_df %>% filter(train_test == 'test') %>% select(player_name, brownlow_votes, match_id)
+    entire_df %>% filter(train_test == 'test') %>% select(player_name, brownlow_votes, match_id, match_round, player_team)
   )
   votes_by_match <- latest_season_with_pred %>% 
     group_by(match_id, match_round) %>% 
@@ -44,6 +44,7 @@ test_model <- function(model, X_test, entire_df) {
     summarise(
       actual_votes = sum(brownlow_votes),
       predicted_votes = sum(predicted_votes),
+      coaches_votes = sum(coaches_votes),
       prediction_sum = sum(pred),
       votes_accuracy = actual_votes - predicted_votes
     )
