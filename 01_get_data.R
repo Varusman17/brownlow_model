@@ -47,13 +47,18 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   # Join All-Australian
   all_australian <- read_excel(paste0(here(),"/Data/all_australian_team.xlsx"))
   aa_data <- left_join(x=player_stats,y=all_australian,by=c("player_name","season","player_team")) 
-  aa_data$AA_squad <- ifelse(is.na(aa_data$AA_squad),0,aa_data$AA_squad)
-  aa_data$AA_team <- ifelse(is.na(aa_data$AA_team),0,aa_data$AA_team)
+  aa_data$aa_squad <- ifelse(is.na(aa_data$aa_squad),0,aa_data$aa_squad)
+  aa_data$aa_team <- ifelse(is.na(aa_data$aa_team),0,aa_data$aa_team)
   
   # Join coaches votes
   coaches_votes <- read_csv(paste0(here(),"/Data/coaches_votes.csv"))
-  all_data <- left_join(aa_data,coaches_votes, by=c('season','match_round','player_team','player_name'))
-  all_data$coaches_votes <- ifelse(is.na(all_data$coaches_votes),0,all_data$coaches_votes)
+  cv_data <- left_join(aa_data,coaches_votes, by=c('season','match_round','player_team','player_name'))
+  cv_data$coaches_votes <- ifelse(is.na(cv_data$coaches_votes),0,cv_data$coaches_votes)
+  
+  # Join captain info
+  captains <- read_excel(paste0(here(),"/Data/captains.xlsx"))
+  all_data <- left_join(cv_data,captains, by=c("player_name","season","player_team"))
+  all_data$captain <- ifelse(is.na(all_data$captain),0,all_data$captain)
   
   return(all_data)
 }

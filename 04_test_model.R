@@ -29,7 +29,7 @@ test_model <- function(model, X_test, entire_df) {
     entire_df %>% filter(train_test == 'test') %>% select(player_name, brownlow_votes, match_id)
   )
   votes_by_match <- latest_season_with_pred %>% 
-    group_by(match_id) %>% 
+    group_by(match_id, match_round) %>% 
     mutate(
       pred_rank = row_number(desc(pred)),
       predicted_votes = case_when(

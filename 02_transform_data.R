@@ -22,7 +22,7 @@ transform_data <- function(
   
   # Remove unnecessary variables but keeping unique identifier for the match
   df_removed <- df %>%
-    select(all_of(dataInfo$Factor[dataInfo$Include == 'Y']), match_id)
+    select(all_of(dataInfo$Factor[dataInfo$Include == 'Y']), match_id, match_round)
   
   # One hot encode all character variables
   chr_vars <- df_removed %>% select(where(is.character)) %>% colnames()

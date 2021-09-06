@@ -18,9 +18,8 @@ source(paste0(here(),"/04_test_model.R"))
 # Source data and add factors ---------------------------------------------
 df <- get_data()
 
-
 # Cast data to correct type and split into train and test -----------------
-transformed_data <- transform_data(df, training_season_cutoff = 2018) # Try and predict on 2019 and assess model performance
+transformed_data <- transform_data(df, training_season_cutoff = 2020) # Try and predict on 2019 and assess model performance
 
 
 # Train XGBoost model -----------------------------------------------------
@@ -34,7 +33,7 @@ model_diagnostics <- test_model(model, transformed_data$X_test, transformed_data
 # Explore model diagnostics -----------------------------------------------
 # Plot variable importance
 xgb.plot.importance(model_diagnostics$variable_importance[1:10])
-
+-
 # Explore predicted votes vs actual votes at player level
 View(model_diagnostics$votes_by_player %>% arrange(desc(predicted_votes)))
 
