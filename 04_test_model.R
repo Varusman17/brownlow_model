@@ -36,25 +36,44 @@ test_model <- function(model, X_test, entire_df) {
         pred_rank == 1 ~ 3,
         pred_rank == 2 ~ 2,
         pred_rank == 3 ~ 1,
-        T ~ 0,
+        T ~ 0
       )
     )
   votes_by_player <- votes_by_match %>% 
-    group_by(player_name) %>% 
+    group_by(player_name, player_team) %>% 
     summarise(
       actual_votes = sum(brownlow_votes),
       predicted_votes = sum(predicted_votes),
       coaches_votes = sum(coaches_votes),
       prediction_sum = sum(pred),
       votes_accuracy = actual_votes - predicted_votes
-    )
+    ) %>% 
+    arrange(desc(actual_votes)) %>% 
+    ungroup()
+  
+  # Store the total difference in predicted vs actual votes across the top 20 players
+  top20_abs_diff <- votes_by_player %>% 
+    head(20) %>% 
+    mutate(votes_accuracy = abs(votes_accuracy)) %>% 
+    summarise(top20_diff = sum(votes_accuracy))
+
+  
+  # Record the model run and store variable names, variable importance, votes by player and votes by match
+  season <- X_test %>% select(season) %>% distinct() %>% pull()
+  new_dir <- glue('{here()}/logs/season-{season}_diff-{top20_abs_diff}_{today()}')
+  system(glue('mkdir {new_dir}'))
+  write_csv(data.frame(features_used = colnames(X_test)), glue('{new_dir}/features_used.csv'))
+  write_csv(imp, glue('{new_dir}/variable_importance.csv'))
+  write_csv(votes_by_match, glue('{new_dir}/votes_by_match.csv'))
+  write_csv(votes_by_player, glue('{new_dir}/votes_by_player.csv'))
   
   # Arrange output into list
   model_performance_list <- list(
     variable_importance = imp,
     pred = latest_season_with_pred,
     votes_by_match = votes_by_match,
-    votes_by_player = votes_by_player
+    votes_by_player = votes_by_player,
+    top20_abs_diff = top20_abs_diff
   )
   
   return(model_performance_list)

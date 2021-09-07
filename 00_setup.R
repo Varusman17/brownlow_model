@@ -26,6 +26,8 @@ list_of_packages <- c("readxl"
                       , 'xgboost'
                       , 'Matrix'
                       , 'mgsub'
+                      , 'lubridate'
+                      , 'glue'
 )
 
 new_packages <- list_of_packages[!(list_of_packages %in% installed.packages()[,"Package"])]
