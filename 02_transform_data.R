@@ -10,11 +10,7 @@
 #
 ####################################################################################
 
-transform_data <- function(
-  df, 
-  training_season_cutoff = 2020,
-  dataInfoPath = paste0(here(), '/Data/training_factor_list.csv')
-) {
+transform_data <- function(df, training_season_cutoff, dataInfoPath = paste0(here(), '/Data/training_factor_list.csv')) {
   
   # Filter to only rows of dataInfo that match column names in df
   dataInfo <- read_csv(dataInfoPath) %>% 
@@ -62,17 +58,17 @@ transform_data <- function(
   df_all <- df_all %>% 
     # eg. if we want to train on pre2017 and test on 2018, we want to filter out 2019 onwards
     filter(season <= training_season_cutoff + 1) %>% 
-    mutate(train_test = ifelse(as.numeric(season) <= training_season_cutoff, 'train', 'test'))
+    mutate(train_test = ifelse(as.integer(season) <= training_season_cutoff, 'train', 'test'))
   
   list_output = list(
     entire_df = df_all,
     X_train = df_all %>%
       filter(train_test == 'train') %>% 
-      select(-player_name, -train_test, -brownlow_votes, -match_id, -match_round, -player_team),
+      select(-player_name, -train_test, -brownlow_votes, -match_id, -match_round, -season,  -player_team),
     y_train = df_all %>% filter(train_test == 'train') %>% select(brownlow_votes) %>% pull(),
     X_test = df_all %>%
       filter(train_test == 'test') %>% 
-      select(-player_name, -train_test, -brownlow_votes, -match_id, -match_round, -player_team),
+      select(-player_name, -train_test, -brownlow_votes, -match_id, -match_round, -season, -player_team),
     y_test = df_all %>% filter(train_test == 'test') %>% select(brownlow_votes) %>% pull()
   )
   

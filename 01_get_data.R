@@ -16,30 +16,24 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   # Fetch stats from fryzigg 
   base_stats <- fetch_player_stats(season = years, source = "fryzigg")
   
-  # Fetch fantasy scores from 2020 and 2021
-  sc_scores <- fetch_player_stats(season = c(2020,2021), source = "footywire") %>%
-    mutate(
-      round_adj = gsub('Round','',Round),
-      player_team = gsub('Brisbane','Brisbane Lions', Team),
-      match_round = as.numeric(round_adj)
-      ) %>%
-    filter(match_round < 24) %>%
-    rename(season = Season, player_name = Player) %>%
-    select(season, match_round, player_name, player_team, AF, SC)
-  
   # Add season, full player name and calculate match outcome
   base_stats <- base_stats %>% 
-    filter(as.numeric(match_round) < 24) %>%
+    # remove players who were the sub but didn't come on
+    filter(time_on_ground_percentage > 0) %>%
+    # restrict to just home and away season
+    filter(as.integer(match_round) < 24) %>%
     mutate(
-      match_round = as.numeric(match_round),
-      season = as.numeric(format(date, "%Y")),
+      match_round = as.integer(match_round),
+      season = as.integer(format(date, "%Y")),
       margin = ifelse(player_team == match_home_team,match_home_team_score - match_away_team_score,match_away_team_score - match_home_team_score),
       match_outcome = case_when(margin > 0 ~ "Win",margin < 0 ~ "Loss",T ~ 'Draw'),
       player_opposition = ifelse(player_team == match_home_team,match_away_team,match_home_team),
       team_goals = ifelse(player_team == match_home_team,match_home_team_goals,match_away_team_goals),
       team_behinds = ifelse(player_team == match_home_team,match_home_team_behinds,match_away_team_behinds),
       team_score = ifelse(player_team == match_home_team,match_home_team_score,match_away_team_score),
-      player_name = paste(player_first_name, player_last_name)
+      player_name = paste(player_first_name, player_last_name),
+      sc_score = supercoach_score,
+      af_score = afl_fantasy_score
     )
   
   # Add brownlow information
@@ -57,7 +51,7 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   
   # Join All-Australian
   all_australian <- read_excel(paste0(here(),"/Data/all_australian_team.xlsx"))
-  aa_data <- left_join(x=player_stats,y=all_australian,by=c("player_name","season","player_team")) 
+  aa_data <- left_join(player_stats,all_australian,by=c("player_name","season","player_team")) 
   aa_data$aa_squad <- ifelse(is.na(aa_data$aa_squad),0,aa_data$aa_squad)
   aa_data$aa_team <- ifelse(is.na(aa_data$aa_team),0,aa_data$aa_team)
   
@@ -68,42 +62,17 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   
   # Join captain info
   captains <- read_excel(paste0(here(),"/Data/captains.xlsx"))
-  all_data <- left_join(cv_data,captains, by=c("player_name","season","player_team"))
-  all_data$captain <- ifelse(is.na(all_data$captain),0,all_data$captain)
+  captain_data <- left_join(cv_data,captains, by=c("player_name","season","player_team"))
+  captain_data$captain <- ifelse(is.na(captain_data$captain),0,captain_data$captain)
+  
+  # Join 2020 and 2021 fantasy scores
+  fantasy_scores <- read_csv(paste0(here(), '/Data/fantasy_scores.csv'))
+  all_data <- left_join(captain_data, fantasy_scores, by=c("season", "match_round", "player_team", "player_name")) %>%
+    mutate(
+      supercoach_score = ifelse(is.na(sc_score), SC, sc_score),
+      afl_fantasy_score = ifelse(is.na(af_score), AF, af_score)
+    ) %>%
+    select(-sc_score, -SC, -af_score, -AF)
   
   return(all_data)
 }
-
-# No fantasy scores from 2020 and no SC scores in 2021
-# View(
-# base_stats %>% 
-# group_by(season) %>% 
-# summarise(AF = min(afl_fantasy_score), SC = min(supercoach_score))
-# )
-# Add 2020 and 2021 sc scores
-# base_stats_adj <- left_join(base_stats, sc_scores, by=c('season', 'match_round','player_team', 'player_name')) %>%
-#   mutate(
-#     sc_score = coalesce(supercoach_score, SC),
-#     af_score = coalesce(afl_fantasy_score, AF)
-#   )
-# 
-# unmatched_name <- base_stats_adj %>% filter(season == c(2020,2021), is.na(sc_score)) %>% distinct(season, player_name, player_team)
-# write.csv(unmatched_name,file=paste0(here(), '/Data/unmatched_name.csv'))
-# 
-# View(sc_scores %>% distinct(player_team))
-# 
-# View(sc_scores %>% filter(player_team == "Fremantle") %>% distinct(season, match_round))
-# 
-# base_stats_adj %>%
-#   filter(season == c(2020,2021), player_team == "Fremantle") %>% 
-#   select(season, match_round, player_name, player_team, supercoach_score, SC, sc_score) %>%
-#   View()
-# 
-# 
-# View(
-#   base_stats_adj %>%
-#     filter(player_team == "Adelaide")
-#   group_by(season) %>% 
-#     summarise(AF = min(afl_fantasy_score), SC = min(supercoach_score))
-# )  
-# 

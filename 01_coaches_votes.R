@@ -1,9 +1,9 @@
 ####################################################################################
 #
-# Author: Saurav Acharya
+# Author: Saurav Acharya & Mitchell Ong-Thomson
 # Project: AFL Brownlow prediction
-# Description: Bring together all of the different data sources for modelling
-# Update 2021-08-23: New source of data have solved for data cleaning steps
+# Inputs: AFLCA champion player of the year votes from 2014 to 2021
+# Outputs: CSV of coaches votes dataset at the player level
 # 
 ####################################################################################
 
