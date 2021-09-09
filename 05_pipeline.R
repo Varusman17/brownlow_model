@@ -15,12 +15,17 @@ source(paste0(here(),"/02_transform_data.R"))
 source(paste0(here(),"/03_train_XGBoost.R"))
 source(paste0(here(),"/04_test_model.R"))
 
+# Set training season cutoff (i.e. predict for the next year)
+
+training_season_cutoff <- 2018 
+testing_season <- training_season_cutoff + 1
+
 # Source data and add factors ---------------------------------------------
 df <- get_data()
 
 
 # Cast data to correct type and split into train and test -----------------
-transformed_data <- transform_data(df, training_season_cutoff = 2020) # Try and predict on 2019 and assess model performance
+transformed_data <- transform_data(df, training_season_cutoff) # Try and predict on 2019 and assess model performance
 
 
 # Train XGBoost model -----------------------------------------------------
@@ -28,7 +33,7 @@ model <- train_XGBoost(transformed_data$X_train, transformed_data$y_train)
 
 
 # Test model --------------------------------------------------------------
-model_diagnostics <- test_model(model, transformed_data$X_test, transformed_data$entire_df)
+model_diagnostics <- test_model(model, transformed_data$X_test, transformed_data$entire_df, testing_season)
 
 
 # Explore model diagnostics -----------------------------------------------
