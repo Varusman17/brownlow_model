@@ -1,0 +1,208 @@
+season,player_name,player_team,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,total_votes,games_played,three_vote_games,two_vote_games,one_vote_games,games_polled
+2020,Lachie Neale,Brisbane Lions,0,3,3,3,3,0,0,3,3,1,3,3,0,DNP,0,3,0,3,31,17,10,,1,11
+2020,Travis Boak,Port Adelaide,3,2,3,0,0,0,0,0,3,0,2,0,3,0,DNP,2,3,0,21,17,5,3,,8
+2020,Christian Petracca,Melbourne,0,3,DNP,0,0,3,2,0,0,0,3,3,0,3,0,0,0,3,20,17,6,1,,7
+2020,Jack Steele,St Kilda,0,0,0,0,3,0,3,3,1,3,0,0,2,1,DNP,2,0,2,20,17,4,3,2,9
+2020,Patrick Dangerfield,Geelong,0,0,0,0,1,3,0,0,0,0,2,2,1,3,DNP,0,0,3,15,17,3,2,2,7
+2020,Dustin Martin,Richmond,2,0,DNP,0,0,0,0,2,3,3,0,0,1,0,0,DNP,1,3,15,16,3,2,2,7
+2020,Jack Macrae,Western Bulldogs,0,0,3,0,0,0,2,3,2,0,2,0,1,0,DNP,2,0,0,15,17,2,4,1,7
+2020,Luke Parker,Sydney,2,2,0,0,0,0,2,0,0,0,DNP,3,0,1,3,0,2,0,15,17,2,4,1,7
+2020,Cameron Guthrie,Geelong,0,0,0,3,0,0,0,3,0,3,0,0,3,1,DNP,1,0,0,14,17,4,,2,6
+2020,Clayton Oliver,Melbourne,0,0,DNP,0,1,0,1,2,0,3,2,2,0,0,0,0,3,0,14,17,2,3,2,7
+2020,Zach Merrett,Essendon,0,3,DNP,0,DNP,0,0,3,0,2,0,0,2,3,0,0,0,0,13,16,3,2,,5
+2020,Scott Pendlebury,Collingwood,0,3,2,2,0,0,0,DNP,DNP,DNP,DNP,0,2,1,0,DNP,3,0,13,13,2,3,1,6
+2020,Max Gawn,Melbourne,0,2,DNP,2,2,2,3,0,0,0,DNP,DNP,DNP,0,2,0,0,0,13,14,1,5,,6
+2020,Toby Greene,Greater Western Sydney,3,0,DNP,3,0,0,DNP,3,0,DNP,DNP,DNP,0,0,3,0,0,0,12,13,4,,,4
+2020,Hugh Greenwood,Gold Coast,0,0,0,0,2,0,3,0,0,0,3,0,0,3,DNP,0,0,0,11,17,3,1,,4
+2020,Dom Sheed,West Coast,3,0,0,0,0,2,0,0,3,DNP,0,0,0,0,0,0,DNP,3,11,16,3,1,,4
+2020,Taylor Adams,Collingwood,0,0,0,0,0,0,0,0,0,3,3,0,1,3,0,DNP,0,1,11,17,3,,2,5
+2020,Tim Kelly,West Coast,0,0,0,0,0,3,0,2,0,DNP,2,0,0,0,1,0,3,0,11,17,2,2,1,5
+2020,Tom Hawkins,Geelong,0,0,0,0,3,2,0,0,0,0,1,3,0,0,DNP,2,0,0,11,17,2,2,1,5
+2020,Ollie Wines,Port Adelaide,DNP,DNP,2,0,0,0,0,0,0,0,3,0,0,0,DNP,3,2,0,10,15,2,2,,4
+2020,Patrick Cripps,Carlton,0,0,3,0,0,0,0,0,2,DNP,0,3,0,0,0,2,0,0,10,17,2,2,,4
+2020,Tom Mitchell,Hawthorn,0,0,0,0,0,0,0,0,1,DNP,1,0,2,0,0,3,0,3,10,17,2,1,2,5
+2020,Marcus Bontempelli,Western Bulldogs,0,0,0,3,0,0,0,0,0,0,0,2,0,0,DNP,1,3,1,10,17,2,1,2,5
+2020,Tom Rockliff,Port Adelaide,1,1,0,0,0,DNP,DNP,DNP,2,3,0,0,0,0,DNP,0,0,3,10,14,2,1,2,5
+2020,Nat Fyfe,Fremantle,0,2,1,0,DNP,0,DNP,DNP,0,DNP,2,2,0,0,0,0,1,2,10,14,,4,2,6
+2020,Shai Bolton,Richmond,0,0,0,0,DNP,0,3,0,0,0,0,0,3,0,0,DNP,3,DNP,9,15,3,,,3
+2020,Charlie Dixon,Port Adelaide,DNP,0,0,3,0,0,3,0,0,0,0,0,0,3,DNP,0,0,0,9,16,3,,,3
+2020,Matt Rowell,Gold Coast,0,3,3,3,0,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,9,5,3,,,3
+2020,Andrew Brayshaw,Fremantle,0,0,0,0,2,2,0,2,0,DNP,3,0,0,0,0,0,0,0,9,17,1,3,,4
+2020,Jarryd Lyons,Brisbane Lions,0,0,0,0,2,0,0,1,0,0,0,2,0,DNP,1,0,3,0,9,17,1,2,2,5
+2020,Elliot Yeo,West Coast,0,0,0,0,3,0,2,0,0,DNP,3,DNP,DNP,DNP,DNP,DNP,DNP,DNP,8,10,2,1,,3
+2020,Rowan Marshall,St Kilda,0,0,0,0,2,0,0,0,0,0,0,3,0,0,DNP,0,0,3,8,17,2,1,,3
+2020,Jarrod Berry,Brisbane Lions,0,0,0,2,0,0,0,0,0,0,0,0,3,DNP,3,0,DNP,DNP,8,15,2,1,,3
+2020,Michael Walters,Fremantle,0,1,0,0,0,3,0,0,DNP,DNP,DNP,0,0,0,0,1,3,DNP,8,14,2,,2,4
+2020,Sam Walsh,Carlton,0,0,0,0,0,0,2,0,0,DNP,0,0,0,0,2,3,0,1,8,17,1,2,1,4
+2020,Josh Kelly,Greater Western Sydney,0,0,DNP,0,2,0,0,1,2,0,DNP,0,3,0,DNP,DNP,0,0,8,14,1,2,1,4
+2020,Dan Butler,St Kilda,0,0,0,3,1,0,2,0,0,2,0,0,0,0,DNP,0,0,0,8,17,1,2,1,4
+2020,Jy Simpkin,North Melbourne,2,0,3,2,0,0,0,0,0,1,0,0,0,0,DNP,0,0,0,8,17,1,2,1,4
+2020,Andrew Gaff,West Coast,2,0,1,0,0,0,1,0,0,DNP,0,2,1,0,0,0,1,0,8,17,,2,4,6
+2020,Andrew McGrath,Essendon,0,0,DNP,0,0,3,0,2,0,0,0,0,0,2,0,DNP,DNP,DNP,7,14,1,2,,3
+2020,Zak Jones,St Kilda,0,3,0,0,DNP,0,0,2,0,0,DNP,2,0,0,DNP,0,0,DNP,7,14,1,2,,3
+2020,Bailey Smith,Western Bulldogs,0,0,0,0,0,1,0,2,0,0,0,0,3,0,DNP,0,1,0,7,17,1,1,2,4
+2020,Luke Ryan,Fremantle,0,0,0,0,0,0,0,0,3,DNP,0,0,3,0,0,0,0,0,6,17,2,,,2
+2020,Josh Kennedy,West Coast,0,0,0,0,0,0,3,3,0,DNP,0,0,0,0,DNP,0,0,0,6,16,2,,,2
+2020,Kane Lambert,Richmond,0,0,0,0,3,3,0,0,0,0,0,0,0,0,DNP,DNP,0,0,6,16,2,,,2
+2020,Chad Wingard,Hawthorn,3,0,0,3,0,0,0,0,0,DNP,0,0,0,0,0,0,0,0,6,17,2,,,2
+2020,Dylan Shiel,Essendon,3,0,DNP,0,3,0,DNP,DNP,0,0,0,0,0,0,0,0,0,0,6,15,2,,,2
+2020,Lachie Hunter,Western Bulldogs,0,DNP,DNP,DNP,DNP,0,1,DNP,DNP,DNP,DNP,0,0,2,DNP,0,0,3,6,9,1,1,1,3
+2020,Darcy Moore,Collingwood,0,0,0,0,0,1,0,0,0,0,DNP,0,3,2,0,DNP,0,0,6,16,1,1,1,3
+2020,Tom Papley,Sydney,0,1,0,2,0,0,0,3,0,0,DNP,0,0,0,0,0,0,0,6,17,1,1,1,3
+2020,Luke Shuey,West Coast,0,1,0,0,0,DNP,DNP,0,0,DNP,0,3,0,2,0,DNP,DNP,DNP,6,12,1,1,1,3
+2020,Brodie Grundy,Collingwood,3,0,1,0,0,0,2,0,0,0,0,0,0,0,0,DNP,0,0,6,17,1,1,1,3
+2020,Steele Sidebottom,Collingwood,1,1,3,0,DNP,DNP,DNP,DNP,0,0,1,0,0,DNP,DNP,DNP,DNP,DNP,6,9,1,,3,4
+2020,Jack Viney,Melbourne,1,0,DNP,0,0,0,0,0,0,2,DNP,0,0,0,0,2,1,0,6,16,,2,2,4
+2020,Trent Cotchin,Richmond,0,0,0,0,0,DNP,DNP,DNP,0,0,DNP,2,0,3,0,DNP,0,0,5,13,1,1,,2
+2020,Jack Gunston,Hawthorn,0,0,0,0,0,0,0,0,3,DNP,0,0,DNP,0,0,0,0,2,5,16,1,1,,2
+2020,Jordan de Goey,Collingwood,0,0,0,0,0,DNP,3,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,2,0,5,8,1,1,,2
+2020,Ed Curnow,Carlton,0,0,0,0,0,3,0,2,0,DNP,0,0,0,0,0,0,0,0,5,17,1,1,,2
+2020,Isaac Heeney,Sydney,3,0,2,0,0,0,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,5,6,1,1,,2
+2020,Brody Mihocek,Collingwood,2,0,0,0,0,3,0,0,0,0,0,0,DNP,0,0,DNP,0,0,5,16,1,1,,2
+2020,Jade Gresham,St Kilda,0,0,0,0,0,1,1,0,3,0,0,DNP,DNP,DNP,DNP,DNP,DNP,DNP,5,11,1,,2,3
+2020,Sam Menegola,Geelong,0,0,0,1,0,0,0,0,0,0,0,0,0,0,DNP,3,0,1,5,17,1,,2,3
+2020,Todd Goldstein,North Melbourne,0,3,0,1,0,1,0,0,0,0,0,0,0,0,DNP,0,0,0,5,17,1,,2,3
+2020,Robbie Gray,Port Adelaide,0,0,0,0,0,0,0,0,0,0,1,0,0,2,DNP,0,0,2,5,17,,2,1,3
+2020,Jack Crisp,Collingwood,0,0,0,0,0,0,0,0,0,1,2,0,0,0,2,DNP,0,0,5,17,,2,1,3
+2020,Nic Naitanui,West Coast,0,0,0,0,1,0,0,0,2,DNP,0,0,0,0,0,DNP,2,0,5,16,,2,1,3
+2020,Oscar Allen,West Coast,DNP,0,0,DNP,2,0,0,1,0,DNP,0,0,0,DNP,0,0,0,2,5,14,,2,1,3
+2020,Mitch Duncan,Geelong,0,0,2,0,0,0,DNP,1,0,0,0,0,2,0,DNP,0,0,0,5,16,,2,1,3
+2020,Rory Laird,Adelaide,0,0,0,0,0,0,0,0,0,0,0,0,0,DNP,0,3,1,0,4,17,1,,1,2
+2020,Jacob Hopper,Greater Western Sydney,0,0,0,0,0,0,0,0,3,0,DNP,0,0,1,0,0,0,0,4,17,1,,1,2
+2020,Harris Andrews,Brisbane Lions,0,0,0,0,1,0,3,0,0,0,0,0,0,DNP,0,DNP,DNP,DNP,4,14,1,,1,2
+2020,Michael Gibbons,Carlton,0,0,0,1,0,0,0,0,0,DNP,0,0,3,0,DNP,DNP,0,0,4,15,1,,1,2
+2020,Nick Haynes,Greater Western Sydney,0,0,0,1,3,0,0,0,0,0,DNP,0,0,0,0,0,0,0,4,17,1,,1,2
+2020,Tim English,Western Bulldogs,0,0,0,1,0,0,3,0,0,0,0,0,0,0,DNP,0,0,0,4,17,1,,1,2
+2020,Josh Dunkley,Western Bulldogs,0,1,0,DNP,DNP,DNP,DNP,DNP,DNP,0,0,0,0,0,DNP,3,0,0,4,11,1,,1,2
+2020,Jack Martin,Carlton,1,0,0,0,0,0,0,3,0,DNP,0,DNP,0,0,0,0,DNP,0,4,15,1,,1,2
+2020,Reilly OBrien,Adelaide,0,0,0,0,0,0,0,0,0,0,0,0,0,DNP,2,0,0,2,4,17,,2,,2
+2020,Lachie Whitfield,Greater Western Sydney,0,0,0,0,0,2,0,0,0,0,DNP,0,0,2,0,0,0,0,4,17,,2,,2
+2020,David Zaharakis,Essendon,0,0,DNP,0,0,2,0,0,0,0,2,DNP,DNP,DNP,DNP,DNP,DNP,DNP,4,10,,2,,2
+2020,Harry Perryman,Greater Western Sydney,2,0,2,0,0,0,0,0,0,0,DNP,0,0,0,0,DNP,0,0,4,16,,2,,2
+2020,Steven May,Melbourne,0,0,DNP,0,0,0,0,0,0,1,0,0,0,2,0,0,0,1,4,17,,1,2,3
+2020,Adam Treloar,Collingwood,DNP,DNP,DNP,DNP,1,2,1,0,0,0,DNP,DNP,DNP,DNP,DNP,DNP,0,0,4,8,,1,2,3
+2020,Hugh McCluggage,Brisbane Lions,0,0,2,1,0,0,0,0,0,0,0,0,1,DNP,0,0,0,0,4,17,,1,2,3
+2020,Stephen Coniglio,Greater Western Sydney,0,1,0,0,0,0,2,0,0,1,DNP,0,0,0,0,0,DNP,0,4,16,,1,2,3
+2020,Josh Kennedy,Sydney,1,0,0,0,0,0,DNP,DNP,DNP,DNP,DNP,DNP,0,0,0,0,1,2,4,12,,1,2,3
+2020,Lachlan Sholl,Adelaide,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,0,0,0,0,DNP,0,0,3,0,3,8,1,,,1
+2020,Adam Cerra,Fremantle,0,0,0,0,0,0,0,0,0,DNP,0,0,0,0,0,3,0,0,3,17,1,,,1
+2020,Jack Graham,Richmond,0,0,0,DNP,DNP,0,0,0,DNP,DNP,DNP,0,0,0,3,DNP,0,0,3,12,1,,,1
+2020,Tom Barrass,West Coast,0,0,0,0,0,0,0,0,0,DNP,0,0,0,0,3,0,0,0,3,17,1,,,1
+2020,Rory Sloane,Adelaide,0,0,0,0,0,0,DNP,DNP,DNP,DNP,DNP,0,0,DNP,3,0,0,0,3,12,1,,,1
+2020,Jeremy Cameron,Greater Western Sydney,0,0,0,0,0,0,0,0,0,0,DNP,0,0,3,0,0,0,0,3,17,1,,,1
+2020,Jack Lukosius,Gold Coast,0,0,0,0,0,0,0,0,0,0,0,3,0,0,DNP,0,0,0,3,17,1,,,1
+2020,Aaron Naughton,Western Bulldogs,0,0,0,0,DNP,DNP,DNP,DNP,DNP,DNP,0,3,0,0,DNP,0,0,0,3,11,1,,,1
+2020,Gary Rohan,Geelong,0,0,0,0,0,0,0,0,0,DNP,3,0,0,0,DNP,0,DNP,0,3,15,1,,,1
+2020,Tim Taranto,Greater Western Sydney,DNP,DNP,DNP,DNP,DNP,DNP,0,0,0,3,DNP,0,0,0,0,0,0,0,3,11,1,,,1
+2020,Jed Anderson,North Melbourne,0,0,0,0,0,DNP,DNP,0,3,0,0,0,0,0,DNP,0,0,0,3,15,1,,,1
+2020,Sam Powell-Pepper,Port Adelaide,0,0,0,0,0,3,0,0,0,0,0,0,0,0,DNP,0,0,0,3,17,1,,,1
+2020,David Mundy,Fremantle,DNP,0,0,0,3,0,0,0,0,DNP,0,0,0,0,0,0,0,0,3,16,1,,,1
+2020,Josh Bruce,Western Bulldogs,0,0,0,0,3,0,0,0,0,0,0,DNP,0,0,DNP,0,0,0,3,16,1,,,1
+2020,David Cuningham,Carlton,0,0,0,3,0,0,0,0,0,DNP,DNP,DNP,DNP,DNP,DNP,0,0,0,3,12,1,,,1
+2020,Isaac Smith,Hawthorn,0,0,3,0,0,0,0,0,0,DNP,0,DNP,DNP,DNP,DNP,DNP,DNP,DNP,3,10,1,,,1
+2020,Steven Motlop,Port Adelaide,0,3,0,0,0,0,0,DNP,DNP,DNP,DNP,0,0,DNP,DNP,0,0,0,3,12,1,,,1
+2020,Joel Selwood,Geelong,0,3,0,0,0,0,0,DNP,DNP,0,0,0,DNP,DNP,DNP,DNP,DNP,0,3,11,1,,,1
+2020,Ben Cunnington,North Melbourne,3,0,DNP,DNP,0,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,3,3,1,,,1
+2020,Dion Prestia,Richmond,3,0,0,0,0,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,3,5,1,,,1
+2020,Matt Crouch,Adelaide,0,0,0,DNP,0,0,0,0,0,0,0,0,0,DNP,1,2,0,0,3,16,,1,1,2
+2020,Matthew Taberner,Fremantle,0,0,0,0,0,0,0,0,2,DNP,0,0,1,0,0,0,0,DNP,3,16,,1,1,2
+2020,Jake Lloyd,Sydney,0,0,0,0,0,0,0,1,0,0,DNP,2,0,0,0,0,0,0,3,17,,1,1,2
+2020,Jayden Short,Richmond,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,DNP,0,0,3,17,,1,1,2
+2020,Liam Baker,Richmond,0,0,DNP,0,0,1,0,0,0,2,0,0,0,0,0,DNP,0,0,3,16,,1,1,2
+2020,Touk Miller,Gold Coast,0,0,2,0,0,0,0,0,0,1,0,0,0,0,DNP,0,0,0,3,17,,1,1,2
+2020,Eddie Betts,Carlton,DNP,0,1,0,0,2,0,0,0,DNP,0,0,0,0,0,DNP,0,0,3,15,,1,1,2
+2020,Caleb Daniel,Western Bulldogs,0,0,1,0,0,0,0,0,0,0,0,0,0,0,DNP,0,2,0,3,17,,1,1,2
+2020,Jaeger OMeara,Hawthorn,0,DNP,1,0,0,0,0,2,0,DNP,0,0,DNP,DNP,DNP,DNP,0,0,3,12,,1,1,2
+2020,Gryan Miers,Geelong,0,1,0,0,0,0,0,0,0,2,0,0,0,0,DNP,0,0,0,3,17,,1,1,2
+2020,Rory Lobb,Fremantle,1,0,0,0,0,0,0,0,0,DNP,0,0,2,0,0,0,0,0,3,17,,1,1,2
+2020,Daniel Rich,Brisbane Lions,0,0,0,0,0,0,0,0,DNP,DNP,0,DNP,DNP,DNP,0,0,0,2,2,13,,1,,1
+2020,Mitch Brown,Melbourne,0,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,0,0,DNP,0,2,2,5,,1,,1
+2020,Harry McKay,Carlton,DNP,0,0,DNP,0,0,0,DNP,0,DNP,DNP,0,0,0,0,0,2,0,2,13,,1,,1
+2020,Brent Daniels,Greater Western Sydney,0,0,0,0,0,0,0,0,0,0,DNP,0,0,0,0,DNP,2,0,2,16,,1,,1
+2020,Blake Acres,Fremantle,DNP,DNP,DNP,DNP,DNP,0,0,0,DNP,DNP,DNP,DNP,DNP,DNP,0,0,2,0,2,7,,1,,1
+2020,Jack Riewoldt,Richmond,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,DNP,2,0,2,17,,1,,1
+2020,Cam Rayner,Brisbane Lions,0,0,0,0,0,0,0,0,0,0,DNP,DNP,0,DNP,0,2,0,0,2,15,,1,,1
+2020,Anthony McDonald-Tipungwuti,Essendon,0,0,DNP,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,2,17,,1,,1
+2020,Ben Ainsworth,Gold Coast,0,0,0,0,0,0,0,0,0,0,0,0,0,2,DNP,0,DNP,0,2,16,,1,,1
+2020,Jeremy McGovern,West Coast,0,0,DNP,DNP,0,0,0,DNP,DNP,DNP,DNP,0,2,0,0,0,0,DNP,2,11,,1,,1
+2020,Mitch Wallis,Western Bulldogs,0,0,0,0,0,0,0,0,0,0,0,0,2,0,DNP,0,0,0,2,17,,1,,1
+2020,Marc Murphy,Carlton,0,0,0,0,0,0,0,0,0,DNP,0,0,2,0,0,0,0,0,2,17,,1,,1
+2020,Josh Daicos,Collingwood,0,0,0,0,0,DNP,0,0,0,2,0,0,0,0,0,DNP,0,0,2,16,,1,,1
+2020,Zak Butters,Port Adelaide,0,0,0,0,0,0,0,0,0,2,0,0,0,0,DNP,0,DNP,DNP,2,15,,1,,1
+2020,Nick Hind,St Kilda,DNP,0,0,DNP,DNP,DNP,DNP,0,2,0,0,0,0,0,DNP,DNP,0,DNP,2,10,,1,,1
+2020,Luke McDonald,North Melbourne,0,0,0,0,0,0,0,0,2,0,0,0,0,0,DNP,0,0,0,2,17,,1,,1
+2020,Alex Witherden,Brisbane Lions,0,DNP,DNP,DNP,DNP,DNP,DNP,DNP,2,0,0,0,0,DNP,DNP,DNP,DNP,DNP,2,6,,1,,1
+2020,Derek Eggmolesse-Smith,Richmond,DNP,DNP,DNP,DNP,DNP,0,2,0,0,0,0,DNP,DNP,DNP,DNP,DNP,DNP,DNP,2,6,,1,,1
+2020,Callum Mills,Sydney,0,0,0,0,0,2,0,0,0,0,DNP,0,0,0,DNP,DNP,0,0,2,15,,1,,1
+2020,Tom Liberatore,Western Bulldogs,DNP,DNP,0,0,2,0,0,0,0,0,0,0,0,0,DNP,0,0,0,2,15,,1,,1
+2020,Jake Stringer,Essendon,0,0,DNP,0,2,DNP,DNP,DNP,DNP,DNP,DNP,DNP,0,0,0,0,0,0,2,10,,1,,1
+2020,Jarrod Witts,Gold Coast,0,0,0,2,0,0,0,0,0,0,0,0,0,0,DNP,0,0,0,2,17,,1,,1
+2020,Levi Casboult,Carlton,0,0,0,2,0,0,0,0,0,DNP,0,0,0,0,0,0,0,0,2,17,,1,,1
+2020,Ben Long,St Kilda,0,0,0,2,0,0,DNP,DNP,DNP,0,0,0,0,0,DNP,0,0,0,2,14,,1,,1
+2020,Justin Westhoff,Port Adelaide,0,0,0,2,0,0,0,0,0,0,DNP,DNP,0,0,DNP,DNP,DNP,DNP,2,12,,1,,1
+2020,Jonathon Ceglar,Hawthorn,0,0,2,0,0,0,DNP,DNP,0,DNP,0,DNP,DNP,0,0,0,0,0,2,13,,1,,1
+2020,Jack Billings,St Kilda,0,2,0,0,0,0,0,0,0,0,0,0,0,0,DNP,0,0,0,2,17,,1,,1
+2020,Shaun Higgins,North Melbourne,0,2,0,0,0,0,0,0,0,0,0,0,0,0,DNP,0,0,0,2,17,,1,,1
+2020,Sam Day,Gold Coast,0,2,0,0,0,0,0,0,0,0,0,0,0,0,DNP,0,0,0,2,17,,1,,1
+2020,Brandan Parfitt,Geelong,DNP,2,DNP,0,0,0,0,0,0,DNP,0,0,0,0,DNP,0,0,0,2,14,,1,,1
+2020,Tom Phillips,Collingwood,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,DNP,DNP,DNP,2,15,,1,,1
+2020,Shaun Burgoyne,Hawthorn,2,0,0,0,0,DNP,0,0,0,DNP,DNP,0,0,DNP,0,DNP,0,0,2,13,,1,,1
+2020,Darcy Byrne-Jones,Port Adelaide,2,0,0,0,0,0,0,0,0,0,0,0,0,0,DNP,0,0,0,2,17,,1,,1
+2020,Adam Saad,Essendon,2,0,DNP,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,17,,1,,1
+2020,Bradley Hill,St Kilda,0,0,0,0,0,0,0,0,0,0,0,1,0,0,DNP,1,0,0,2,17,,,2,2
+2020,Luke Davies-Uniacke,North Melbourne,DNP,DNP,DNP,DNP,DNP,DNP,DNP,0,0,DNP,0,1,0,0,DNP,0,0,1,2,9,,,2,2
+2020,Peter Ladhams,Port Adelaide,DNP,DNP,DNP,DNP,DNP,DNP,1,0,0,1,0,0,DNP,DNP,DNP,DNP,0,0,2,8,,,2,2
+2020,David Swallow,Gold Coast,0,DNP,0,0,0,0,1,1,0,0,0,DNP,0,0,DNP,0,0,0,2,15,,,2,2
+2020,Darcy Tucker,Fremantle,0,0,0,1,1,0,0,0,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,2,8,,,2,2
+2020,Oliver Florent,Sydney,0,0,1,0,0,0,0,0,0,0,DNP,0,0,0,0,1,0,0,2,17,,,2,2
+2020,Dylan Moore,Hawthorn,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,0,0,1,1,3,,,1,1
+2020,Shane Edwards,Richmond,0,0,0,0,0,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,1,1,6,,,1,1
+2020,Sebastian Ross,St Kilda,0,0,0,0,0,0,0,0,DNP,DNP,DNP,0,0,0,DNP,0,0,1,1,14,,,1,1
+2020,John Noble,Collingwood,0,0,0,0,DNP,DNP,0,0,0,0,0,0,0,0,0,DNP,1,0,1,15,,,1,1
+2020,Brad Ebert,Port Adelaide,0,0,0,0,0,0,DNP,0,0,DNP,DNP,DNP,0,0,DNP,DNP,1,0,1,12,,,1,1
+2020,Mitch Robinson,Brisbane Lions,0,0,0,0,0,0,0,0,0,0,0,0,0,DNP,0,1,0,0,1,17,,,1,1
+2020,Brad Crouch,Adelaide,0,0,0,0,0,0,0,0,DNP,DNP,DNP,DNP,DNP,DNP,0,1,0,0,1,12,,,1,1
+2020,Karl Amon,Port Adelaide,0,0,0,0,0,0,0,0,0,0,0,0,0,0,DNP,1,0,0,1,17,,,1,1
+2020,Jacob Weitering,Carlton,0,0,0,0,0,0,0,0,0,DNP,0,0,0,0,1,0,0,0,1,17,,,1,1
+2020,Ryan Clarke,Sydney,DNP,DNP,DNP,DNP,0,0,0,0,0,DNP,DNP,DNP,DNP,0,1,0,0,0,1,10,,,1,1
+2020,Jake Aarts,Richmond,DNP,DNP,DNP,DNP,0,0,0,0,0,0,0,0,0,0,1,DNP,0,0,1,13,,,1,1
+2020,Alex Sexton,Gold Coast,DNP,0,0,0,0,0,0,0,0,0,DNP,0,DNP,1,DNP,0,0,0,1,14,,,1,1
+2020,Bachar Houli,Richmond,DNP,0,0,0,0,DNP,DNP,DNP,DNP,DNP,DNP,DNP,0,1,0,DNP,0,0,1,9,,,1,1
+2020,Joe Daniher,Essendon,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,1,0,DNP,0,0,1,4,,,1,1
+2020,Tom Clurey,Port Adelaide,0,0,0,0,0,0,0,0,0,0,0,0,1,0,DNP,0,0,DNP,1,16,,,1,1
+2020,Zac Fisher,Carlton,0,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,0,0,1,0,0,0,0,DNP,1,8,,,1,1
+2020,Nick Vlastuin,Richmond,0,0,0,0,0,0,0,0,DNP,0,0,1,0,0,0,DNP,0,0,1,16,,,1,1
+2020,Liam Ryan,West Coast,0,0,0,0,0,0,0,0,0,DNP,0,1,0,0,0,0,0,0,1,17,,,1,1
+2020,Bailey Williams,Western Bulldogs,0,0,0,0,0,0,0,0,0,0,0,1,0,0,DNP,0,0,0,1,17,,,1,1
+2020,Jack Newnes,Carlton,0,0,0,0,0,0,0,0,0,DNP,0,1,0,0,0,0,0,0,1,17,,,1,1
+2020,Bayley Fritsch,Melbourne,0,0,DNP,0,0,0,0,0,0,0,0,1,0,DNP,0,0,0,0,1,16,,,1,1
+2020,Jed Bews,Geelong,DNP,0,0,0,0,0,0,0,0,0,0,1,0,0,DNP,0,0,0,1,16,,,1,1
+2020,Dane Rampe,Sydney,0,0,0,0,0,0,0,0,0,0,DNP,1,DNP,DNP,DNP,DNP,DNP,DNP,1,11,,,1,1
+2020,Lachie Weller,Gold Coast,0,0,0,0,0,0,0,0,0,0,1,0,0,0,DNP,0,0,0,1,17,,,1,1
+2020,Angus Brayshaw,Melbourne,0,0,DNP,0,0,0,0,0,0,0,1,0,0,0,0,DNP,DNP,DNP,1,14,,,1,1
+2020,Liam Jones,Carlton,0,0,0,0,0,0,0,0,0,DNP,1,0,0,0,0,0,0,0,1,17,,,1,1
+2020,Eric Hipwood,Brisbane Lions,0,0,0,0,0,0,0,0,0,0,1,0,0,DNP,0,0,0,0,1,17,,,1,1
+2020,Caleb Serong,Fremantle,DNP,DNP,DNP,0,0,0,0,0,1,DNP,0,0,0,0,0,0,0,0,1,14,,,1,1
+2020,Zac Williams,Greater Western Sydney,DNP,0,0,0,DNP,DNP,DNP,DNP,1,0,DNP,0,0,0,0,DNP,0,0,1,11,,,1,1
+2020,Tom Stewart,Geelong,0,0,0,0,DNP,DNP,DNP,0,1,0,0,0,0,0,DNP,0,0,0,1,14,,,1,1
+2020,Aaron Hall,North Melbourne,0,0,0,0,0,0,0,0,1,0,0,DNP,DNP,0,DNP,0,0,0,1,15,,,1,1
+2020,Charlie Cameron,Brisbane Lions,0,0,0,0,0,0,0,0,1,0,0,0,0,DNP,0,0,0,0,1,17,,,1,1
+2020,Mitch Georgiades,Port Adelaide,0,DNP,DNP,DNP,DNP,DNP,DNP,0,1,0,0,0,0,DNP,DNP,DNP,DNP,DNP,1,7,,,1,1
+2020,Noah Balta,Richmond,DNP,DNP,DNP,DNP,0,0,0,0,1,0,0,0,0,0,0,DNP,0,0,1,13,,,1,1
+2020,Brodie Smith,Adelaide,0,0,0,0,0,0,0,1,0,DNP,0,0,0,DNP,0,0,0,0,1,16,,,1,1
+2020,Paddy Ryder,St Kilda,0,0,0,DNP,DNP,DNP,0,1,0,0,DNP,0,0,0,DNP,0,0,0,1,13,,,1,1
+2020,Jared Polec,North Melbourne,0,0,0,0,0,0,0,1,DNP,0,0,DNP,DNP,DNP,DNP,0,0,0,1,13,,,1,1
+2020,Zac Bailey,Brisbane Lions,0,0,0,0,0,0,1,0,0,0,0,0,0,DNP,0,0,0,0,1,17,,,1,1
+2020,Kane Farrell,Port Adelaide,DNP,DNP,DNP,0,0,1,0,0,0,0,0,0,DNP,DNP,DNP,0,0,DNP,1,11,,,1,1
+2020,Izak Rankine,Gold Coast,DNP,DNP,DNP,DNP,DNP,1,0,0,0,0,0,0,0,0,DNP,0,0,0,1,12,,,1,1
+2020,Ben Keays,Adelaide,DNP,0,0,0,0,1,0,0,0,0,0,0,0,DNP,0,0,0,0,1,16,,,1,1
+2020,Gary Ablett,Geelong,0,0,0,0,0,1,0,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,0,1,8,,,1,1
+2020,Harry Himmelberg,Greater Western Sydney,0,0,0,0,1,0,0,0,0,0,DNP,0,0,0,0,0,0,DNP,1,16,,,1,1
+2020,Easton Wood,Western Bulldogs,0,DNP,DNP,DNP,1,0,0,0,0,0,0,0,0,0,DNP,DNP,DNP,0,1,12,,,1,1
+2020,Jake Carlisle,St Kilda,DNP,0,0,1,0,0,0,0,0,0,0,DNP,0,DNP,DNP,DNP,DNP,0,1,12,,,1,1
+2020,Hamish Hartlett,Port Adelaide,0,0,0,1,0,0,0,0,0,0,0,0,0,0,DNP,0,0,0,1,17,,,1,1
+2020,Ben King,Gold Coast,0,0,1,0,0,0,0,0,0,0,0,0,0,0,DNP,0,0,0,1,17,,,1,1
+2020,Sam Docherty,Carlton,0,1,0,0,0,0,0,0,0,DNP,0,0,0,0,0,0,0,DNP,1,16,,,1,1
+2020,Liam Shiels,Hawthorn,1,0,0,0,0,0,0,0,0,DNP,0,0,0,0,DNP,0,0,0,1,16,,,1,1
+2020,Luke Dunstan,St Kilda,1,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,DNP,1,1,,,1,1
+2020,Matt de Boer,Greater Western Sydney,1,0,0,0,0,0,0,0,0,DNP,DNP,DNP,DNP,0,0,0,0,DNP,1,13,,,1,1

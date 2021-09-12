@@ -13,11 +13,8 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   require(readxl)
   require(fitzRoy)
   
-  # Fetch stats from fryzigg 
-  base_stats <- fetch_player_stats(season = years, source = "fryzigg")
-  
   # Add season, full player name and calculate match outcome
-  base_stats <- base_stats %>% 
+  base_stats <- fetch_player_stats(season = years, source = "fryzigg") %>% 
     # remove players who were the sub but didn't come on
     filter(time_on_ground_percentage > 0) %>%
     # restrict to just home and away season
@@ -33,11 +30,31 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
       team_score = ifelse(player_team == match_home_team,match_home_team_score,match_away_team_score),
       player_name = paste(player_first_name, player_last_name),
       sc_score = supercoach_score,
-      af_score = afl_fantasy_score
+      af_score = afl_fantasy_score,
+      br_votes = brownlow_votes
     )
   
+  # Load 2020 brownlow votes
+  br_2020 <- read_csv(paste0(here(),"/Data/brownlow_2020.csv"))
+  br_2020 <- br_2020[,1:21]
+  br_2020 <- melt(br_2020,value.name ="BR",variable.name ="match_round",id=c("season","player_name","player_team"))
+  br_2020 <- br_2020 %>% 
+    filter(BR > 0) %>% 
+    filter(BR != "DNP") %>%
+    mutate(
+      match_round = as.integer(match_round),
+      BR = as.integer(BR)
+    )  
+  
+  # Add 2020 brownlow information
+  br_stats <- left_join(base_stats, br_2020, by=c("season", "match_round", "player_team", "player_name")) %>%
+    mutate(
+      brownlow_votes = ifelse(is.na(BR), br_votes, BR)
+    )
+
+  
   # Add brownlow information
-  player_stats <- base_stats %>%
+  player_stats <- br_stats %>%
     group_by(season, player_id) %>%
     mutate(
       games_played = length(player_id),

@@ -9,7 +9,7 @@
 # 
 ####################################################################################
 
-test_model <- function(model, X_test, entire_df) {
+test_model <- function(model, X_test, entire_df, testing_season) {
   
   # Pull out variable importance
   names <- dimnames(data.matrix(X_test))[[2]]
@@ -61,13 +61,14 @@ test_model <- function(model, X_test, entire_df) {
 
   
   # Record the model run and store variable names, variable importance, votes by player and votes by match
-  season <- latest_season_with_pred %>% select(season) %>% distinct() %>% pull()
-  new_dir <- glue("{here()}/logs/season-{season}_diff-{top20_abs_diff}_{format(now(), '%Y_%m_%d_%H_%M_%S')}")
-  system(glue('mkdir {new_dir}'))
+  season <- testing_season
+  datetime <- format(Sys.time(),'%Y%d%m_%H%M')
+  new_dir <- glue('{here()}/Logs/season_{season}_diff_{top20_abs_diff}_{datetime}')
+  dir.create(new_dir)
   write_csv(data.frame(features_used = colnames(X_test)), glue('{new_dir}/features_used.csv'))
   write_csv(imp, glue('{new_dir}/variable_importance.csv'))
   write_csv(votes_by_match, glue('{new_dir}/votes_by_match.csv'))
-  write_csv(votes_by_player, glue('{new_dir}/votes_by_player.csv'))
+  write_csv(votes_by_player %>% arrange(desc(predicted_votes)), glue('{new_dir}/votes_by_player.csv'))
   
   # Arrange output into list
   model_performance_list <- list(
