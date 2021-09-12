@@ -18,7 +18,7 @@ transform_data <- function(df, training_season_cutoff, dataInfoPath = paste0(her
   
   # Remove unnecessary variables but keeping unique identifier for the match
   df_removed <- df %>%
-    select(all_of(dataInfo$Factor[dataInfo$Include == 'Y']), match_id, match_round, player_team)
+    select(all_of(dataInfo$Factor[dataInfo$Include == 'Y']), match_id, match_round, player_team, season)
   
   
   # Add in variables that are proportional to the match
@@ -47,9 +47,17 @@ transform_data <- function(df, training_season_cutoff, dataInfoPath = paste0(her
   
   # One hot encode all character variables
   chr_vars <- df_removed %>% select(where(is.character), -player_team) %>% colnames()
-  dummies <- dummyVars(as.formula(paste('~', paste(chr_vars, collapse = ' + '))), data = df_removed)
-  df_ohe <- as.data.frame(predict(dummies, newdata = df_removed))
-  df_all <- bind_cols(df_removed %>% select(-all_of(chr_vars)), df_ohe, data.frame(player_name = df$player_name))
+  # dummies <- dummyVars(as.formula(paste('~', paste(chr_vars, collapse = ' + '))), data = df_removed)
+  # df_ohe <- as.data.frame(predict(dummies, newdata = df_removed))
+  dummies <- dummy_cols(
+    df_removed, 
+    select_columns = chr_vars, 
+    remove_first_dummy = T, 
+    remove_selected_columns = T
+  )
+  
+  df_all <- bind_cols(dummies, data.frame(player_name = df$player_name))
+  
   
   # Split into training and test sets based on season
   #' [Note: Random splitting vs season splitting]

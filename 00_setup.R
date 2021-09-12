@@ -28,6 +28,7 @@ list_of_packages <- c("readxl"
                       , 'mgsub'
                       , 'lubridate'
                       , 'glue'
+                      , 'fastDummies'
 )
 
 new_packages <- list_of_packages[!(list_of_packages %in% installed.packages()[,"Package"])]

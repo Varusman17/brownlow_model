@@ -26,7 +26,9 @@ test_model <- function(model, X_test, entire_df) {
   latest_season_with_pred <- bind_cols(
     X_test, 
     data.frame(pred = brownlow_pred), 
-    entire_df %>% filter(train_test == 'test') %>% select(player_name, brownlow_votes, match_id, match_round, player_team)
+    entire_df %>% 
+      filter(train_test == 'test') %>% 
+      select(player_name, brownlow_votes, match_id, match_round, player_team, season)
   )
   votes_by_match <- latest_season_with_pred %>% 
     group_by(match_id, match_round) %>% 
@@ -59,8 +61,8 @@ test_model <- function(model, X_test, entire_df) {
 
   
   # Record the model run and store variable names, variable importance, votes by player and votes by match
-  season <- X_test %>% select(season) %>% distinct() %>% pull()
-  new_dir <- glue('{here()}/logs/season-{season}_diff-{top20_abs_diff}_{today()}')
+  season <- latest_season_with_pred %>% select(season) %>% distinct() %>% pull()
+  new_dir <- glue("{here()}/logs/season-{season}_diff-{top20_abs_diff}_{format(now(), '%Y_%m_%d_%H_%M_%S')}")
   system(glue('mkdir {new_dir}'))
   write_csv(data.frame(features_used = colnames(X_test)), glue('{new_dir}/features_used.csv'))
   write_csv(imp, glue('{new_dir}/variable_importance.csv'))
