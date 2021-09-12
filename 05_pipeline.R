@@ -17,7 +17,7 @@ source(paste0(here(),"/04_test_model.R"))
 
 # Set training season cutoff (i.e. predict for the next year)
 
-training_season_cutoff <- 2018 
+training_season_cutoff <- 2019 
 testing_season <- training_season_cutoff + 1
 
 # Source data and add factors ---------------------------------------------
