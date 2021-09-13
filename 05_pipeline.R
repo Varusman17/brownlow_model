@@ -23,9 +23,8 @@ testing_season <- training_season_cutoff + 1
 # Source data and add factors ---------------------------------------------
 df <- get_data()
 
-
 # Cast data to correct type and split into train and test -----------------
-transformed_data <- transform_data(df, training_season_cutoff)
+transformed_data <- transform_data(df, training_season_cutoff, testing_season)
 
 
 # Train XGBoost model -----------------------------------------------------

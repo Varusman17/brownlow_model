@@ -10,7 +10,7 @@
 #
 ####################################################################################
 
-transform_data <- function(df, training_season_cutoff, dataInfoPath = paste0(here(), '/Data/training_factor_list.csv')) {
+transform_data <- function(df, training_season_cutoff, testing_season, dataInfoPath = paste0(here(), '/Data/training_factor_list.csv')) {
   
   # Filter to only rows of dataInfo that match column names in df
   dataInfo <- read_csv(dataInfoPath) %>% 
@@ -19,6 +19,8 @@ transform_data <- function(df, training_season_cutoff, dataInfoPath = paste0(her
   # Remove unnecessary variables but keeping unique identifier for the match
   df_removed <- df %>%
     select(all_of(dataInfo$Factor[dataInfo$Include == 'Y']), match_id, match_round, player_team, season)
+  
+  # Add in experience per game
   
   
   # Add in variables that are proportional to the match
@@ -65,7 +67,7 @@ transform_data <- function(df, training_season_cutoff, dataInfoPath = paste0(her
   #' randomly due to information leakage by capturing response variable in our independent variables
   df_all <- df_all %>% 
     # eg. if we want to train on pre2017 and test on 2018, we want to filter out 2019 onwards
-    filter(season <= training_season_cutoff + 1) %>% 
+    filter(season <= testing_season) %>% 
     mutate(train_test = ifelse(as.integer(season) <= training_season_cutoff, 'train', 'test'))
   
   list_output = list(

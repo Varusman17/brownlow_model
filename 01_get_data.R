@@ -50,8 +50,8 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   br_stats <- left_join(base_stats, br_2020, by=c("season", "match_round", "player_team", "player_name")) %>%
     mutate(
       brownlow_votes = ifelse(is.na(BR), br_votes, BR)
-    )
-
+    ) %>%
+    select(-BR,-br_votes)
   
   # Add brownlow information
   player_stats <- br_stats %>%
@@ -84,12 +84,37 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   
   # Join 2020 and 2021 fantasy scores
   fantasy_scores <- read_csv(paste0(here(), '/Data/fantasy_scores.csv'))
-  all_data <- left_join(captain_data, fantasy_scores, by=c("season", "match_round", "player_team", "player_name")) %>%
+  fantasy_data <- left_join(captain_data, fantasy_scores, by=c("season", "match_round", "player_team", "player_name")) %>%
     mutate(
       supercoach_score = ifelse(is.na(sc_score), SC, sc_score),
       afl_fantasy_score = ifelse(is.na(af_score), AF, af_score)
     ) %>%
-    select(-sc_score, -SC, -af_score, -AF)
+    select(-sc_score, -SC, -af_score, -AF, -footywire_player)
+  
+  # List of players
+  all_players <- base_stats %>% distinct(player_id, player_name)  
+  
+  # All matches
+  all_stats <- fitzRoy::get_fryzigg_stats() %>%
+    mutate(
+      season = as.integer(format(date, "%Y")),
+      player_name = paste(player_first_name, player_last_name)    
+    ) %>%
+    select(season, match_round, player_id, player_name)
+  
+  # Experience
+  experience <- right_join(all_stats, all_players, by = c("player_id", "player_name")) %>%
+    group_by(player_id, player_name) %>%
+    mutate(
+      num_games = row_number()
+    ) %>%
+    ungroup() %>%
+    mutate(match_round = as.integer(match_round)) %>%
+    # restrict to just home and away season
+    filter(as.integer(match_round) < 24)    
+  
+  # Join experience
+  all_data <- left_join(fantasy_data, experience, by=c("season", "match_round", "player_id", "player_name")) %>%
   
   return(all_data)
 }
