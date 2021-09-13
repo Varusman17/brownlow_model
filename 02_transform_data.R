@@ -20,9 +20,6 @@ transform_data <- function(df, training_season_cutoff, testing_season, dataInfoP
   df_removed <- df %>%
     select(all_of(dataInfo$Factor[dataInfo$Include == 'Y']), match_id, match_round, player_team, season)
   
-  # Add in experience per game
-  
-  
   # Add in variables that are proportional to the match
   df_removed <- df_removed %>% 
     group_by(match_id) %>% 
@@ -67,19 +64,37 @@ transform_data <- function(df, training_season_cutoff, testing_season, dataInfoP
   #' randomly due to information leakage by capturing response variable in our independent variables
   df_all <- df_all %>% 
     # eg. if we want to train on pre2017 and test on 2018, we want to filter out 2019 onwards
-    filter(season <= testing_season) %>% 
+    filter(season >= training_season_cutoff - 4 & season <= testing_season) %>% 
     mutate(train_test = ifelse(as.integer(season) <= training_season_cutoff, 'train', 'test'))
   
+  # Take out response
+  df_response <- df_all %>% 
+    filter(train_test == "train" & brownlow_votes > 0)
+  
+  # Take 7 rows where no brownlow votes were polled
+  df_zeros <- df_all %>%
+    filter(train_test == "train" & brownlow_votes == 0) %>% 
+    group_by(match_id) %>% 
+    sample_n(7)
+  
+  # Take test season
+  df_test <- df_all %>% 
+    filter(train_test == "test")
+  
+  # Union this dataset ready for modelling
+  df_modelling <- bind_rows(df_response, df_zeros, df_test)
+  df_modelling <- df_modelling %>% sample_n(as.numeric(count(df_modelling)))
+  
   list_output = list(
-    entire_df = df_all,
-    X_train = df_all %>%
+    entire_df = df_modelling,
+    X_train = df_modelling %>%
       filter(train_test == 'train') %>% 
       select(-player_name, -train_test, -brownlow_votes, -match_id, -match_round, -season,  -player_team),
-    y_train = df_all %>% filter(train_test == 'train') %>% select(brownlow_votes) %>% pull(),
-    X_test = df_all %>%
+    y_train = df_modelling %>% filter(train_test == 'train') %>% select(brownlow_votes) %>% pull(),
+    X_test = df_modelling %>%
       filter(train_test == 'test') %>% 
       select(-player_name, -train_test, -brownlow_votes, -match_id, -match_round, -season, -player_team),
-    y_test = df_all %>% filter(train_test == 'test') %>% select(brownlow_votes) %>% pull()
+    y_test = df_modelling %>% filter(train_test == 'test') %>% select(brownlow_votes) %>% pull()
   )
   
   return(list_output)

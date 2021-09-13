@@ -1,0 +1,615 @@
+player_name,player_team,actual_votes,predicted_votes,coaches_votes,prediction_sum,votes_accuracy
+Lachie Neale,Brisbane Lions,31,29,93,32.376763224601746,2
+Travis Boak,Port Adelaide,21,23,77,23.078384675085545,-2
+Christian Petracca,Melbourne,20,21,78,24.20445862656925,-1
+Jack Steele,St Kilda,20,19,72,19.328057158738375,1
+Scott Pendlebury,Collingwood,13,15,43,15.872040009126067,-2
+Taylor Adams,Collingwood,11,15,60,17.866655495017767,-4
+Zach Merrett,Essendon,13,14,55,16.84469791688025,-1
+Marcus Bontempelli,Western Bulldogs,10,14,59,17.157297149300575,-4
+Sam Menegola,Geelong,5,14,41,16.111085752025247,-9
+Dustin Martin,Richmond,15,13,42,13.502880501910113,2
+Jack Macrae,Western Bulldogs,15,13,46,18.978831444401294,2
+Luke Parker,Sydney,15,13,44,18.259711630642414,2
+Patrick Dangerfield,Geelong,15,12,44,16.87317876331508,3
+Cameron Guthrie,Geelong,14,12,48,16.299585103988647,2
+Nat Fyfe,Fremantle,10,12,39,17.099257461726665,-2
+Tom Rockliff,Port Adelaide,10,12,25,13.041853910544887,-2
+Andrew Gaff,West Coast,8,12,29,15.820555330719799,-4
+Zak Jones,St Kilda,7,12,37,12.353593908250332,-5
+Andrew Brayshaw,Fremantle,9,10,34,9.668436678592116,-1
+Jarryd Lyons,Brisbane Lions,9,10,39,14.456142324022949,-1
+Josh Kelly,Greater Western Sydney,8,10,33,11.99008567724377,-2
+Andrew McGrath,Essendon,7,10,37,9.350079500116408,-3
+Nic Naitanui,West Coast,5,10,51,10.021691530942917,-5
+Lachie Whitfield,Greater Western Sydney,4,10,40,14.111694909632206,-6
+David Mundy,Fremantle,3,10,36,9.533176993951201,-7
+Tom Hawkins,Geelong,11,9,35,10.160405262839049,2
+Ollie Wines,Port Adelaide,10,9,43,12.85173671413213,1
+Sam Walsh,Carlton,8,9,38,13.40655283536762,-1
+Adam Treloar,Collingwood,4,9,24,6.949394024908543,-5
+Joel Selwood,Geelong,3,9,27,7.797156181186438,-6
+Clayton Oliver,Melbourne,14,8,34,15.998030368238688,6
+Toby Greene,Greater Western Sydney,12,8,34,8.855597539804876,4
+Tim Kelly,West Coast,11,8,34,10.41008238075301,3
+Charlie Dixon,Port Adelaide,9,8,36,9.145849937573075,1
+Luke Ryan,Fremantle,6,8,30,7.73102340195328,-2
+Todd Goldstein,North Melbourne,5,8,32,10.634130691294558,-3
+Hugh McCluggage,Brisbane Lions,4,8,30,10.878737416584045,-4
+Matt Crouch,Adelaide,3,8,24,10.47472130204551,-5
+Jack Billings,St Kilda,2,8,25,9.927680160850286,-6
+Jarrod Witts,Gold Coast,2,8,27,7.283458497142419,-6
+Max Gawn,Melbourne,13,7,30,11.42744779586792,6
+Shai Bolton,Richmond,9,7,32,9.477257197722793,2
+Dylan Shiel,Essendon,6,7,24,11.334327668417245,-1
+Jack Viney,Melbourne,6,7,30,9.132482730783522,-1
+Lachie Hunter,Western Bulldogs,6,7,20,7.541347295045853,-1
+Rory Laird,Adelaide,4,7,33,9.291134483879432,-3
+Caleb Daniel,Western Bulldogs,3,7,35,7.93491476168856,-4
+Jed Anderson,North Melbourne,3,7,29,8.0087588110473,-4
+Josh P. Kennedy,Sydney,0,7,19,7.961370645090938,-7
+Dom Sheed,West Coast,11,6,18,8.204825726221316,5
+Patrick Cripps,Carlton,10,6,18,10.800086252391338,4
+Matt Rowell,Gold Coast,9,6,30,4.737185220699757,3
+Dan Butler,St Kilda,8,6,25,6.562149915844202,2
+Jy Simpkin,North Melbourne,8,6,19,10.633773610927165,2
+Chad Wingard,Hawthorn,6,6,29,6.636106672580354,0
+Ed Curnow,Carlton,5,6,18,7.694606020115316,-1
+Jack Crisp,Collingwood,5,6,19,6.466999092604965,-1
+Jade Gresham,St Kilda,5,6,22,5.621438524918631,-1
+Mitch Duncan,Geelong,5,6,33,9.841653076000512,-1
+Harry Perryman,Greater Western Sydney,4,6,20,5.854167848359793,-2
+Jeremy McGovern,West Coast,2,6,19,4.281386146787554,-4
+Liam Ryan,West Coast,1,6,41,6.677617801353335,-5
+Ed Langdon,Melbourne,0,6,17,6.6688019363209605,-6
+Michael Walters,Fremantle,8,5,34,8.983704538084567,3
+Rowan Marshall,St Kilda,8,5,23,8.709795901551843,3
+Isaac Heeney,Sydney,5,5,19,4.538771324791014,0
+Jack Gunston,Hawthorn,5,5,19,5.69253658503294,0
+Robbie Gray,Port Adelaide,5,5,21,4.946320896036923,0
+Nick Haynes,Greater Western Sydney,4,5,25,6.422540955711156,-1
+Tim English,Western Bulldogs,4,5,19,7.220500802621245,-1
+Levi Casboult,Carlton,2,5,17,3.9725383315235376,-3
+Dayne Zorko,Brisbane Lions,0,5,30,8.479834325611591,-5
+Tom Mitchell,Hawthorn,10,4,23,7.706128373916727,6
+Brodie Grundy,Collingwood,6,4,22,6.020353803876787,2
+Kane Lambert,Richmond,6,4,20,4.788996475224849,2
+Jack Martin,Carlton,4,4,19,5.842225473374128,0
+Adam Cerra,Fremantle,3,4,22,4.984034165274352,-1
+Harris Andrews,Brisbane Lions,3,4,20,4.5442114202305675,-1
+Jake Lloyd,Sydney,3,4,24,9.861693769693375,-1
+Touk Miller,Gold Coast,3,4,21,5.945033865049481,-1
+Oliver Florent,Sydney,2,4,9,4.606962493155152,-2
+Jared Polec,North Melbourne,1,4,15,5.771401915233582,-3
+Noah Balta,Richmond,1,4,23,3.742839344777167,-3
+James Worpel,Hawthorn,0,4,11,5.386905907653272,-4
+Jordan De Goey,Collingwood,0,4,0,3.262359428219497,-4
+Josh J. Kennedy,West Coast,0,4,0,4.269333638716489,-4
+Jarrod Berry,Brisbane Lions,8,3,23,5.312936959438957,5
+Steele Sidebottom,Collingwood,6,3,13,5.8507988806813955,3
+Trent Cotchin,Richmond,5,3,26,5.926411718130112,2
+Jacob Hopper,Greater Western Sydney,4,3,12,5.5283826272934675,1
+Stephen Coniglio,Greater Western Sydney,4,3,9,9.463057659566402,1
+Steven May,Melbourne,4,3,28,7.187549180933274,1
+Aaron Naughton,Western Bulldogs,3,3,8,2.190893285907805,0
+Ben Cunnington,North Melbourne,3,3,10,4.402474284172058,0
+Dion Prestia,Richmond,3,3,9,3.1147158816456795,0
+Gryan Miers,Geelong,3,3,13,3.8988941395655274,0
+Isaac Smith,Hawthorn,3,3,9,3.4757799901999533,0
+Jack Lukosius,Gold Coast,3,3,13,4.314145876618568,0
+Jayden Short,Richmond,3,3,18,4.491024389397353,0
+Josh Bruce,Western Bulldogs,3,3,10,2.5004304316826165,0
+Tom Barrass,West Coast,3,3,15,3.7325849910266697,0
+Ben Ainsworth,Gold Coast,2,3,11,3.028984023607336,-1
+Callum Mills,Sydney,2,3,11,3.3824150391155854,-1
+Derek Eggmolesse-Smith,Richmond,2,3,8,1.5735547337681055,-1
+Luke McDonald,North Melbourne,2,3,12,4.1778956414200366,-1
+Marc Murphy,Carlton,2,3,15,5.730336309410632,-1
+Dane Rampe,Sydney,1,3,20,4.4527551588835195,-2
+Liam Shiels,Hawthorn,1,3,16,6.514281144482084,-2
+Dylan Grimes,Richmond,0,3,16,3.2406764840707183,-3
+Jaeger O'Meara,Hawthorn,0,3,16,4.965107394382358,-3
+Jordan Ridley,Essendon,0,3,28,6.449332592077553,-3
+Noah Anderson,Gold Coast,0,3,12,3.5699914291035384,-3
+Reilly O'Brien,Adelaide,0,3,11,5.612744886428118,-3
+Tim Membrey,St Kilda,0,3,12,2.9554670210927725,-3
+Toby McLean,Western Bulldogs,0,3,9,2.1059516090899706,-3
+Hugh Greenwood,Gold Coast,11,2,21,7.015797930769622,9
+Tom Papley,Sydney,6,2,20,3.9578872844576836,4
+David Zaharakis,Essendon,4,2,12,2.048159770667553,2
+Josh Dunkley,Western Bulldogs,4,2,10,3.0676236909348518,2
+Michael Gibbons,Carlton,4,2,3,2.1062726858071983,2
+Eddie Betts,Carlton,3,2,7,1.6250641788356006,1
+Jeremy Cameron,Greater Western Sydney,3,2,8,1.6210733214393258,1
+Liam Baker,Richmond,3,2,11,2.6590229142457247,1
+Sam Powell-Pepper,Port Adelaide,3,2,12,2.855428472161293,1
+Steven Motlop,Port Adelaide,3,2,7,1.9002952775917947,1
+Alex Witherden,Brisbane Lions,2,2,5,1.9580419291742146,0
+Blake Acres,Fremantle,2,2,7,3.9393997746519744,0
+Daniel Rich,Brisbane Lions,2,2,19,4.62741903308779,0
+Josh Daicos,Collingwood,2,2,6,2.3676820071414113,0
+Shaun Higgins,North Melbourne,2,2,8,4.485970721812919,0
+Zak Butters,Port Adelaide,2,2,18,5.14106301497668,0
+Bayley Fritsch,Melbourne,1,2,8,2.2440149653702974,-1
+Brad Crouch,Adelaide,1,2,12,3.7067769542336464,-1
+Charlie Cameron,Brisbane Lions,1,2,16,2.7589781563729048,-1
+Hamish Hartlett,Port Adelaide,1,2,10,2.7963676709332503,-1
+Lachie Weller,Gold Coast,1,2,20,4.118145624175668,-1
+Rory Lobb,Fremantle,1,2,10,2.104703846387565,-1
+Sam Docherty,Carlton,1,2,13,4.407564491964877,-1
+Sebastian Ross,St Kilda,1,2,6,2.7535768770612776,-1
+Shane Edwards,Richmond,1,2,9,1.74656480550766,-1
+Tom Stewart,Geelong,1,2,15,3.7810500930063426,-1
+Zac Bailey,Brisbane Lions,1,2,17,5.202896386152133,-1
+Brad Sheppard,West Coast,0,2,6,2.5894115371629596,-2
+Connor Rozee,Port Adelaide,0,2,11,2.1504979114979506,-2
+Dan Houston,Port Adelaide,0,2,19,3.8162266296567395,-2
+Hunter Clark,St Kilda,0,2,9,1.005355636589229,-2
+Jack Higgins,Richmond,0,2,6,1.369623831473291,-2
+James Rowbottom,Sydney,0,2,4,1.852083517005667,-2
+James Sicily,Hawthorn,0,2,9,3.6090780729427934,-2
+Josh Battle,St Kilda,0,2,4,1.8766985518159345,-2
+Lachie Henderson,Geelong,0,2,0,0.28040067839901894,-2
+Rhys Stanley,Geelong,0,2,9,2.0984790846705437,-2
+Sam Petrevski-Seton,Carlton,0,2,8,1.9905756660737097,-2
+Shane McAdam,Adelaide,0,2,7,2.109236177057028,-2
+Tom Jonas,Port Adelaide,0,2,19,3.9585945424623787,-2
+Elliot Yeo,West Coast,8,1,19,3.2662130147218704,7
+Bailey Smith,Western Bulldogs,7,1,26,5.125454964116216,6
+Darcy Moore,Collingwood,6,1,27,4.234919019159861,5
+Brody Mihocek,Collingwood,5,1,14,2.3411409051623195,4
+David Cuningham,Carlton,3,1,8,1.9645032216794789,2
+Gary Rohan,Geelong,3,1,9,2.099967803864274,2
+Lachlan Sholl,Adelaide,3,1,9,1.076473994879052,2
+Tim Taranto,Greater Western Sydney,3,1,9,3.864156591705978,2
+Adam Saad,Essendon,2,1,16,4.768145244568586,1
+Darcy Byrne-Jones,Port Adelaide,2,1,21,5.796380110317841,1
+David Swallow,Gold Coast,2,1,5,4.059571757912636,1
+Mitch Wallis,Western Bulldogs,2,1,10,1.9548647119663656,1
+Sam Day,Gold Coast,2,1,0,0.9723887436557561,1
+Shaun Burgoyne,Hawthorn,2,1,4,1.0951077435165644,1
+Tom Liberatore,Western Bulldogs,2,1,27,6.616497572977096,1
+Aaron Hall,North Melbourne,1,1,0,2.387500789947808,0
+Angus Brayshaw,Melbourne,1,1,19,4.846835013013333,0
+Bachar Houli,Richmond,1,1,10,2.895064157433808,0
+Brad Ebert,Port Adelaide,1,1,5,1.991452131420374,0
+Brodie Smith,Adelaide,1,1,16,3.903337141731754,0
+Caleb Serong,Fremantle,1,1,13,3.2486108420416713,0
+Ben McEvoy,Hawthorn,0,1,9,3.600200072978623,-1
+Christian Salem,Melbourne,0,1,3,2.920668418868445,-1
+Dougal Howard,St Kilda,0,1,8,1.134342917765025,-1
+Griffin Logue,Fremantle,0,1,6,1.51008087862283,-1
+Jacob Townsend,Essendon,0,1,4,1.111326951533556,-1
+Jake Riccardi,Greater Western Sydney,0,1,7,1.7791498564183712,-1
+Jason Johannisen,Western Bulldogs,0,1,5,1.958038495387882,-1
+Kamdyn McIntosh,Richmond,0,1,6,1.8766583567485213,-1
+Marlion Pickett,Richmond,0,1,6,0.9400937238242477,-1
+Matthew Kennedy,Carlton,0,1,4,2.0040357399266213,-1
+Michael Hibberd,Melbourne,0,1,4,0.6780151049606502,-1
+Zach Tuohy,Geelong,0,1,13,3.1306804893538356,-1
+Luke Shuey,West Coast,6,0,11,4.689953625202179,6
+Oscar Allen,West Coast,5,0,7,1.8330558232264593,5
+Jack Graham,Richmond,3,0,14,2.683588867308572,3
+Rory Sloane,Adelaide,3,0,0,0.8793164398521185,3
+Anthony McDonald-Tipungwuti,Essendon,2,0,10,0.9733075564727187,2
+Ben Long,St Kilda,2,0,2,0.1600823972839862,2
+Bradley Hill,St Kilda,2,0,6,1.1058199480175972,2
+Brandan Parfitt,Geelong,2,0,7,3.0815794076770544,2
+Brent Daniels,Greater Western Sydney,2,0,6,0.8752809233847074,2
+Cam Rayner,Brisbane Lions,2,0,2,1.1997572002001107,2
+Darcy Tucker,Fremantle,2,0,3,1.0660963049158454,2
+Harry McKay,Carlton,2,0,6,1.9776379615068436,2
+Jack Riewoldt,Richmond,2,0,10,1.395836410112679,2
+Jake Stringer,Essendon,2,0,4,0.25975807942450047,2
+Jonathon Ceglar,Hawthorn,2,0,6,0.759628189727664,2
+Justin Westhoff,Port Adelaide,2,0,2,1.1472070715390146,2
+Luke Davies-Uniacke,North Melbourne,2,0,5,0.15154391061514616,2
+Mitch Brown,Melbourne,2,0,0,-0.32224702136591077,2
+Nick Hind,St Kilda,2,0,6,1.320809195167385,2
+Peter Ladhams,Port Adelaide,2,0,10,2.706441964721307,2
+Tom Phillips,Collingwood,2,0,0,1.9552380123641342,2
+Bailey Williams,Western Bulldogs,1,0,5,1.3717198492959142,1
+Ben Keays,Adelaide,1,0,0,1.3755904734134674,1
+Ben King,Gold Coast,1,0,6,0.10617829347029328,1
+Dylan Moore,Hawthorn,1,0,2,0.27409152686595917,1
+Easton Wood,Western Bulldogs,1,0,5,0.5227357698604465,1
+Eric Hipwood,Brisbane Lions,1,0,7,0.5124948816373944,1
+Gary Ablett,Geelong,1,0,5,1.2318764068186283,1
+Harry Himmelberg,Greater Western Sydney,1,0,2,1.6578139550983906,1
+Izak Rankine,Gold Coast,1,0,8,1.5713743559317663,1
+Jack Newnes,Carlton,1,0,1,0.7485773982480168,1
+Jacob Weitering,Carlton,1,0,20,2.412041618488729,1
+Jake Aarts,Richmond,1,0,0,0.23475980828516185,1
+Jake Carlisle,St Kilda,1,0,1,0.16320786520373076,1
+Jed Bews,Geelong,1,0,9,0.5287978053092957,1
+Joe Daniher,Essendon,1,0,4,1.1855934616178274,1
+John Noble,Collingwood,1,0,1,1.0903039261465892,1
+Kane Farrell,Port Adelaide,1,0,6,0.86285361321643,1
+Karl Amon,Port Adelaide,1,0,8,1.5765183365438133,1
+Luke Dunstan,St Kilda,1,0,0,0.853782057762146,1
+Matt de Boer,Greater Western Sydney,1,0,0,0.22484829620225355,1
+Mitch Georgiades,Port Adelaide,1,0,2,-0.06842631660401821,1
+Mitch Robinson,Brisbane Lions,1,0,4,1.6368337427265942,1
+Nick Vlastuin,Richmond,1,0,21,2.0170443900860846,1
+Paddy Ryder,St Kilda,1,0,8,1.4634061357937753,1
+Ryan Clarke,Sydney,1,0,1,0.5800873237894848,1
+Tom Clurey,Port Adelaide,1,0,5,0.10052043478935957,1
+Zac Fisher,Carlton,1,0,6,1.4018156873062253,1
+Zac Williams,Greater Western Sydney,1,0,5,2.817056038416922,1
+Aaron Francis,Essendon,0,0,3,0.2257136949338019,0
+Aaron vandenBerg,Melbourne,0,0,0,-0.0014997974503785372,0
+Adam Kennedy,Greater Western Sydney,0,0,0,0.44941879715770483,0
+Adam Tomlinson,Melbourne,0,0,0,0.9100252429489046,0
+Aidan Corr,Greater Western Sydney,0,0,3,-0.120469287969172,0
+Aiden Bonar,North Melbourne,0,0,0,-0.012049947283230722,0
+Alex Keath,Western Bulldogs,0,0,12,2.4112577703781426,0
+Alex Neal-Bullen,Melbourne,0,0,0,0.19790755829308182,0
+Alex Sexton,Gold Coast,0,0,2,0.17539602890610695,0
+Aliir Aliir,Sydney,0,0,0,0.002239125780761242,0
+Andrew McPherson,Adelaide,0,0,0,0.21909022517502308,0
+Andrew Phillips,Essendon,0,0,0,-0.10023926384747028,0
+Archie Smith,Brisbane Lions,0,0,0,0.0070761884562671185,0
+Atu Bosenavulagi,Collingwood,0,0,0,-2.9843533411622047e-5,0
+Bailey Banfield,Fremantle,0,0,0,-0.039317247457802296,0
+Bailey Dale,Western Bulldogs,0,0,0,-0.07944003120064735,0
+Bailey J. Williams,West Coast,0,0,0,-0.0011736046290025115,0
+Bailey Scott,North Melbourne,0,0,0,0.5923761238809675,0
+Ben Brown,North Melbourne,0,0,0,-0.3392335157841444,0
+Ben Cavarra,Western Bulldogs,0,0,0,0.0030272402800619602,0
+Ben Crocker,Adelaide,0,0,0,0.3665601706597954,0
+Ben McKay,North Melbourne,0,0,0,3.244852414354682e-4,0
+Ben Paton,St Kilda,0,0,2,0.27389097423292696,0
+Ben Reid,Collingwood,0,0,0,0.026489760726690292,0
+Ben Ronke,Sydney,0,0,0,0.016001044306904078,0
+Ben Stratton,Hawthorn,0,0,0,0.06628538202494383,0
+Billy Frampton,Adelaide,0,0,0,0.025064561516046524,0
+Billy Gowers,Western Bulldogs,0,0,0,0.014365268871188164,0
+Blake Hardwick,Hawthorn,0,0,0,0.18650574458297342,0
+Bobby Hill,Greater Western Sydney,0,0,0,0.49997468292713165,0
+Boyd Woodcock,Port Adelaide,0,0,0,0.01724505634047091,0
+Brad Close,Geelong,0,0,0,0.16190257878042758,0
+Brandon Ellis,Gold Coast,0,0,6,1.0936658506980166,0
+Brandon Matera,Fremantle,0,0,0,-0.007179167587310076,0
+Brandon Starcevich,Brisbane Lions,0,0,5,0.3368089448194951,0
+Brandon Zerk-Thatcher,Essendon,0,0,0,0.05351035948842764,0
+Brayden Ainsworth,West Coast,0,0,0,0.196759520098567,0
+Brayden Fiorini,Gold Coast,0,0,0,0.1403341800905764,0
+Brayden Ham,Essendon,0,0,0,0.06077299814205617,0
+Brayden Maynard,Collingwood,0,0,22,5.017765040742233,0
+Brayden Sier,Collingwood,0,0,2,-0.1826986875385046,0
+Braydon Preuss,Melbourne,0,0,0,0.21407731249928474,0
+Brendon Ah Chee,West Coast,0,0,0,0.09380906412843615,0
+Brennan Cox,Fremantle,0,0,3,1.3796140475897118,0
+Brett Bewley,Fremantle,0,0,0,0.5813017217442393,0
+Bryce Gibbs,Adelaide,0,0,1,1.0300600938498974,0
+Cale Hooker,Essendon,0,0,3,0.6410865127108991,0
+Caleb Graham,Gold Coast,0,0,0,0.023324450012296438,0
+Callan Ward,Greater Western Sydney,0,0,0,0.7722231820225716,0
+Callum Ah Chee,Brisbane Lions,0,0,0,0.877646497101523,0
+Callum L. Brown,Collingwood,0,0,0,0.5041568393353373,0
+Callum Porter,Western Bulldogs,0,0,0,-0.02623986080288887,0
+Callum Sinclair,Sydney,0,0,1,0.03939166571944952,0
+Callum Wilkie,St Kilda,0,0,1,0.735945635358803,0
+Cam McCarthy,Fremantle,0,0,0,0.009303320199251175,0
+Cam Sutcliffe,Port Adelaide,0,0,0,0.04318345617502928,0
+Cameron Ellis-Yolmen,Brisbane Lions,0,0,0,0.8083587698638439,0
+Cameron Polson,Carlton,0,0,0,0.015179767971858382,0
+Cameron Zurhaar,North Melbourne,0,0,3,0.5107253412716091,0
+Chad Warner,Sydney,0,0,0,-0.005043641664087772,0
+Changkuoth Jiath,Hawthorn,0,0,0,-0.03822809411212802,0
+Charlie Ballard,Gold Coast,0,0,4,2.0239999275654554,0
+Charlie Constable,Geelong,0,0,0,0.19173943437635899,0
+Charlie Spargo,Melbourne,0,0,0,0.029634209349751472,0
+Chayce Jones,Adelaide,0,0,0,0.2993296643253416,0
+Chris Mayne,Collingwood,0,0,0,0.42372611456084996,0
+Cody Weightman,Western Bulldogs,0,0,0,0.04487825185060501,0
+Colin O'Riordan,Sydney,0,0,0,-0.01645926060155034,0
+Connor Blakely,Fremantle,0,0,0,0.4489060649648309,0
+Connor Budarick,Gold Coast,0,0,0,0.15385859191883355,0
+Connor Idun,Greater Western Sydney,0,0,0,0.006372935604304075,0
+Conor Glass,Hawthorn,0,0,0,0.06058905087411404,0
+Conor McKenna,Essendon,0,0,0,-0.1084341136738658,0
+Conor Nash,Hawthorn,0,0,0,-0.018384214490652084,0
+Curtis Taylor,North Melbourne,0,0,0,-0.5847615115344524,0
+Damon Greaves,Hawthorn,0,0,2,-0.04950714576989412,0
+Dan Hannebery,St Kilda,0,0,1,0.3713785973377526,0
+Daniel Howe,Hawthorn,0,0,0,0.12105801794677973,0
+Daniel Lloyd,Greater Western Sydney,0,0,0,0.5639621737645939,0
+Daniel McStay,Brisbane Lions,0,0,3,0.7302610017359257,0
+Daniel Rioli,Richmond,0,0,4,0.7234061709605157,0
+Daniel Talia,Adelaide,0,0,0,-0.03760790568776429,0
+Darcy Cameron,Collingwood,0,0,1,0.20121794124133885,0
+Darcy Fogarty,Adelaide,0,0,0,-0.06933590536937118,0
+Darcy Fort,Geelong,0,0,0,0.02301061898469925,0
+Darcy Gardiner,Brisbane Lions,0,0,6,0.7018587845377624,0
+Darcy MacPherson,Gold Coast,0,0,0,0.3007197502302006,0
+Darcy Parish,Essendon,0,0,5,3.580241457093507,0
+Darren Minchington,Hawthorn,0,0,0,-0.0028791632503271103,0
+David Astbury,Richmond,0,0,0,0.16406626999378204,0
+David Mackay,Adelaide,0,0,0,0.13056465721456334,0
+Dean Kent,St Kilda,0,0,0,0.10226226388476789,0
+Devon Smith,Essendon,0,0,0,2.4315269326325506,0
+Dylan Clarke,Essendon,0,0,0,0.32925112918019295,0
+Dylan Roberton,St Kilda,0,0,0,0.005099451169371605,0
+Dylan Stephens,Sydney,0,0,0,0.055956108029931784,0
+Dyson Heppell,Essendon,0,0,0,0.08648610673844814,0
+Ed Phillips,St Kilda,0,0,0,0.21014291513711214,0
+Ed Richards,Western Bulldogs,0,0,0,0.5204471191391349,0
+Ed Vickers-Willis,North Melbourne,0,0,0,-0.02460406208410859,0
+Elijah Taylor,Sydney,0,0,0,-0.004218810587190092,0
+Elliott Himmelberg,Adelaide,0,0,2,0.2833123814780265,0
+Esava Ratugolea,Geelong,0,0,1,0.7690398218110204,0
+Ethan Hughes,Fremantle,0,0,0,0.14537413185462356,0
+Finn Maginness,Hawthorn,0,0,0,-0.00490708090364933,0
+Fischer McAsey,Adelaide,0,0,0,-0.007005819119513035,0
+Flynn Appleby,Collingwood,0,0,0,0.10865804553031921,0
+Flynn Perez,North Melbourne,0,0,0,-0.006076926249079406,0
+George Hewett,Sydney,0,0,4,0.6630815425887704,0
+Grant Birchall,Brisbane Lions,0,0,1,1.0527100369799882,0
+Harley Bennell,Melbourne,0,0,0,0.02067229081876576,0
+Harry Cunningham,Sydney,0,0,0,0.550887938356027,0
+Harry Jones,Hawthorn,0,0,0,-0.021584777161478996,0
+Harry Morrison,Hawthorn,0,0,0,-0.08914857573108748,0
+Harry Schoenberg,Adelaide,0,0,4,0.02825472503900528,0
+Harry Taylor,Geelong,0,0,3,1.1200349809369072,0
+Hayden Crozier,Western Bulldogs,0,0,8,-0.08451298298314214,0
+Hayden McLean,Sydney,0,0,0,0.03955806605517864,0
+Hayden Young,Fremantle,0,0,0,-0.06872328463941813,0
+Heath Shaw,Greater Western Sydney,0,0,2,1.9012235641712323,0
+Irving Mosquito,Essendon,0,0,0,0.009302141261287034,0
+Isaac Cumming,Greater Western Sydney,0,0,0,0.044581636786460876,0
+Isaac Quaynor,Collingwood,0,0,0,0.3644538411172107,0
+Ivan Soldo,Richmond,0,0,0,0.3249700767919421,0
+Jack Bowes,Gold Coast,0,0,0,0.7217041220865212,0
+Jack Buckley,Greater Western Sydney,0,0,0,-0.033983830362558365,0
+Jack Bytel,St Kilda,0,0,0,0.29170120134949684,0
+Jack Darling,West Coast,0,0,7,2.5502688325941563,0
+Jack Henry,Geelong,0,0,3,0.051687874016352,0
+Jack Lonie,St Kilda,0,0,0,0.4963853578083217,0
+Jack Madgen,Collingwood,0,0,0,0.3495820970274508,0
+Jack Mahony,North Melbourne,0,0,0,0.09941985970363021,0
+Jack Payne,Brisbane Lions,0,0,0,0.11547791305929422,0
+Jack Petruccelle,West Coast,0,0,0,0.027296172454953194,0
+Jack Redden,West Coast,0,0,0,1.8375525581650436,0
+Jack Ross,Richmond,0,0,0,-0.04254021588712931,0
+Jack Scrimshaw,Hawthorn,0,0,0,1.9779856289969757,0
+Jack Silvagni,Carlton,0,0,0,0.021768679842352867,0
+Jack Sinclair,St Kilda,0,0,0,0.5575425762217492,0
+Jack Steven,Geelong,0,0,0,0.49796301079913974,0
+Jack Ziebell,North Melbourne,0,0,0,-0.506868951022625,0
+Jackson Hately,Greater Western Sydney,0,0,0,0.4535310969222337,0
+Jackson Nelson,West Coast,0,0,2,0.9986452045268379,0
+Jackson Thurlow,Sydney,0,0,2,0.3448108771117404,0
+Jackson Trengove,Western Bulldogs,0,0,0,0.0016210972098633647,0
+Jaidyn Stephenson,Collingwood,0,0,0,0.6018942415248603,0
+Jake Kelly,Adelaide,0,0,0,0.09507238352671266,0
+Jake Kolodjashnij,Geelong,0,0,0,0.1441604628926143,0
+Jake Lever,Melbourne,0,0,4,0.7151617569616064,0
+Jake Melksham,Melbourne,0,0,0,-0.16339999623596668,0
+Jake Waterman,West Coast,0,0,0,0.22776788659393787,0
+Jamaine Jones,West Coast,0,0,0,-0.0387175465002656,0
+James Aish,Fremantle,0,0,2,1.5242102904012427,0
+James Bell,Sydney,0,0,0,-0.02476162277162075,0
+James Cousins,Hawthorn,0,0,0,0.8602764247916639,0
+James Frawley,Hawthorn,0,0,0,0.6985399350523949,0
+James Harmes,Melbourne,0,0,0,0.1552568637416698,0
+James Stewart,Essendon,0,0,0,-0.05362138897180557,0
+Jamie Cripps,West Coast,0,0,0,0.10476158815436065,0
+Jamie Elliott,Collingwood,0,0,3,-0.15901402942836285,0
+Jamie Macmillan,North Melbourne,0,0,0,0.23093159450218081,0
+Jarman Impey,Hawthorn,0,0,0,-0.04018204100430012,0
+Jarrod Brander,West Coast,0,0,0,0.2756447996944189,0
+Jarrod Harbrow,Gold Coast,0,0,0,0.2787593458779156,0
+Jarrod Lienert,Port Adelaide,0,0,0,0.10253332229331136,0
+Jarryn Geary,St Kilda,0,0,0,0.12497907131910324,0
+Jason Castagna,Richmond,0,0,0,0.7895141210174188,0
+Jasper Pittard,North Melbourne,0,0,0,0.8997008623555303,0
+Jay Lockhart,Melbourne,0,0,0,0.21537064027506858,0
+Jayden Laverde,Essendon,0,0,0,0.00785130204167217,0
+Jeremy Finlayson,Greater Western Sydney,0,0,3,0.2430967977270484,0
+Jeremy Howe,Collingwood,0,0,9,1.4979526549577713,0
+Jeremy Sharp,Gold Coast,0,0,0,-0.03201503399759531,0
+Jesse Hogan,Fremantle,0,0,0,-0.046439921483397484,0
+Jesse Joyce,Gold Coast,0,0,0,-0.0066749220713973045,0
+Jonathon Marsh,St Kilda,0,0,0,0.17352240066975355,0
+Jordan Clark,Geelong,0,0,0,-0.10126807540655136,0
+Jordan Dawson,Sydney,0,0,7,1.2640432573389262,0
+Jordan Roughead,Collingwood,0,0,0,0.7618451379239559,0
+Jordon Butts,Adelaide,0,0,0,-0.004966403357684612,0
+Josh Caddy,Richmond,0,0,0,0.3541926993057132,0
+Josh Corbett,Gold Coast,0,0,0,-0.10282347118481994,0
+Josh Jenkins,Geelong,0,0,0,-0.07555558532476425,0
+Josh Morris,Hawthorn,0,0,0,0.01517727691680193,0
+Josh Rotham,West Coast,0,0,1,0.24042942514643073,0
+Josh Schache,Western Bulldogs,0,0,0,-0.028364229947328568,0
+Josh Thomas,Collingwood,0,0,2,-0.2175551374675706,0
+Josh Wagner,Melbourne,0,0,0,-0.031117418315261602,0
+Josh Walker,North Melbourne,0,0,0,0.7323298892006278,0
+Justin McInerney,Sydney,0,0,2,0.9113243425963446,0
+Jye Caldwell,Greater Western Sydney,0,0,0,0.13515363953774795,0
+Kade Simpson,Carlton,0,0,1,1.202796421945095,0
+Kaiden Brand,Sydney,0,0,0,0.0020791427232325077,0
+Keidean Coleman,Brisbane Lions,0,0,0,0.027314459905028343,0
+Kobe Mutch,Essendon,0,0,0,-0.004791807848960161,0
+Kyle Hartigan,Adelaide,0,0,0,0.15148533915635198,0
+Kyle Langford,Essendon,0,0,3,0.8257383853197098,0
+Kyron Hayden,North Melbourne,0,0,0,0.1582607962191105,0
+Kysaiah Pickett,Melbourne,0,0,0,0.16644352581351995,0
+Lachie Ash,Greater Western Sydney,0,0,0,0.26448208652436733,0
+Lachie Fogarty,Geelong,0,0,0,-0.5077294912189245,0
+Lachie Plowman,Carlton,0,0,8,1.220555076841265,0
+Lachie Schultz,Fremantle,0,0,0,1.3394668870605528,0
+Lachie Young,Western Bulldogs,0,0,0,0.04397214949131012,0
+Lachlan Hosie,North Melbourne,0,0,0,0.05647297960240394,0
+Lachlan Keeffe,Greater Western Sydney,0,0,0,-0.06298659089952707,0
+Lachlan Murphy,Adelaide,0,0,0,0.2223882811376825,0
+Laitham Vandermeer,Western Bulldogs,0,0,0,-0.32382215082179755,0
+Levi Greenwood,Collingwood,0,0,0,-0.015141382347792387,0
+Lewis Jetta,West Coast,0,0,0,0.4097209139727056,0
+Lewis Melican,Sydney,0,0,2,0.42850868310779333,0
+Lewis Taylor,Sydney,0,0,0,0.36061967303976417,0
+Liam Duggan,West Coast,0,0,6,1.5865097712958232,0
+Liam Henry,Fremantle,0,0,0,0.0403818404302001,0
+Liam Jones,Carlton,0,0,5,0.15505376085639,0
+Lin Jong,Western Bulldogs,0,0,0,0.03875063359737396,0
+Lincoln McCarthy,Brisbane Lions,0,0,1,0.40055847307667136,0
+Louis Butler,Western Bulldogs,0,0,0,0.029596609994769096,0
+Luke Breust,Hawthorn,0,0,3,0.5248095525894314,0
+Luke Brown,Adelaide,0,0,0,0.04247886314988136,0
+Luke Dahlhaus,Geelong,0,0,0,0.2243061359040439,0
+Luke Jackson,Melbourne,0,0,0,-0.16912095085717738,0
+Lynden Dunn,Collingwood,0,0,0,-0.015105385333299637,0
+Mabior Chol,Richmond,0,0,0,0.0144647853448987,0
+Majak Daw,North Melbourne,0,0,0,0.031148751033470035,0
+Marc Pittonet,Carlton,0,0,14,1.920941875781864,0
+Mark Blicavs,Geelong,0,0,15,3.4694159040227532,0
+Mark Hutchings,West Coast,0,0,0,0.015170298051089048,0
+Mark O'Connor,Geelong,0,0,5,1.645072716055438,0
+Marley Williams,North Melbourne,0,0,0,-0.3938973881304264,0
+Martin Gleeson,Essendon,0,0,0,-0.08032220846507698,0
+Mason Cox,Collingwood,0,0,1,0.3863664413802326,0
+Mason Redman,Essendon,0,0,0,6.500419694930315e-4,0
+Mason Wood,North Melbourne,0,0,0,0.1116086000110954,0
+Matt Guelfi,Essendon,0,0,0,-0.1999008567072451,0
+Matt Taberner,Fremantle,0,0,14,3.9157520877197385,0
+Matthew Cottrell,Carlton,0,0,0,0.11143633956089616,0
+Matthew Ling,Sydney,0,0,0,0.023144908249378204,0
+Matthew Scharenberg,Collingwood,0,0,0,0.0575324110686779,0
+Matthew Suckling,Western Bulldogs,0,0,0,-0.336330140940845,0
+Max King,St Kilda,0,0,0,0.53726117592304945,0
+Michael Frederick,Fremantle,0,0,0,-0.14368167845532298,0
+Michael Hartley,Hawthorn,0,0,0,-0.11076489184051752,0
+Michael Hurley,Essendon,0,0,0,0.5248300232924521,0
+Mitch Crowden,Fremantle,0,0,0,0.03959150891751051,0
+Mitch Hannan,Melbourne,0,0,0,0.015301487408578396,0
+Mitch Lewis,Hawthorn,0,0,0,0.025278884219005704,0
+Mitch McGovern,Carlton,0,0,1,0.11324417684227228,0
+Mitchell Hibberd,Essendon,0,0,0,0.19183407363016158,0
+Mitchell Hinge,Brisbane Lions,0,0,0,0.043759386986494064,0
+Myles Poholke,Adelaide,0,0,0,-0.06392624042928219,0
+Nathan Broad,Richmond,0,0,0,0.03494455188047141,0
+Nathan Jones,Melbourne,0,0,0,-0.0420359605923295,0
+Nathan Wilson,Fremantle,0,0,2,-0.1308538978919387,0
+Ned McHenry,Adelaide,0,0,0,0.6607841454679146,0
+Neville Jetta,Melbourne,0,0,0,0.023229558020830154,0
+Nic Newman,Carlton,0,0,0,-0.013251700438559055,0
+Nicholas Reid,West Coast,0,0,0,0.0028860196471214294,0
+Nick Blakey,Sydney,0,0,4,1.0115013297181576,0
+Nick Coffield,St Kilda,0,0,11,1.4694386911578476,0
+Nick Holman,Gold Coast,0,0,0,0.3128768806345761,0
+Nick Larkey,North Melbourne,0,0,0,-0.025861866772174835,0
+Noah Answerth,Brisbane Lions,0,0,4,0.42305370850954205,0
+Oleg Markov,Richmond,0,0,0,0.1488615944981575,0
+Oliver Hanrahan,Hawthorn,0,0,0,0.014381528832018375,0
+Orazio Fantasia,Essendon,0,0,0,7.715472020208836e-4,0
+Oscar McDonald,Melbourne,0,0,0,0.049485072027891874,0
+Oscar McInerney,Brisbane Lions,0,0,4,2.8845777248498052,0
+Oskar Baker,Melbourne,0,0,0,0.03505244292318821,0
+Paddy Dow,Carlton,0,0,0,0.0036067673936486244,0
+Patrick Lipinski,Western Bulldogs,0,0,1,1.081980214919895,0
+Patrick Naish,Richmond,0,0,0,-2.1751271560788155e-5,0
+Paul Ahern,North Melbourne,0,0,0,-0.016209639608860016,0
+Paul Puopolo,Hawthorn,0,0,1,0.124718839651905,0
+Paul Seedsman,Adelaide,0,0,1,1.9403566396795213,0
+Pearce Hanley,Gold Coast,0,0,0,-0.08568946085870266,0
+Phil Davis,Greater Western Sydney,0,0,2,0.7672187141142786,0
+Quinton Narkle,Geelong,0,0,0,0.1733494377695024,0
+Reece Conca,Fremantle,0,0,2,0.3568331664428115,0
+Rhylee West,Western Bulldogs,0,0,0,0.08853371744044125,0
+Rhys Mathieson,Brisbane Lions,0,0,0,-0.05181337520480156,0
+Ricky Henderson,Hawthorn,0,0,0,0.1562683779047802,0
+Riley Bonner,Port Adelaide,0,0,0,-0.003759684506803751,0
+Roarke Smith,Western Bulldogs,0,0,0,-0.08816418424248695,0
+Robbie Fox,Sydney,0,0,3,0.5953448071377352,0
+Robbie Tarrant,North Melbourne,0,0,6,0.8546802211785689,0
+Rory Atkins,Adelaide,0,0,0,-0.0018792380578815937,0
+Rupert Wills,Collingwood,0,0,0,0.0816777041181922,0
+Ryan Burton,Port Adelaide,0,0,0,-0.1334769083186984,0
+Ryan Gardner,Western Bulldogs,0,0,0,0.016907615587115288,0
+Ryan Lester,Brisbane Lions,0,0,1,0.850737321190536,0
+Ryley Stoddart,Sydney,0,0,0,-0.01572468306403607,0
+Sam Collins,Gold Coast,0,0,2,0.8154022817034274,0
+Sam Draper,Essendon,0,0,0,-0.08081680303439498,0
+Sam Durdin,North Melbourne,0,0,0,-0.007614188361912966,0
+Sam Flanders,Gold Coast,0,0,0,0.029976999387145042,0
+Sam Frost,Hawthorn,0,0,5,0.1408779425546527,0
+Sam Gray,Sydney,0,0,0,-0.02710458217188716,0
+Sam J. Reid,Greater Western Sydney,0,0,0,-0.0017077847151085734,0
+Sam Jacobs,Greater Western Sydney,0,0,0,-0.0012651998549699783,0
+Sam Lloyd,Western Bulldogs,0,0,0,0.128932636231184,0
+Sam Mayes,Port Adelaide,0,0,0,0.8215130576863885,0
+Sam Naismith,Sydney,0,0,0,-0.04492628760635853,0
+Sam Philp,Carlton,0,0,0,0.015330984257161617,0
+Sam Reid,Sydney,0,0,0,-0.009907675441354513,0
+Sam Simpson,Geelong,0,0,0,1.6394645287655294,0
+Sam Skinner,Brisbane Lions,0,0,0,-0.0429576113820076,0
+Sam Sturt,Fremantle,0,0,0,0.4283605571836233,0
+Sam Taylor,Greater Western Sydney,0,0,0,-0.0472089946269989,0
+Sam Weideman,Melbourne,0,0,2,0.7545306636020541,0
+Sam Wicks,Sydney,0,0,0,-0.043496984988451004,0
+Scott Lycett,Port Adelaide,0,0,11,1.2829990037716925,0
+Sean Darcy,Fremantle,0,0,3,0.6832889844663441,0
+Sean Lemmens,Gold Coast,0,0,0,0.019860946107655764,0
+Shane Mumford,Greater Western Sydney,0,0,0,0.3331881910562515,0
+Shane Savage,St Kilda,0,0,0,0.06481325626373291,0
+Shannon Hurn,West Coast,0,0,7,1.8120587836019695,0
+Shaun Atley,North Melbourne,0,0,0,1.7226625393377617,0
+Shaun McKernan,Essendon,0,0,0,0.09319387469440699,0
+Stefan Martin,Brisbane Lions,0,0,0,-0.01768549531698227,0
+Stephen Hill,Fremantle,0,0,1,0.0986981219612062,0
+Sydney Stack,Richmond,0,0,0,-0.09365259972400963,0
+Tarryn Thomas,North Melbourne,0,0,0,-0.011509417789056897,0
+Taylin Duman,Fremantle,0,0,0,0.80555616307538,0
+Taylor Duryea,Western Bulldogs,0,0,0,0.2843717113137245,0
+Taylor Garner,North Melbourne,0,0,0,0.01843417529016733,0
+Taylor Walker,Adelaide,0,0,0,-0.01207967521622777,0
+Thomas Berry,Brisbane Lions,0,0,0,0.026500192936509848,0
+Thomson Dow,Richmond,0,0,0,0.013281128369271755,0
+Tim O'Brien,Hawthorn,0,0,0,-0.12085310369729996,0
+Tobe Watson,Fremantle,0,0,0,0.005793163785710931,0
+Toby Bedford,Melbourne,0,0,0,0.003544916631653905,0
+Toby Nankervis,Richmond,0,0,7,0.7868112754076719,0
+Todd Marshall,Port Adelaide,0,0,2,0.028028950095176697,0
+Tom Atkins,Geelong,0,0,0,0.11027777846902609,0
+Tom Bellchambers,Essendon,0,0,0,0.09319011121988297,0
+Tom Cole,West Coast,0,0,0,0.0052147331880405545,0
+Tom Cutler,Essendon,0,0,0,0.11761615728028119,0
+Tom De Koning,Carlton,0,0,0,0.4457835853099823,0
+Tom Doedee,Adelaide,0,0,7,1.5054286974482238,0
+Tom Fullarton,Brisbane Lions,0,0,0,0.026954418048262596,0
+Tom Green,Greater Western Sydney,0,0,4,0.4839540735119954,0
+Tom Hickey,West Coast,0,0,0,0.10530832409858704,0
+Tom J. Lynch,Richmond,0,0,0,1.014153508003801,0
+Tom Lynch,Adelaide,0,0,2,3.1395135649945587,0
+Tom McCartin,Sydney,0,0,1,0.2808541071135551,0
+Tom McDonald,Melbourne,0,0,0,-0.11603397107683122,0
+Tom Murphy,North Melbourne,0,0,0,0.05926740076392889,0
+Tom Scully,Hawthorn,0,0,0,0.31784598174272105,0
+Tom Sparrow,Melbourne,0,0,0,-0.02529736189171672,0
+Tom Williamson,Carlton,0,0,0,0.21056950569618493,0
+Travis Colyer,Fremantle,0,0,0,-0.0026732059195637703,0
+Travis Varcoe,Collingwood,0,0,0,0.013847803929820657,0
+Trent Dumont,North Melbourne,0,0,5,5.324132063658908,0
+Trent McKenzie,Port Adelaide,0,0,8,1.1394957974553108,0
+Trent Rivers,Melbourne,0,0,0,0.12781746848486364,0
+Tyler Brown,Collingwood,0,0,0,0.1373860886087641,0
+Tyson Stengle,Adelaide,0,0,0,0.5070124724879861,0
+Wayne Milera,Adelaide,0,0,1,0.021442907862365246,0
+Wil Powell,Gold Coast,0,0,1,0.850455628708005,0
+Will Brodie,Gold Coast,0,0,0,0.027305711060762405,0
+Will Day,Hawthorn,0,0,0,-0.22710020479280502,0
+Will Hamill,Adelaide,0,0,0,-0.017216293257661164,0
+Will Hayes,Western Bulldogs,0,0,0,0.016878164373338223,0
+Will Hayward,Sydney,0,0,0,0.1714912496972829,0
+Will Hoskin-Elliott,Collingwood,0,0,0,0.4148648059926927,0
+Will Schofield,West Coast,0,0,0,0.0036017908714711666,0
+Will Setterfield,Carlton,0,0,0,2.266344484873116,0
+Will Snelling,Essendon,0,0,1,0.6296954083954915,0
+Will Walker,North Melbourne,0,0,0,0.0056243110448122025,0
+Xavier Duursma,Port Adelaide,0,0,4,1.1749305231496692,0
+Xavier O'Halloran,Greater Western Sydney,0,0,0,-0.010174892377108335,0
+Xavier O'Neill,West Coast,0,0,0,0.24250435084104538,0
+Zac Foot,Sydney,0,0,0,0.19800925254821777,0
+Zac Langdon,Greater Western Sydney,0,0,0,-0.0653652772307396,0
+Zach Guthrie,Geelong,0,0,0,0.021430647931993008,0
+Zaine Cordy,Western Bulldogs,0,0,0,0.0013995039043948054,0

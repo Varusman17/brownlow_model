@@ -49,7 +49,9 @@ View(model_diagnostics$votes_by_player %>% arrange(desc(predicted_votes)))
 View(
   model_diagnostics$votes_by_match %>%
   filter(brownlow_votes >0 | predicted_votes > 0 | coaches_votes >0) %>%
-  select(player_team, player_name, player_positionC, supercoach_score, afl_fantasy_score, brownlow_votes, predicted_votes, coaches_votes)
+  select(player_team, player_name, player_position_C, 
+         supercoach_score, afl_fantasy_score, brownlow_votes, predicted_votes, pred, coaches_votes,
+         rolling_avg_votes_per_game, rolling_avg_games_polled, prev_season_br_votes, prev_season_games_polled)
 )
 
 
