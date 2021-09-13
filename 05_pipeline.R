@@ -17,7 +17,7 @@ source(paste0(here(),"/04_test_model.R"))
 
 # Set training season cutoff (i.e. predict for the next year)
 
-training_season_cutoff <- 2019 
+training_season_cutoff <- 2019
 testing_season <- training_season_cutoff + 1
 
 # Source data and add factors ---------------------------------------------
@@ -46,7 +46,8 @@ View(model_diagnostics$votes_by_player %>% arrange(desc(predicted_votes)))
 # Inspect matches where coaches, predicted and actual votes were greater than 0
 # 2021 SC scores have not been updated in fryzigg package
 
-View(model_diagnostics$votes_by_match %>%
+View(
+  model_diagnostics$votes_by_match %>%
   filter(brownlow_votes >0 | predicted_votes > 0 | coaches_votes >0) %>%
   select(player_team, player_name, player_positionC, supercoach_score, afl_fantasy_score, brownlow_votes, predicted_votes, coaches_votes)
 )
