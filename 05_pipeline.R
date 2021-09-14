@@ -28,7 +28,7 @@ transformed_data <- transform_data(df, training_season_cutoff, testing_season)
 
 
 # Train XGBoost model -----------------------------------------------------
-model <- train_XGBoost(transformed_data$X_train, transformed_data$y_train)
+model <- train_XGBoost(transformed_data$X_train, transformed_data$y_train, type = 'regression')
 
 
 # Test model --------------------------------------------------------------
@@ -41,7 +41,7 @@ xgb.plot.importance(model_diagnostics$variable_importance[1:10])
 
 
 # Explore predicted votes vs actual votes at player level
-View(model_diagnostics$votes_by_player %>% arrange(desc(predicted_votes)))
+View(model_diagnostics$votes_by_player %>% arrange(desc(predicted_votes)) %>% select(-votes_accuracy) %>% distinct())
 
 # Inspect matches where coaches, predicted and actual votes were greater than 0
 # 2021 SC scores have not been updated in fryzigg package
