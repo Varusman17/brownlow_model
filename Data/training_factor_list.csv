@@ -77,3 +77,4 @@ ID,Factor,Response,InputFactor,Monotone,Key,Type,New_factor,Old_factor,Check,Inc
 76,prev_season_games_polled,N,Y,0,N,Numeric,1,0,1,N
 77,rolling_avg_votes_per_game,N,Y,0,N,Numeric,1,0,1,N
 78,rolling_avg_games_polled,N,Y,0,N,Numeric,1,0,1,N
+79,betfair_votes,N,Y,0,N,Numeric,1,0,1,Y

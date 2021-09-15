@@ -75,7 +75,7 @@ coaches_votes_data <- left_join(coaches_votes_data, name_fixes, by = c('player_t
 
 # write out final csv for use
 cv_data <- coaches_votes_data %>% 
-  select(season, match_round, player_name, player_team, coaches_votes)
+  select(season, match_round, player_name, player_team = player_team.x, coaches_votes)
 write.csv(cv_data,file=paste0(here(), '/Data/coaches_votes.csv'))
 
 # check that every player exists in fryzigg

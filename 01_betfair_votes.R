@@ -11,146 +11,156 @@ rm(list = ls())
 gc()
 library(here)
 source(paste0(here(),"/00_setup.R"))
-source(paste0(here(),"/01_get_data.R"))
 
 # Check if scraping is allowed
-paths_allowed(paths="https://www.betfair.com.au/hub/2020-brownlow-medal-predictor/")
+# paths_allowed(paths="https://www.betfair.com.au/hub/2020-brownlow-medal-predictor/")
 
 # Load in main URL
-cv_url <- "https://www.betfair.com.au/hub/2020-brownlow-medal-predictor/"
-result_table <- NULL
+cv_url_2019 <- "https://www.betfair.com.au/hub/2019-brownlow-medal-predictor/"
+cv_url_2020 <- "https://www.betfair.com.au/hub/2020-brownlow-medal-predictor/"
+cv_url_2021 <- "https://www.betfair.com.au/hub/brownlow-medal-predictor/"
 
+# Load round names
+round_2019 <- read_html(cv_url_2019) %>% html_elements('div.c-tab__items') %>% html_children() %>% html_text()
+round_2020 <- read_html(cv_url_2020) %>% html_elements('div.c-tab__items') %>% html_children() %>% html_text()
+round_2021 <- read_html(cv_url_2021) %>% html_elements('div.c-tab__items') %>% html_children() %>% html_text()
 
-betfair_2020 <- read_html(cv_url)
+# Load data tabs
+data_tabIDs_2019 <- read_html(cv_url_2019) %>% html_elements('div.c-tab__items') %>% html_children() %>% html_attr("data-tab")
+data_tabIDs_2020 <- read_html(cv_url_2020) %>% html_elements('div.c-tab__items') %>% html_children() %>% html_attr("data-tab")
+data_tabIDs_2021 <- read_html(cv_url_2021) %>% html_elements('div.c-tab__items') %>% html_children() %>% html_attr("data-tab")
 
+# Get round to data_tab_mapping   
+data_tab_mapping_2019 <-
+  bind_cols(
+    data.frame(season = 2019),
+    data.frame(match_round = round_2019),
+    data.frame(data_tab = as.integer(data_tabIDs_2019))
+  ) %>% 
+  mutate(
+    match_round = as.integer(gsub(".*Round ","",match_round))
+  )
 
-  for (i in 1:25) {
-    
-      
-    
-    
-  }
-# get rounds    
-betfair_2020 <- read_html(cv_url) %>%
-  html_elements('a:nth-child(18)') %>%
-  html_text()
+data_tab_mapping_2020 <-
+  bind_cols(
+    data.frame(season = 2020),
+    data.frame(match_round = round_2020),
+    data.frame(data_tab = as.integer(data_tabIDs_2020))
+  ) %>% 
+  mutate(
+    match_round = as.integer(gsub(".*R","",match_round))
+  )
 
-betfair_2020 <- read_html(cv_url) %>%
-  html_elements('div.c-tab__items') %>%
-  html_children()
-  html_attr('href')
+data_tab_mapping_2021 <-
+  bind_cols(
+    data.frame(season = 2021),
+    data.frame(match_round = round_2021),
+    data.frame(data_tab = as.integer(data_tabIDs_2021))
+  ) %>% 
+  mutate(
+    match_round = as.integer(gsub(".*R","",match_round))
+  )
 
-#
-betfair_2020 <- read_html(cv_url) %>%
-  html_elements('th:nth-child(2)') %>%
-  html_text()
+# Combine mapping
+data_tab_mapping <- rbind(data_tab_mapping_2019, data_tab_mapping_2020, data_tab_mapping_2021)
 
-# get player names
-betfair_2020 <- read_html(cv_url) %>%
-  html_elements('#tablepress-2589') %>%
-  html_table()
+# Grab all of the tables with votes information
+betfair_votes_2019 <- read_html(cv_url_2019) %>% html_elements('div.c-tab__contents') %>% html_children() %>% html_table()
+betfair_votes_2020 <- read_html(cv_url_2020) %>% html_elements('div.c-tab__contents') %>% html_children() %>% html_table()
+betfair_votes_2021 <- read_html(cv_url_2021) %>% html_elements('div.c-tab__content.u-overflow-auto') %>% html_text()
+betfair_votes_2021 <- str_split(betfair_votes_2021,"\n")
 
-betfair_2020 <- read_html(cv_url) %>%
-  html_elements('td:nth-child(1)') %>%
-  html_text()
-
-# get votes
-betfair_2020 <- read_html(cv_url) %>%
-  html_elements('td:nth-child(2)') %>%
-  html_text()
-
-?html_element
-
-# Set up looping through season and rounds
-for (k in 2014:2021) {
+# Loop through and clean 2019 results
+result_table_2019 <- NULL
+for (i in 1:23) {
   
-  cv_url_season <- paste0("https://aflcoaches.com.au/awards/the-aflca-champion-player-of-the-year-award/leaderboard/",k,"/",k,"01")
-  
-  for (i in 1:25) {
-    skip<-F
-    round <- str_pad(i,2,'left','0')
-    cv_url_round <- paste0(cv_url_season,round)
-    
-    #If page doesn't exist go to next round/year
-    tryCatch(read_html(cv_url_round), error = function(e) {skip<<-T})
-    if(skip) {next} 
-    coaches_votes_url <- read_html(cv_url_round)
-    
-    cv_numbers <- coaches_votes_url %>% 
-      html_elements('.col-2') %>% 
-      html_text() %>% 
-      mgsub("\n|\t",'')
-    
-    cv_players <- coaches_votes_url %>% 
-      html_elements('.col-10') %>% 
-      html_text() %>% 
-      mgsub::mgsub("\n|\t",'')
-    
-    result_table_round <- tibble(
-      votes = cv_numbers,
-      players = cv_players,
-      round = as.character(i),
-      season = k
+  result_table_round_2019 <- 
+    bind_cols(
+      data.frame(season = 2019),
+      data.frame(data_tab = i - 1),
+      betfair_votes_2019[[i]] %>% filter(Player != 'Player')
     )
-    result_table <- rbind(result_table, result_table_round)
-    print(i)
-  }
-  print(k)
+  result_table_2019 <- rbind(result_table_round_2019, result_table_2019)
+  
+}
+# Adjust 2019 results
+result_table_2019 <- result_table_2019 %>% 
+  filter(Player != 'PLayer') %>% 
+  select(season, data_tab, player_name = Player, betfair_votes = `Projected Votes`)
+
+# Loop through and clean 2020 results
+result_table_2020 <- NULL
+for (i in 1:18) {
+  
+  result_table_round_2020 <- 
+      bind_cols(
+        data.frame(season = 2020),
+        data.frame(data_tab = i - 1),
+        betfair_votes_2020[[i]] %>% filter(Player != 'Player')
+    )
+  result_table_2020 <- rbind(result_table_round_2020, result_table_2020)
+  
 }
 
-# Adjust webscraped data to be usable
-coaches_votes_data <- result_table %>%
-  filter(votes != 'Votes') %>%
-  separate(players,c('player_first_name','player_last_name','playing_for_short'), sep = ' ', remove = F) %>% 
-  mutate(web_scraped_team = gsub('\\(|\\)','',playing_for_short),
-         player_temp = paste(player_first_name, player_last_name),
-         match_round = as.numeric(round),
-         coaches_votes = as.numeric(votes),
-         record_id = paste(season, match_round, player_temp,web_scraped_team, coaches_votes, sep="_")) 
+# Adjust 2020 results
+result_table_2020 <- result_table_2020 %>% 
+  mutate(len = nchar(Player)) %>% 
+  filter(len > 0) %>% 
+  select(season, data_tab, player_name = Player, betfair_votes = `Projected Votes`)
 
-# Load in clean team name
-team_mapping <- read_csv(paste0(here(), '/Data/team_attributes.csv'))
-coaches_votes_data <- inner_join(coaches_votes_data, team_mapping, by = c('web_scraped_team'))
+# Loop through and clean 2021 results
+result_table_2021 <- NULL
+for (i in 1:23) {
+  
+  result_table_round_2021 <- 
+    bind_cols(
+      data.frame(season = 2021),
+      data.frame(data_tab = i - 1),
+      data.frame(string_parse = betfair_votes_2021[[i]])
+    )
+  result_table_2021 <- rbind(result_table_round_2021, result_table_2021)
+  
+}
+
+# Adjust 2021 results
+teams <- c("ADELAIDE", "BRISBANE", "CARLTON", "COLLINGWOOD", "ESSENDON","FREMANTLE","GEELONG", "GWS","GOLD","HAWTHORN","MELBOURNE","PORT ADELAIDE","RICHMOND","ST", "SYDNEY","WEST COAST","WESTERN BULLDOGS")
+result_table_2021 <- result_table_2021 %>% 
+  mutate(
+    len = nchar(string_parse),
+    first = gsub("([A-Za-z]+).*", "\\1", string_parse),
+    player_name = gsub("\\s+[^ ]+$", "", string_parse),
+    betfair_votes = gsub(".*\\s", "", string_parse)
+  ) %>% 
+  filter(len > 0 & len < 24) %>% 
+  filter(!(first %in% teams)) %>% 
+  select(season, data_tab, player_name, betfair_votes)
+
+# Combine results
+result_table <- rbind(result_table_2019, result_table_2020, result_table_2021)
+
+# Adjust webscraped data to be usable
+player_team_mapping <- read_csv(paste0(here(),"/Data/player_team_mapping.csv"))
+betfair_team <- result_table %>% 
+  left_join(data_tab_mapping, by=c("data_tab","season")) %>% 
+  select(season, match_round, player_name, betfair_votes) %>% 
+  mutate(player_name = replace(player_name, season == 2019 & match_round %in% c(4,18,19) & player_name == 'Tom Lynch','Tom J Lynch')) %>%
+  mutate(player_name = replace(player_name, season == 2020 & match_round == 15 & player_name == 'Tom Lynch','Tom J Lynch')) %>%
+  mutate(player_name = replace(player_name, season == 2021 & match_round %in% c(7,16) & player_name == 'Tom Lynch','Tom J Lynch')) %>%
+  left_join(player_team_mapping, by = c("season", "player_name")) %>% 
+  select(season, match_round, player_temp = player_name, player_team, betfair_votes)
+
+# Write out list of unmatched names
+write.csv(subset(betfair_team, is.na(player_team)), file=paste0(here(), '/Data/unmatched_betfair.csv'))
 
 # Load in name fixes to make it compatible with fryzigg
 name_fixes <- read_excel(paste0(here(),"/Data/name_fixes.xlsx"))
-coaches_votes_data <- left_join(coaches_votes_data, name_fixes, by = c('player_temp','web_scraped_team')) %>%
-  mutate(player_name = coalesce(player_temp_adj, player_temp))
+betfair_data <- left_join(betfair_team, name_fixes, by = c('player_temp')) %>%
+  mutate(
+    player_name = coalesce(player_temp_adj, player_temp),
+    player_team = coalesce(player_team.x, player_team.y)
+  ) %>% 
+  select(season, match_round, player_name, player_team, betfair_votes) %>% 
+  filter(!(player_name == 'Tom J. Lynch' & player_team == 'Gold Coast'))  
 
-# write out final csv for use
-cv_data <- coaches_votes_data %>% 
-  select(season, match_round, player_name, player_team, coaches_votes)
-write.csv(cv_data,file=paste0(here(), '/Data/coaches_votes.csv'))
-
-# check that every player exists in fryzigg
-# df <- get_data() 
-# 
-# match_coaches <- left_join(df, cv_data, by = c('season','match_round','player_team','player_name'))
-# match_coaches$coaches_votes <- ifelse(is.na(match_coaches$coaches_votes),0,match_coaches$coaches_votes)
-# 
-# cv_check <- cv_data %>%
-#   group_by(season, player_name) %>%
-#   summarise(total_votes = sum(as.numeric(coaches_votes))) %>%
-#   mutate(record_id = paste(season, player_name, total_votes, sep="_")) %>%
-#   arrange(season,desc(total_votes))
-# 
-# join_check <- match_coaches %>%
-#   filter(coaches_votes > 0) %>%
-#   group_by(season, player_name) %>%
-#   summarise(total_votes = sum(as.numeric(coaches_votes))) %>%
-#   mutate(record_id = paste(season, player_name, total_votes, sep="_")) %>%
-#   arrange(season,desc(total_votes))
-# 
-# write.csv(cv_check,file=paste0(here(), '/Data/cv_check.csv'))
-#write.csv(join_check,file=paste0(here(), '/Data/join_check.csv'))
-
-# Check individual players
-# View(match_coaches %>%
-#        filter(player_first_name == "Nick", player_team == "Essendon") %>% 
-#        distinct(player_first_name, player_last_name, player_name, player_team))
-# 
-# View(coaches_votes_data %>% 
-#        filter(player_first_name == "Nick", player_team == "Essendon") %>%  
-#        distinct(player_first_name, player_last_name, player_name, player_team))
-# 
-# View(cv_data %>% filter(player_name == "Nick OBrien"))
+# Write out final csv for use
+write.csv(betfair_data,file=paste0(here(), '/Data/betfair_votes.csv'))
