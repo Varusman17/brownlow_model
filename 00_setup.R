@@ -29,6 +29,8 @@ list_of_packages <- c("readxl"
                       , 'lubridate'
                       , 'glue'
                       , 'fastDummies'
+                      , 'shinydashboard'
+                      , 'DT'
 )
 
 new_packages <- list_of_packages[!(list_of_packages %in% installed.packages()[,"Package"])]
