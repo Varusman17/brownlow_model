@@ -29,7 +29,12 @@ transformed_data <- transform_data(df, training_season_cutoff, testing_season)
 
 # Train XGBoost model -----------------------------------------------------
 model <- train_XGBoost(transformed_data$X_train, transformed_data$y_train, type = 'regression')
-
+oLogit_model <- train_oLogit(
+  transformed_data$X_train, 
+  transformed_data$y_train, 
+  transformed_data$X_test, 
+  transformed_data$y_test
+)
 
 # Test model --------------------------------------------------------------
 model_diagnostics <- test_model(model, transformed_data$X_test, transformed_data$entire_df, testing_season)
