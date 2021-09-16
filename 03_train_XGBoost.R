@@ -44,21 +44,5 @@ train_XGBoost <- function(X, y, type = 'classification') {
     )
   }
   
-  model <- xgboost(
-    data = X,
-    label = y,
-    booster = "gbtree", 
-    objective = "multi:softprob", # reg:squarederror,
-    eval_metric="mlogloss",
-    num_class = 4,
-    nrounds = 100,
-    eta=0.3,
-    gamma=0,
-    max_depth=6,
-    min_child_weight=1,
-    subsample=1,
-    colsample_bytree=1
-  )
-  
   return(model)
 }
