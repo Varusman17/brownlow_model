@@ -12,16 +12,8 @@
 
 transform_data <- function(df, training_season_cutoff, testing_season, dataInfoPath = paste0(here(), '/Data/training_factor_list.csv')) {
   
-  # Filter to only rows of dataInfo that match column names in df
-  dataInfo <- read_csv(dataInfoPath) %>% 
-    inner_join(data.frame(Factor = colnames(df)), by = 'Factor')
-  
-  # Remove unnecessary variables but keeping unique identifier for the match
-  df_removed <- df %>%
-    select(all_of(dataInfo$Factor[dataInfo$Include == 'Y']), match_id, match_round, player_team, season)
-  
   # Add in variables that are proportional to the match
-  df_removed <- df_removed %>% 
+  df <- df %>% 
     group_by(match_id) %>% 
     mutate(
       kicks_prop = kicks / sum(kicks),
@@ -36,13 +28,20 @@ transform_data <- function(df, training_season_cutoff, testing_season, dataInfoP
       contested_possessions_prop = contested_possessions / sum(contested_possessions),
       uncontested_possessions_prop = uncontested_possessions / sum(uncontested_possessions),
       contested_marks_prop = contested_marks / sum(contested_marks),
-      contested_marks_prop = contested_marks / sum(contested_marks),
       marks_inside_fifty_prop = marks_inside_fifty / sum(marks_inside_fifty),
       goal_assists_prop = goal_assists / sum(goal_assists),
       turnovers_prop = turnovers / sum(turnovers),
       shots_at_goal_prop = shots_at_goal / sum(shots_at_goal)
     ) %>% 
     ungroup()
+  
+  # Filter to only rows of dataInfo that match column names in df
+  dataInfo <- read_csv(dataInfoPath) %>% 
+    inner_join(data.frame(Factor = colnames(df)), by = 'Factor')
+
+  # Remove unnecessary variables but keeping unique identifier for the match
+  df_removed <- df %>%
+    select(all_of(dataInfo$Factor[dataInfo$Include == 'Y']), match_id, match_round, player_team, season)  
   
   # One hot encode all character variables
   chr_vars <- df_removed %>% select(where(is.character), -player_team) %>% colnames()
@@ -56,7 +55,6 @@ transform_data <- function(df, training_season_cutoff, testing_season, dataInfoP
   )
   
   df_all <- bind_cols(dummies, data.frame(player_name = df$player_name))
-  
   
   # Split into training and test sets based on season
   #' [Note: Random splitting vs season splitting]
@@ -72,6 +70,7 @@ transform_data <- function(df, training_season_cutoff, testing_season, dataInfoP
     filter(train_test == "train" & brownlow_votes > 0)
   
   # Take 7 rows where no brownlow votes were polled
+  set.seed(123)
   df_zeros <- df_all %>%
     filter(train_test == "train" & brownlow_votes == 0) %>% 
     group_by(match_id) %>% 

@@ -1,0 +1,19 @@
+player_team,actual_votes,predicted_votes,coaches_votes,prediction_sum,votes_accuracy
+Port Adelaide,75,75,382,75,0
+Geelong,64,69,338,69,-5
+Collingwood,66,68,269,68,-2
+Brisbane Lions,66,67,334,67,-1
+Western Bulldogs,61,66,315,66,-5
+Melbourne,61,56,263,56,5
+West Coast,66,55,278,55,11
+St Kilda,60,55,288,55,5
+Fremantle,50,52,263,52,-2
+Greater Western Sydney,51,51,226,51,0
+Richmond,56,48,298,48,8
+Carlton,48,46,235,46,2
+Essendon,37,44,209,44,-7
+Sydney,39,42,197,42,-3
+North Melbourne,27,36,144,36,-9
+Gold Coast,38,31,193,31,7
+Adelaide,20,29,130,29,-9
+Hawthorn,33,28,170,28,5
