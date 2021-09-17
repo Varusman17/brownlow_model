@@ -13,6 +13,7 @@ source(paste0(here(),"/00_setup.R"))
 source(paste0(here(),"/01_get_data.R"))
 source(paste0(here(),"/02_transform_data.R"))
 source(paste0(here(),"/03_train_XGBoost.R"))
+source(paste0(here(),"/03_train_oLogit.R"))
 source(paste0(here(),"/04_test_model.R"))
 
 # Set training season cutoff (i.e. predict for the next year)
@@ -23,18 +24,19 @@ testing_season <- training_season_cutoff + 1
 # Source data and add factors ---------------------------------------------
 df <- get_data()
 
+
 # Cast data to correct type and split into train and test -----------------
 transformed_data <- transform_data(df, training_season_cutoff, testing_season)
 
 
 # Train XGBoost model -----------------------------------------------------
-model <- train_XGBoost(transformed_data$X_train, transformed_data$y_train, type = 'regression')
-oLogit_model <- train_oLogit(
-  transformed_data$X_train, 
-  transformed_data$y_train, 
-  transformed_data$X_test, 
-  transformed_data$y_test
-)
+model <- train_XGBoost(transformed_data$X_train, transformed_data$y_train, type = 'classification')
+# oLogit_model <- train_oLogit(
+#   transformed_data$X_train, 
+#   transformed_data$y_train, 
+#   transformed_data$X_test, 
+#   transformed_data$y_test
+# )
 
 # Test model --------------------------------------------------------------
 model_diagnostics <- test_model(model, transformed_data$X_test, transformed_data$entire_df, testing_season)
@@ -46,7 +48,7 @@ xgb.plot.importance(model_diagnostics$variable_importance[1:10])
 
 
 # Explore predicted votes vs actual votes at player level
-View(model_diagnostics$votes_by_player %>% arrange(desc(predicted_votes)) %>% select(-votes_accuracy) %>% distinct())
+View(model_diagnostics$votes_by_player %>% arrange(desc(predicted_votes)) %>% select(-prediction_sum) %>% distinct())
 
 # Inspect matches where coaches, predicted and actual votes were greater than 0
 # 2021 SC scores have not been updated in fryzigg package

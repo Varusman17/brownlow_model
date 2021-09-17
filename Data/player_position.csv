@@ -1,4 +1,4 @@
-player_position,player_position_adj
+player_position_temp,player_position_adj
 BPL,B
 BPR,B
 C,C
@@ -16,6 +16,6 @@ INT,INT
 R,C
 RK,RK
 RR,C
-SUB,SUB
+SUB,INT
 WL,W
 WR,W

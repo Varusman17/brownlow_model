@@ -105,7 +105,7 @@ test_model <- function(model, X_test, entire_df, testing_season) {
   season <- testing_season
   datetime <- format(Sys.time(),'%Y%d%m_%H%M')
   model_type <- ifelse(model$params$objective == 'multi:softprob', 'multinomial', 'regression')
-  new_dir <- glue('{here()}/Logs/season_{season}_diff_{total_abs_diff}_{datetime}_{model_type}')
+  new_dir <- glue('{here()}/Logs/season_{season}_tot_{total_abs_diff}_top20_{top20_abs_diff}_{datetime}_{model_type}')
   dir.create(new_dir)
   write_csv(data.frame(features_used = colnames(X_test)), glue('{new_dir}/features_used.csv'))
   write_csv(imp, glue('{new_dir}/variable_importance.csv'))

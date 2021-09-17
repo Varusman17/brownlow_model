@@ -32,7 +32,7 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
   #   ) 
 
   # Add season, full player name and calculate match outcome
-  base_stats <- fetch_player_stats(season = c(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021), source = "fryzigg") %>% 
+  base_stats <- fetch_player_stats(season = years, source = "fryzigg") %>% 
     #fetch_player_stats(season = years, source = "fryzigg") %>% 
     # Restrict to H&A season, players 
     filter(time_on_ground_percentage > 0 & as.integer(match_round) < 24) %>%
@@ -47,10 +47,54 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
       team_score = ifelse(player_team == match_home_team,match_home_team_score,match_away_team_score),
       player_name = paste(player_first_name, player_last_name),
       sc_score = supercoach_score,
-      af_score = afl_fantasy_score
+      af_score = afl_fantasy_score,
+      player_position_temp = player_position
       # br_votes = brownlow_votes
-    )
+    ) %>% 
+    left_join(player_position, by=c("player_position_temp")) %>%
+    select(-player_position_temp)   
 
+  # Number of games at each position
+  pos_summ <-  base_stats %>% 
+      group_by(player_name, player_position_adj) %>% 
+      summarise(
+        total_games = n()
+      ) 
+  
+  # Rank the most common position
+  pos_rank <- pos_summ %>% 
+    filter(!(player_position_adj %in% c("INT"))) %>% 
+    arrange(player_name, desc(total_games)) %>%  
+    group_by(player_name) %>% 
+      mutate(
+        pos_rank = row_number(desc(total_games))
+      )
+  
+  # Find the top position
+  top_pos <- pos_rank %>% 
+    filter(pos_rank == 1) %>% 
+    select(player_name, player_position_top = player_position_adj)
+
+  # Adjust the position to remove INT
+  pos_adj <- pos_summ %>% 
+    left_join(top_pos, by=c("player_name")) %>% 
+    select(player_name, player_position_adj, total_games, player_position_top) %>% 
+    mutate(
+      player_position_v1 = ifelse(player_position_adj %in% c("INT"), player_position_top, player_position_adj),
+      player_position_final = ifelse(is.na(player_position_v1),player_position_adj,player_position_v1)
+    ) %>% 
+    mutate(player_position_final = replace(player_position_final, player_name == 'Tom Green','C')) %>%
+    mutate(player_position_final = replace(player_position_final, player_name == 'Jaxon Prior','HB')) %>%
+    mutate(player_position_final = replace(player_position_final, player_name == 'Charlie Constable','C')) %>%
+    mutate(player_position_final = replace(player_position_final, player_name == 'Trey Ruscoe','F')) %>%
+    mutate(player_position_final = replace(player_position_final, player_name == 'Jarrod Cameron','F')) %>% 
+    select(-total_games, player_position_top,-player_position_v1)
+  
+  # Join adjusted player position
+  base_stats <- base_stats %>% 
+    left_join(pos_adj, by = c("player_name","player_position_adj")) %>% 
+    select(-player_position_adj)
+  
   # Distinct list of players
   all_players <- base_stats %>% distinct(player_id, player_name)  
   
