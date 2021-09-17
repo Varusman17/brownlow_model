@@ -31,6 +31,7 @@ list_of_packages <- c("readxl"
                       , 'fastDummies'
                       , 'shinydashboard'
                       , 'DT'
+                      , 'plotly'
 )
 
 new_packages <- list_of_packages[!(list_of_packages %in% installed.packages()[,"Package"])]
