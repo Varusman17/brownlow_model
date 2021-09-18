@@ -30,7 +30,7 @@ transformed_data <- transform_data(df, training_season_cutoff, testing_season)
 
 
 # Train XGBoost model -----------------------------------------------------
-model <- train_XGBoost(transformed_data$X_train, transformed_data$y_train, type = 'classification')
+model <- train_XGBoost(transformed_data$X_train, transformed_data$y_train, type = 'regression')
 # oLogit_model <- train_oLogit(
 #   transformed_data$X_train, 
 #   transformed_data$y_train, 
@@ -93,4 +93,18 @@ ggplot(model_diagnostics$votes_by_match %>% filter(predicted_votes > 0),
 # corr <- round(cor(data),2)
 # p.mat <- cor_pmat(data)
 # ggcorrplot(corr, p.mat = p.mat, type = "lower", insig = "blank")
-
+# player_info <- 
+#   df %>% 
+#   filter(season == 2021) %>%
+#   select(date, match_id, match_round, player_name, player_team, player_opposition, betfair_votes, match_outcome, margin)
+# 
+# match_info <- 
+#   df %>% 
+#   filter(season == 2021) %>%
+#   select(date, match_id, match_round, venue_name, match_home_team, match_home_team_goals, match_home_team_behinds, match_home_team_score,
+#          match_away_team, match_away_team_goals, match_away_team_behinds, match_away_team_score) %>% 
+#   distinct
+# 
+# 
+# write.csv(player_info, paste0(here(), '/Data/player_info.csv'))
+# write.csv(match_info, paste0(here(), '/Data/match_info.csv'))

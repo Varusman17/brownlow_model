@@ -1,0 +1,199 @@
+"","date","match_id","match_round","venue_name","match_home_team","match_home_team_goals","match_home_team_behinds","match_home_team_score","match_away_team","match_away_team_goals","match_away_team_behinds","match_away_team_score"
+"1",2021-03-18,15875,1,"MCG","Richmond",15,15,105,"Carlton",11,14,80
+"2",2021-03-19,15876,1,"MCG","Collingwood",7,11,53,"Western Bulldogs",10,9,69
+"3",2021-03-20,15877,1,"MCG","Melbourne",11,14,80,"Fremantle",8,10,58
+"4",2021-03-20,15878,1,"Adelaide Oval","Adelaide",15,13,103,"Geelong",13,13,91
+"5",2021-03-20,15879,1,"Marvel Stadium","Essendon",13,13,91,"Hawthorn",14,8,92
+"6",2021-03-20,15880,1,"Gabba","Brisbane Lions",14,10,94,"Sydney",19,11,125
+"7",2021-03-21,15881,1,"Marvel Stadium","North Melbourne",9,11,65,"Port Adelaide",17,15,117
+"8",2021-03-21,15882,1,"GIANTS Stadium","Greater Western Sydney",11,12,78,"St Kilda",13,8,86
+"9",2021-03-21,15883,1,"Optus Stadium","West Coast",12,11,83,"Gold Coast",8,10,58
+"10",2021-03-25,15884,2,"MCG","Carlton",13,7,85,"Collingwood",16,10,106
+"11",2021-03-26,15885,2,"GMHBA Stadium","Geelong",12,9,81,"Brisbane Lions",11,14,80
+"12",2021-03-27,15886,2,"SCG","Sydney",18,13,121,"Adelaide",11,22,88
+"13",2021-03-27,15887,2,"Adelaide Oval","Port Adelaide",18,11,119,"Essendon",9,11,65
+"14",2021-03-27,15888,2,"Marvel Stadium","St Kilda",11,7,73,"Melbourne",12,19,91
+"15",2021-03-27,15889,2,"Metricon Stadium","Gold Coast",14,14,98,"North Melbourne",5,9,39
+"16",2021-03-28,15890,2,"MCG","Hawthorn",7,7,49,"Richmond",11,12,78
+"17",2021-03-28,15891,2,"Marvel Stadium","Western Bulldogs",14,16,100,"West Coast",14,9,93
+"18",2021-03-28,15892,2,"Optus Stadium","Fremantle",11,21,87,"Greater Western Sydney",7,14,56
+"19",2021-04-01,15893,3,"Marvel Stadium","Collingwood",11,6,72,"Brisbane Lions",11,7,73
+"20",2021-04-02,15894,3,"Marvel Stadium","North Melbourne",5,9,39,"Western Bulldogs",25,17,167
+"21",2021-04-02,15895,3,"Adelaide Oval","Adelaide",14,11,95,"Gold Coast",12,13,85
+"22",2021-04-03,15896,3,"MCG","Richmond",10,12,72,"Sydney",17,15,117
+"23",2021-04-03,15897,3,"Marvel Stadium","Essendon",22,11,143,"St Kilda",9,14,68
+"24",2021-04-03,15898,3,"Optus Stadium","West Coast",16,12,108,"Port Adelaide",11,5,71
+"25",2021-04-04,15899,3,"Marvel Stadium","Carlton",16,13,109,"Fremantle",9,10,64
+"26",2021-04-04,15900,3,"UNSW Canberra Oval","Greater Western Sydney",11,2,68,"Melbourne",15,12,102
+"27",2021-04-05,15901,3,"MCG","Geelong",10,9,69,"Hawthorn",9,10,64
+"28",2021-04-08,15902,4,"SCG","Sydney",11,17,83,"Essendon",12,8,80
+"29",2021-04-09,15903,4,"Adelaide Oval","Port Adelaide",11,13,79,"Richmond",11,11,77
+"30",2021-04-10,15904,4,"Mars Stadium","Western Bulldogs",10,13,73,"Brisbane Lions",8,6,54
+"31",2021-04-10,15905,4,"Marvel Stadium","St Kilda",15,12,102,"West Coast",13,4,82
+"32",2021-04-10,15906,4,"Metricon Stadium","Gold Coast",8,11,59,"Carlton",9,16,70
+"33",2021-04-10,15907,4,"MCG","Collingwood",9,6,60,"Greater Western Sydney",14,6,90
+"34",2021-04-11,15908,4,"Marvel Stadium","North Melbourne",10,8,68,"Adelaide",16,13,109
+"35",2021-04-11,15909,4,"MCG","Melbourne",12,13,85,"Geelong",9,6,60
+"36",2021-04-11,15910,4,"Optus Stadium","Fremantle",13,18,96,"Hawthorn",12,9,81
+"37",2021-04-15,15911,5,"Marvel Stadium","St Kilda",7,6,48,"Richmond",20,14,134
+"38",2021-04-16,15912,5,"Optus Stadium","West Coast",16,7,103,"Collingwood",11,10,76
+"39",2021-04-17,15913,5,"Marvel Stadium","Western Bulldogs",17,16,118,"Gold Coast",8,8,56
+"40",2021-04-17,15914,5,"SCG","Sydney",10,9,69,"Greater Western Sydney",9,17,71
+"41",2021-04-17,15915,5,"MCG","Carlton",9,14,68,"Port Adelaide",15,6,96
+"42",2021-04-17,15916,5,"Gabba","Brisbane Lions",15,12,102,"Essendon",6,9,45
+"43",2021-04-18,15917,5,"Adelaide Oval","Adelaide",11,6,72,"Fremantle",12,12,84
+"44",2021-04-18,15918,5,"MCG","Hawthorn",8,6,54,"Melbourne",15,14,104
+"45",2021-04-18,15919,5,"GMHBA Stadium","Geelong",10,17,77,"North Melbourne",7,5,47
+"46",2021-04-23,15920,6,"UNSW Canberra Oval","Greater Western Sydney",9,11,65,"Western Bulldogs",15,14,104
+"47",2021-04-24,15921,6,"GMHBA Stadium","Geelong",21,10,136,"West Coast",5,9,39
+"48",2021-04-24,15922,6,"Metricon Stadium","Gold Coast",15,10,100,"Sydney",9,6,60
+"49",2021-04-24,15923,6,"Marvel Stadium","Carlton",12,13,85,"Brisbane Lions",15,13,103
+"50",2021-04-24,15924,6,"MCG","Melbourne",12,10,82,"Richmond",6,12,48
+"51",2021-04-24,15925,6,"Optus Stadium","Fremantle",14,15,99,"North Melbourne",6,12,48
+"52",2021-04-25,15926,6,"University of Tasmania Stadium","Hawthorn",15,12,102,"Adelaide",16,3,99
+"53",2021-04-25,15927,6,"MCG","Collingwood",13,7,85,"Essendon",16,13,109
+"54",2021-04-25,15928,6,"Adelaide Oval","Port Adelaide",14,9,93,"St Kilda",5,9,39
+"55",2021-04-30,15929,7,"MCG","Richmond",11,11,77,"Western Bulldogs",7,13,55
+"56",2021-05-01,15930,7,"MCG","Collingwood",7,13,55,"Gold Coast",12,7,79
+"57",2021-05-01,15931,7,"Adelaide Oval","Adelaide",4,15,39,"Greater Western Sydney",15,16,106
+"58",2021-05-01,15932,7,"Marvel Stadium","St Kilda",19,14,128,"Hawthorn",9,5,59
+"59",2021-05-01,15933,7,"Gabba","Brisbane Lions",13,15,93,"Port Adelaide",5,14,44
+"60",2021-05-01,15934,7,"SCG","Sydney",14,6,90,"Geelong",12,16,88
+"61",2021-05-02,15935,7,"Blundstone Arena","North Melbourne",11,7,73,"Melbourne",16,7,103
+"62",2021-05-02,15936,7,"MCG","Essendon",16,11,107,"Carlton",19,9,123
+"63",2021-05-02,15937,7,"Optus Stadium","West Coast",20,12,132,"Fremantle",11,7,73
+"64",2021-05-07,15938,8,"MCG","Richmond",9,9,63,"Geelong",19,12,126
+"65",2021-05-08,15939,8,"Metricon Stadium","Gold Coast",7,12,54,"St Kilda",8,15,63
+"66",2021-05-08,15940,8,"GIANTS Stadium","Greater Western Sydney",16,11,107,"Essendon",16,9,105
+"67",2021-05-08,15941,8,"Marvel Stadium","North Melbourne",11,10,76,"Collingwood",14,10,94
+"68",2021-05-08,15942,8,"MCG","Melbourne",10,7,67,"Sydney",8,10,58
+"69",2021-05-08,15943,8,"Adelaide Oval","Port Adelaide",12,15,87,"Adelaide",5,8,38
+"70",2021-05-09,15944,8,"MCG","Hawthorn",8,12,60,"West Coast",14,14,98
+"71",2021-05-09,15945,8,"Marvel Stadium","Western Bulldogs",16,11,107,"Carlton",13,13,91
+"72",2021-05-09,15946,8,"Gabba","Brisbane Lions",14,11,95,"Fremantle",10,11,71
+"73",2021-05-14,15947,9,"Marvel Stadium","St Kilda",5,17,47,"Geelong",10,8,68
+"74",2021-05-15,15948,9,"SCG","Sydney",10,12,72,"Collingwood",5,12,42
+"75",2021-05-15,15949,9,"University of Tasmania Stadium","Hawthorn",12,8,80,"North Melbourne",13,9,87
+"76",2021-05-15,15950,9,"Metricon Stadium","Gold Coast",7,9,51,"Brisbane Lions",19,10,124
+"77",2021-05-15,15951,9,"Marvel Stadium","Richmond",13,9,87,"Greater Western Sydney",12,11,83
+"78",2021-05-15,15952,9,"Adelaide Oval","Port Adelaide",12,5,77,"Western Bulldogs",15,6,96
+"79",2021-05-16,15953,9,"Marvel Stadium","Essendon",10,8,68,"Fremantle",8,13,61
+"80",2021-05-16,15954,9,"MCG","Melbourne",13,16,94,"Carlton",10,8,68
+"81",2021-05-16,15955,9,"Optus Stadium","West Coast",16,10,106,"Adelaide",11,10,76
+"82",2021-05-21,15956,10,"Gabba","Brisbane Lions",15,12,102,"Richmond",11,8,74
+"83",2021-05-22,15957,10,"MCG","Carlton",13,8,86,"Hawthorn",9,9,63
+"84",2021-05-22,15958,10,"GMHBA Stadium","Geelong",14,7,91,"Gold Coast",8,9,57
+"85",2021-05-22,15959,10,"Adelaide Oval","Adelaide",15,6,96,"Melbourne",14,11,95
+"86",2021-05-22,15960,10,"Marvel Stadium","Western Bulldogs",21,18,144,"St Kilda",5,3,33
+"87",2021-05-22,15961,10,"Optus Stadium","Fremantle",12,14,86,"Sydney",13,6,84
+"88",2021-05-23,15962,10,"GIANTS Stadium","Greater Western Sydney",13,15,93,"West Coast",11,11,77
+"89",2021-05-23,15977,10,"MCG","Collingwood",8,10,58,"Port Adelaide",8,11,59
+"90",2021-05-23,15978,10,"Marvel Stadium","Essendon",22,9,141,"North Melbourne",10,9,69
+"91",2021-05-28,15979,11,"Marvel Stadium","Western Bulldogs",8,11,59,"Melbourne",13,9,87
+"92",2021-05-29,15980,11,"MCG","Collingwood",6,15,51,"Geelong",8,13,61
+"93",2021-05-29,15981,11,"Gabba","Brisbane Lions",19,15,129,"Greater Western Sydney",10,5,65
+"94",2021-05-29,15982,11,"Marvel Stadium","St Kilda",12,16,88,"North Melbourne",10,8,68
+"95",2021-05-29,15983,11,"SCG","Gold Coast",17,11,113,"Hawthorn",11,10,76
+"96",2021-05-29,15984,11,"Optus Stadium","West Coast",11,5,71,"Essendon",12,15,87
+"97",2021-05-30,15985,11,"GIANTS Stadium","Richmond",17,9,111,"Adelaide",12,11,83
+"98",2021-05-30,15986,11,"SCG","Sydney",15,10,100,"Carlton",11,12,78
+"99",2021-05-30,15987,11,"Adelaide Oval","Port Adelaide",18,7,115,"Fremantle",9,15,69
+"100",2021-06-04,15997,12,"GIANTS Stadium","Melbourne",14,13,97,"Brisbane Lions",11,9,75
+"101",2021-06-05,15998,12,"SCG","Sydney",13,14,92,"St Kilda",12,11,83
+"102",2021-06-05,15999,12,"Adelaide Oval","Adelaide",10,13,73,"Collingwood",12,6,78
+"103",2021-06-05,16000,12,"Optus Stadium","Essendon",12,12,84,"Richmond",19,9,123
+"104",2021-06-06,16001,12,"SCG","Carlton",10,13,73,"West Coast",14,11,95
+"105",2021-06-06,16002,12,"Optus Stadium","Fremantle",9,11,65,"Western Bulldogs",13,15,93
+"106",2021-06-10,16009,13,"Adelaide Oval","Port Adelaide",14,7,91,"Geelong",17,10,112
+"107",2021-06-11,16014,13,"SCG","Sydney",7,9,51,"Hawthorn",14,5,89
+"108",2021-06-12,16015,13,"Optus Stadium","Fremantle",11,10,76,"Gold Coast",6,13,49
+"109",2021-06-12,16016,13,"Cazaly's Stadium","St Kilda",8,12,60,"Adelaide",9,12,66
+"110",2021-06-13,16017,13,"Blundstone Arena","North Melbourne",14,10,94,"Greater Western Sydney",14,10,94
+"111",2021-06-13,16018,13,"Optus Stadium","West Coast",13,7,85,"Richmond",12,9,81
+"112",2021-06-14,16019,13,"SCG","Melbourne",9,9,63,"Collingwood",11,14,80
+"113",2021-06-18,16020,14,"GMHBA Stadium","Geelong",12,11,83,"Western Bulldogs",11,12,78
+"114",2021-06-19,16021,14,"Metricon Stadium","Gold Coast",4,7,31,"Port Adelaide",12,9,81
+"115",2021-06-19,16022,14,"Blundstone Arena","North Melbourne",6,9,45,"Brisbane Lions",9,14,68
+"116",2021-06-19,16023,14,"GIANTS Stadium","Greater Western Sydney",16,6,102,"Carlton",9,12,66
+"117",2021-06-20,16024,14,"University of Tasmania Stadium","Hawthorn",10,13,73,"Essendon",13,8,86
+"118",2021-06-24,16025,15,"Gabba","Brisbane Lions",13,16,94,"Geelong",7,8,50
+"119",2021-06-25,16026,15,"MCG","Richmond",2,10,22,"St Kilda",9,8,62
+"120",2021-06-26,16027,15,"Marvel Stadium","Collingwood",12,7,79,"Fremantle",14,7,91
+"121",2021-06-26,16028,15,"Blundstone Arena","North Melbourne",9,18,72,"Gold Coast",9,9,63
+"122",2021-06-26,16029,15,"Adelaide Oval","Port Adelaide",12,9,81,"Sydney",10,11,71
+"123",2021-06-26,16030,15,"MCG","Essendon",8,9,57,"Melbourne",9,14,68
+"124",2021-06-27,16031,15,"MCG","Greater Western Sydney",11,6,72,"Hawthorn",13,12,90
+"125",2021-06-27,16032,15,"Optus Stadium","West Coast",6,7,43,"Western Bulldogs",13,20,98
+"126",2021-06-27,16033,15,"Marvel Stadium","Carlton",12,11,83,"Adelaide",10,13,73
+"127",2021-07-01,16034,16,"Marvel Stadium","Gold Coast",10,17,77,"Richmond",10,7,67
+"128",2021-07-02,16035,16,"GMHBA Stadium","Geelong",15,8,98,"Essendon",8,9,57
+"129",2021-07-03,16036,16,"MCG","Melbourne",7,13,55,"Greater Western Sydney",9,10,64
+"130",2021-07-03,16037,16,"Adelaide Oval","Adelaide",8,11,59,"Brisbane Lions",17,9,111
+"131",2021-07-03,16038,16,"MCG","Fremantle",8,16,64,"Carlton",12,8,80
+"132",2021-07-03,16039,16,"Marvel Stadium","Hawthorn",7,11,53,"Port Adelaide",13,9,87
+"133",2021-07-04,16040,16,"GMHBA Stadium","Sydney",18,10,118,"West Coast",3,8,26
+"134",2021-07-04,16041,16,"MCG","Collingwood",8,13,61,"St Kilda",10,10,70
+"135",2021-07-04,16042,16,"Marvel Stadium","Western Bulldogs",16,12,108,"North Melbourne",11,13,79
+"136",2021-07-08,16043,17,"Adelaide Oval","Port Adelaide",8,7,55,"Melbourne",12,14,86
+"137",2021-07-09,16044,17,"Marvel Stadium","Essendon",11,18,84,"Adelaide",2,9,21
+"138",2021-07-10,16045,17,"University of Tasmania Stadium","Hawthorn",6,10,46,"Fremantle",16,12,108
+"139",2021-07-10,16046,17,"MCG","Carlton",5,14,44,"Geelong",10,10,70
+"140",2021-07-10,16047,17,"Metricon Stadium","Brisbane Lions",8,15,63,"St Kilda",14,11,95
+"141",2021-07-11,16048,17,"Mars Stadium","Greater Western Sydney",9,10,64,"Gold Coast",10,5,65
+"142",2021-07-11,16049,17,"Marvel Stadium","Western Bulldogs",8,12,60,"Sydney",11,13,79
+"143",2021-07-11,16050,17,"MCG","Richmond",11,5,71,"Collingwood",13,9,87
+"144",2021-07-12,16051,17,"Optus Stadium","West Coast",8,12,60,"North Melbourne",10,10,70
+"145",2021-07-15,16052,18,"Optus Stadium","Fremantle",3,13,31,"Geelong",14,16,100
+"146",2021-07-16,16053,18,"Metricon Stadium","Richmond",16,10,106,"Brisbane Lions",13,8,86
+"147",2021-07-17,16054,18,"Marvel Stadium","St Kilda",8,13,61,"Port Adelaide",10,14,74
+"148",2021-07-17,16055,18,"Metricon Stadium","Gold Coast",11,13,79,"Western Bulldogs",14,6,90
+"149",2021-07-17,16056,18,"MCG","Melbourne",11,13,79,"Hawthorn",12,7,79
+"150",2021-07-18,16057,18,"Metricon Stadium","North Melbourne",11,8,74,"Essendon",13,14,92
+"151",2021-07-18,16058,18,"MCG","Collingwood",9,8,62,"Carlton",13,13,91
+"152",2021-07-18,16059,18,"Adelaide Oval","Adelaide",8,8,56,"West Coast",14,14,98
+"153",2021-07-18,16060,18,"Metricon Stadium","Greater Western Sydney",11,6,72,"Sydney",15,8,98
+"154",2021-07-23,16061,19,"Marvel Stadium","Port Adelaide",14,13,97,"Collingwood",10,9,69
+"155",2021-07-24,16062,19,"Marvel Stadium","Carlton",11,11,77,"North Melbourne",18,8,116
+"156",2021-07-24,16063,19,"Gabba","Brisbane Lions",17,18,120,"Gold Coast",10,11,71
+"157",2021-07-24,16064,19,"Optus Stadium","West Coast",14,10,94,"St Kilda",13,8,86
+"158",2021-07-24,16065,19,"Marvel Stadium","Adelaide",16,6,102,"Hawthorn",13,5,83
+"159",2021-07-24,16066,19,"MCG","Melbourne",9,11,65,"Western Bulldogs",13,7,85
+"160",2021-07-25,16067,19,"Metricon Stadium","Essendon",7,11,53,"Greater Western Sydney",9,12,66
+"161",2021-07-25,16068,19,"MCG","Geelong",15,5,95,"Richmond",8,9,57
+"162",2021-07-25,16069,19,"Metricon Stadium","Sydney",14,14,98,"Fremantle",8,10,58
+"163",2021-07-30,16070,20,"Marvel Stadium","St Kilda",12,9,81,"Carlton",18,4,112
+"164",2021-07-31,16071,20,"Mars Stadium","Western Bulldogs",15,15,105,"Adelaide",8,8,56
+"165",2021-07-31,16072,20,"Blundstone Arena","North Melbourne",6,6,42,"Geelong",8,14,62
+"166",2021-07-31,16073,20,"MCG","Collingwood",14,6,90,"West Coast",6,9,45
+"167",2021-08-01,16074,20,"Marvel Stadium","Gold Coast",4,6,30,"Melbourne",18,20,128
+"168",2021-08-01,16075,20,"University of Tasmania Stadium","Hawthorn",14,8,92,"Brisbane Lions",12,8,80
+"169",2021-08-01,16076,20,"MCG","Essendon",16,6,102,"Sydney",17,7,109
+"170",2021-08-01,16077,20,"Optus Stadium","Fremantle",7,13,55,"Richmond",6,15,51
+"171",2021-08-01,16078,20,"Marvel Stadium","Greater Western Sydney",11,7,73,"Port Adelaide",15,10,100
+"172",2021-08-06,16079,21,"GMHBA Stadium","Geelong",8,17,65,"Greater Western Sydney",13,6,84
+"173",2021-08-07,16080,21,"Marvel Stadium","Carlton",8,9,57,"Gold Coast",11,10,76
+"174",2021-08-07,16081,21,"MCG","Richmond",13,11,89,"North Melbourne",8,8,56
+"175",2021-08-07,16082,21,"Adelaide Oval","Adelaide",7,9,51,"Port Adelaide",7,13,55
+"176",2021-08-07,16083,21,"Marvel Stadium","St Kilda",14,9,93,"Sydney",10,4,64
+"177",2021-08-08,16084,21,"MCG","Hawthorn",15,7,97,"Collingwood",12,6,78
+"178",2021-08-08,16085,21,"Marvel Stadium","Western Bulldogs",12,12,84,"Essendon",15,7,97
+"179",2021-08-08,16086,21,"Optus Stadium","Fremantle",8,6,54,"Brisbane Lions",18,10,118
+"180",2021-08-09,16087,21,"Optus Stadium","West Coast",9,9,63,"Melbourne",10,12,72
+"181",2021-08-13,16088,22,"Marvel Stadium","Greater Western Sydney",16,10,106,"Richmond",10,7,67
+"182",2021-08-14,16089,22,"University of Tasmania Stadium","Hawthorn",9,10,64,"Western Bulldogs",5,7,37
+"183",2021-08-14,16090,22,"GMHBA Stadium","Geelong",13,7,85,"St Kilda",11,5,71
+"184",2021-08-14,16091,22,"Adelaide Oval","Port Adelaide",21,14,140,"Carlton",5,15,45
+"185",2021-08-14,16092,22,"Gabba","Brisbane Lions",22,10,142,"Collingwood",8,9,57
+"186",2021-08-14,16093,22,"Marvel Stadium","North Melbourne",12,5,77,"Sydney",13,13,91
+"187",2021-08-15,16094,22,"MCG","Melbourne",16,8,104,"Adelaide",9,9,63
+"188",2021-08-15,16095,22,"GMHBA Stadium","Gold Coast",4,6,30,"Essendon",14,14,98
+"189",2021-08-15,16096,22,"Optus Stadium","Fremantle",12,7,79,"West Coast",9,10,64
+"190",2021-08-20,16097,23,"Marvel Stadium","Western Bulldogs",10,4,64,"Port Adelaide",9,12,66
+"191",2021-08-21,16098,23,"MCG","Richmond",12,11,83,"Hawthorn",12,11,83
+"192",2021-08-21,16099,23,"Marvel Stadium","Sydney",21,10,136,"Gold Coast",6,13,49
+"193",2021-08-21,16100,23,"Gabba","Brisbane Lions",19,11,125,"West Coast",13,9,87
+"194",2021-08-21,16101,23,"GMHBA Stadium","Geelong",12,5,77,"Melbourne",12,9,81
+"195",2021-08-21,16102,23,"Marvel Stadium","Carlton",11,9,75,"Greater Western Sydney",12,17,89
+"196",2021-08-22,16103,23,"Blundstone Arena","St Kilda",17,5,107,"Fremantle",6,13,49
+"197",2021-08-22,16104,23,"MCG","Essendon",16,6,102,"Collingwood",9,10,64
+"198",2021-08-22,16105,23,"Adelaide Oval","Adelaide",13,20,98,"North Melbourne",8,6,54

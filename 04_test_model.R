@@ -17,6 +17,12 @@ test_model <- function(model, X_test, entire_df, testing_season) {
     feature_names = names, 
     model = model
   )
+  coverage <- data.frame(
+    Feature = names,
+    na_prop = colMeans(is.na(transformed_data$X_test)),
+    zero_prop = colMeans(!transformed_data$X_test, na.rm = TRUE)
+  )
+  imp_adj <- imp %>% left_join(coverage,by=c("Feature"))
   
   #' [1.] Predict on the latest season in the dataset
   #' [2.] Bind with rest of test dataset
@@ -108,7 +114,7 @@ test_model <- function(model, X_test, entire_df, testing_season) {
   new_dir <- glue('{here()}/Logs/season_{season}_tot_{total_abs_diff}_top20_{top20_abs_diff}_{datetime}_{model_type}')
   dir.create(new_dir)
   write_csv(data.frame(features_used = colnames(X_test)), glue('{new_dir}/features_used.csv'))
-  write_csv(imp, glue('{new_dir}/variable_importance.csv'))
+  write_csv(imp_adj, glue('{new_dir}/variable_importance.csv'))
   write_csv(votes_by_match, glue('{new_dir}/votes_by_match.csv'))
   write_csv(votes_by_player %>% arrange(desc(predicted_votes)), glue('{new_dir}/votes_by_player.csv'))
   write_csv(votes_by_team %>% arrange(desc(predicted_votes)), glue('{new_dir}/votes_by_team.csv'))

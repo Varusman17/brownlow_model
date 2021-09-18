@@ -52,7 +52,7 @@ get_data <- function(years = list(2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
       # br_votes = brownlow_votes
     ) %>% 
     left_join(player_position, by=c("player_position_temp")) %>%
-    select(-player_position_temp)   
+    select(-player_position_temp,-match_margin)   
 
   # Number of games at each position
   pos_summ <-  base_stats %>% 
