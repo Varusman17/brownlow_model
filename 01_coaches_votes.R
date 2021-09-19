@@ -57,25 +57,30 @@ for (k in 2014:2021) {
 # Adjust webscraped data to be usable
 coaches_votes_data <- result_table %>%
   filter(votes != 'Votes') %>%
-  separate(players,c('player_first_name','player_last_name','playing_for_short'), sep = ' ', remove = F) %>% 
-  mutate(web_scraped_team = gsub('\\(|\\)','',playing_for_short),
-         player_temp = paste(player_first_name, player_last_name),
-         match_round = as.numeric(round),
-         coaches_votes = as.numeric(votes),
-         record_id = paste(season, match_round, player_temp,web_scraped_team, coaches_votes, sep="_")) 
+  mutate(
+    players = gsub('\\(|\\)','',players),
+    player_temp = gsub("\\s+[^ ]+$", "", players),
+    web_scraped_team = word(players, -1),
+    match_round = as.numeric(round),
+    coaches_votes = as.numeric(votes),
+    record_id = paste(season, match_round, player_temp,web_scraped_team, coaches_votes, sep="_")
+  ) 
 
 # Load in clean team name
 team_mapping <- read_csv(paste0(here(), '/Data/team_attributes.csv'))
 coaches_votes_data <- inner_join(coaches_votes_data, team_mapping, by = c('web_scraped_team'))
 
 # Load in name fixes to make it compatible with fryzigg
-name_fixes <- read_excel(paste0(here(),"/Data/name_fixes.xlsx"))
+name_fixes <- read_csv(paste0(here(),"/Data/name_fixes.csv"))
 coaches_votes_data <- left_join(coaches_votes_data, name_fixes, by = c('player_temp','web_scraped_team')) %>%
   mutate(player_name = coalesce(player_temp_adj, player_temp))
 
 # write out final csv for use
 cv_data <- coaches_votes_data %>% 
   select(season, match_round, player_name, player_team = player_team.x, coaches_votes)
+
+View(cv_data)
+  
 write.csv(cv_data,file=paste0(here(), '/Data/coaches_votes.csv'))
 
 # check that every player exists in fryzigg

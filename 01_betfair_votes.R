@@ -153,7 +153,7 @@ betfair_team <- result_table %>%
 write.csv(subset(betfair_team, is.na(player_team)), file=paste0(here(), '/Data/unmatched_betfair.csv'))
 
 # Load in name fixes to make it compatible with fryzigg
-name_fixes <- read_excel(paste0(here(),"/Data/name_fixes.xlsx"))
+name_fixes <- read_csv(paste0(here(),"/Data/name_fixes.csv"))
 betfair_data <- left_join(betfair_team, name_fixes, by = c('player_temp')) %>%
   mutate(
     player_name = coalesce(player_temp_adj, player_temp),

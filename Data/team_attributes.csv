@@ -1,19 +1,19 @@
-web_scraped_team,player_team
-ADEL,Adelaide
-BL,Brisbane Lions
-CARL,Carlton
-COLL,Collingwood
-ESS,Essendon
-FRE,Fremantle
-GCFC,Gold Coast
-GEEL,Geelong
-GWS,Greater Western Sydney
-HAW,Hawthorn
-MELB,Melbourne
-NMFC,North Melbourne
-PORT,Port Adelaide
-RICH,Richmond
-STK,St Kilda
-SYD,Sydney
-WB,Western Bulldogs
-WCE,West Coast
+player_team,web_scraped_team
+Adelaide,ADEL
+Brisbane Lions,BL
+Carlton,CARL
+Collingwood,COLL
+Essendon,ESS
+Fremantle,FRE
+Gold Coast,GCFC
+Geelong,GEEL
+Greater Western Sydney,GWS
+Hawthorn,HAW
+Melbourne,MELB
+North Melbourne,NMFC
+Port Adelaide,PORT
+Richmond,RICH
+St Kilda,STK
+Sydney,SYD
+Western Bulldogs,WB
+West Coast,WCE
